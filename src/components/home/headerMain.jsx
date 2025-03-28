@@ -19,11 +19,8 @@ function HeaderMain() {
 
   return (
     <nav className="bg-white border-black">
-      {/* Single Flex Container */}
       <div className="mx-auto max-w-screen-xl p-4">
-        {/* Container for Logo, Navbar, and Hamburger (Mobile View) */}
         <div className="flex justify-between items-center">
-          {/* Left: Logo */}
           <a
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -35,13 +32,12 @@ function HeaderMain() {
             />
           </a>
 
-          {/* Middle: Navbar Links (visible on larger screens) */}
-          <div className="hidden sm:flex flex-grow justify-center">
+          <div className="hidden sm:flex text-lg flex-grow justify-center">
             <ul className="flex space-x-8">
               <li>
                 <a
                   href="/about"
-                  className="block py-2 px-3 text-black rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 px-3  text-black rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
                   aria-current="page"
                 >
                   About
@@ -72,7 +68,6 @@ function HeaderMain() {
                 </button>
               </li>
 
-              {/* Navbar Dropdown for Desktop */}
           
               <li>
                 <button
@@ -98,7 +93,6 @@ function HeaderMain() {
                   </svg>
                 </button>
 
-                {/* Navbar Dropdown Menu */}
                 <div
                   className={`z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 absolute mt-2 ${
                     isDropdownNavbarOpen ? "block" : "hidden"
@@ -143,14 +137,12 @@ function HeaderMain() {
             </ul>
           </div>
 
-          {/* Right: Book Appointment Button (only visible on desktop) */}
-          <div className="hidden md:block">
+          <div className="hidden md:block text-xl">
             <button className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-600 transition duration-300">
               Book Appointment
             </button>
           </div>
 
-          {/* Right: Hamburger Icon (for Mobile) */}
           <button
             className="block md:hidden text-black"
             onClick={toggleMobileMenu}
@@ -172,9 +164,8 @@ function HeaderMain() {
           </button>
         </div>
 
-        {/* Navbar Links for Mobile (shown when mobile menu is open) */}
         <div
-          className={`mt-4 md:hidden justify-between items-center ${
+          className={`mt-4 md:hidden justify-between text-lg items-center ${
             isMobileMenuOpen ? "block" : "hidden"
           }`}
         >
@@ -236,7 +227,6 @@ function HeaderMain() {
                   </svg>
                 </button>
 
-                {/* Navbar Dropdown Menu */}
                 <div
                   className={`z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 absolute mt-2 ${
                     isDropdownNavbarOpen ? "block" : "hidden"
@@ -289,7 +279,6 @@ function HeaderMain() {
         </div>
       </div>
 
-      {/* Dropdown Menu for Treatment on Mobile */}
       <div
         id="mega-menu-full-dropdown"
         className={`mt-1 border-gray-200 shadow-xs bg-gray-50  md:bg-white border-y ${
