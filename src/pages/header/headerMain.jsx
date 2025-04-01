@@ -18,7 +18,7 @@ function HeaderMain() {
   };
 
   return (
-    <nav className="bg-white border-black top-9 fixed w-full z-50 shadow-lg">
+    <nav className="bg-white border-black top-9 fixed w-full z-50 shadow-sm">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex justify-between items-center">
           <a

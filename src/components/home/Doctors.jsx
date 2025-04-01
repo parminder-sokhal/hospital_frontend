@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowLeft, FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Doctors = () => {
   // Sample data
@@ -7,48 +7,24 @@ const Doctors = () => {
     {
       img: "/images/doctor1.jpg",
       name: "Dr. John Doe",
-      info: "1Cardiologist at XYZ Hospital",
+      info: "Cardiologist at XYZ Hospital",
     },
     {
       img: "/images/doctor2.jpg",
       name: "Dr. Jane Smith",
-      info: "2Dentist at ABC Clinic",
+      info: "Dentist at ABC Clinic",
     },
     {
       img: "/images/doctor3.jpg",
       name: "Dr. Michael Lee",
-      info: "3Orthopedic Surgeon at LMN Hospital",
+      info: "Orthopedic Surgeon at LMN Hospital",
     },
     {
       img: "/images/doctor1.jpg",
       name: "Dr. John Doe",
-      info: "4Cardiologist at XYZ Hospital",
+      info: "Cardiologist at XYZ Hospital",
     },
-    {
-      img: "/images/doctor2.jpg",
-      name: "Dr. Jane Smith",
-      info: "5Dentist at ABC Clinic",
-    },
-    {
-      img: "/images/doctor3.jpg",
-      name: "Dr. Michael Lee",
-      info: "6Orthopedic Surgeon at LMN Hospital",
-    },
-    {
-      img: "/images/doctor1.jpg",
-      name: "Dr. John Doe",
-      info: "7Cardiologist at XYZ Hospital",
-    },
-    {
-      img: "/images/doctor2.jpg",
-      name: "Dr. Jane Smith",
-      info: "8Dentist at ABC Clinic",
-    },
-    {
-      img: "/images/doctor3.jpg",
-      name: "Dr. Michael Lee",
-      info: "9Orthopedic Surgeon at LMN Hospital",
-    },
+   
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -62,7 +38,7 @@ const Doctors = () => {
       if (window.innerWidth >= 1024) {
         setSlidesPerScreen(4); // Desktop: 4 items per screen
       } else if (window.innerWidth >= 768) {
-        setSlidesPerScreen(2); // Tablet: 2 items per screen
+        setSlidesPerScreen(1); // md & Tablet: 1 item per screen
       } else {
         setSlidesPerScreen(1); // Mobile: 1 item per screen
       }
@@ -112,9 +88,12 @@ const Doctors = () => {
             {data.map((doctor, index) => (
               <div
                 key={index}
-                className="carousel-slide flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 xl:w-1/4 p-4"
+                className="carousel-slide flex-shrink-0 px-4"
+                style={{
+                  width: `${100 / slidesPerScreen}%`, // Adjust width to screen size
+                }}
               >
-                <div className="flex flex-col justify-between items-center bg-white rounded-lg shadow-md w-72 h-92">
+                <div className="flex flex-col justify-between items-center bg-white rounded-lg shadow-md">
                   <div className="overflow-hidden w-full h-72 rounded-t-lg">
                     <img
                       src={doctor.img}
@@ -122,7 +101,7 @@ const Doctors = () => {
                       className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
                     />
                   </div>
-                  <div className=" flex flex-col items-center justify-start">
+                  <div className="flex flex-col items-center justify-start px-2">
                     <p className="font-semibold text-lg text-left">{doctor.name}</p>
                     <p className="text-sm text-black text-left">{doctor.info}</p>
                   </div>
@@ -149,25 +128,24 @@ const Doctors = () => {
         {/* Navigation Buttons */}
       </div>
       <div className="relative w-full flex justify-center gap-4 mt-4">
-  {/* Previous Button */}
-  <button
-    onClick={handlePrev}
-    className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
-  >
-    <FaChevronLeft size={24} />
-    <span className="sr-only">Previous</span>
-  </button>
-  
-  {/* Next Button */}
-  <button
-    onClick={handleNext}
-    className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
-  >
-    <FaChevronRight size={24} />
-    <span className="sr-only">Next</span>
-  </button>
-</div>
+        {/* Previous Button */}
+        <button
+          onClick={handlePrev}
+          className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
+        >
+          <FaChevronLeft size={24} />
+          <span className="sr-only">Previous</span>
+        </button>
 
+        {/* Next Button */}
+        <button
+          onClick={handleNext}
+          className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
+        >
+          <FaChevronRight size={24} />
+          <span className="sr-only">Next</span>
+        </button>
+      </div>
     </div>
   );
 };
