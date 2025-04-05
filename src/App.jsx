@@ -7,7 +7,8 @@ import "./app.css";
 import Header from "./pages/header/header";
 import HeaderMain from "./pages/header/headerMain.jsx";
 import Home from "./pages/home/Home";
-import About from "./components/about/about.jsx";
+import About from "./pages/about/about.jsx";
+import Footer from "./pages/footer/footer.jsx";
 
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
             <Route path="/about" element={<About />} />
             
           </Routes>
+          <Footer/>
+          
        
     </Router>
   );

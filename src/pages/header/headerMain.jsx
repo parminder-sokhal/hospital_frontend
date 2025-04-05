@@ -18,7 +18,7 @@ function HeaderMain() {
   };
 
   return (
-    <nav className="bg-white border-black top-9 fixed w-full z-50 shadow-sm">
+    <nav className="bg-white border-black top-10 fixed w-full z-50 shadow-sm">
       <div className="mx-auto max-w-screen-xl p-4">
         <div className="flex justify-between items-center">
           <a
@@ -26,8 +26,8 @@ function HeaderMain() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="/logo/loonalogo.webp"
-              className="h-16"
+              src="/logo/loonalogo.png"
+              className="h-16 text-"
               alt="Loonahospital Logo"
             />
           </a>
