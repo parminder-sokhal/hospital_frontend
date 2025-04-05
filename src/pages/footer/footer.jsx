@@ -97,16 +97,32 @@ const Footer = () => {
               <div className="space-y-2 flex flex-col">
                 <a
                   href="tel:+1234567890"
-                  className="flex items-center space-x-2 hover:text-[#DB8E00]"
+                  className="flex items-center space-x-2 hover:text-yellow-500"
                 >
-                  <FaPhoneAlt className="text-xl" />
+                  <span>Emergency number</span>
                   <span>+91 9882123456</span>
                 </a>
-                <a href="tel:+911234567890" className="text-sm">
-                  Contact Number: +91 123 456 7890
+                <a
+                  href="tel:+1234567890"
+                  className="flex items-center space-x-2 hover:text-yellow-500"
+                >
+                  <span>Inquiry number:</span>
+                  <span>+91 9882123456</span>
                 </a>
-                <a href="mailto:contact@hospital.com" className="text-sm">
-                  Email: contact@hospital.com
+                <a
+                  href="tel:+1234567890"
+                  className="flex items-center space-x-2 hover:text-yellow-500"
+                >
+                  <span>Contact Number:</span>
+                  <span>+91 9882123456</span>
+                </a>
+
+                <a
+                  href="mailto:example@example.com"
+                  className="flex items-center space-x-2 hover:text-[#DB8E00]"
+                >
+                  <span>Our Email:</span>
+                  <span>abc@gmail.com</span>
                 </a>
               </div>
               <div className="flex space-x-4">
