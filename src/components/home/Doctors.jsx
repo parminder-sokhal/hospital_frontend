@@ -5,22 +5,22 @@ const Doctors = () => {
   // Sample data
   const data = [
     {
-      img: "/images/doctor1.jpg",
+      img: "/images/doctor1.jpeg",
       name: "Dr. John Doe",
       info: "Cardiologist at XYZ Hospital",
     },
     {
-      img: "/images/doctor2.jpg",
+      img: "/images/doctor1.jpeg",
       name: "Dr. Jane Smith",
       info: "Dentist at ABC Clinic",
     },
     {
-      img: "/images/doctor3.jpg",
+      img: "/images/doctor1.jpeg",
       name: "Dr. Michael Lee",
       info: "Orthopedic Surgeon at LMN Hospital",
     },
     {
-      img: "/images/doctor1.jpg",
+      img: "/images/doctor1.jpeg",
       name: "Dr. John Doe",
       info: "Cardiologist at XYZ Hospital",
     },
@@ -70,9 +70,12 @@ const Doctors = () => {
   };
 
   return (
-    <div className="container mx-auto my-10 lg:px-20 sm:px-14 md:px-18 mt-35">
-      <div className="flex justify-center items-center mb-4">
-        <h2 className="text-4xl font-bold">Our Doctors</h2>
+    <div className="container mx-auto my-20 lg:px-20 sm:px-14 md:px-18 ">
+      <div className="flex justify-between items-center mb-4 px-5">
+        <h2 className="text-3xl ">Our Team of Experts</h2>
+        <a href="/doctors">
+        <h3 className="hover:underline underline-offset-10 hover:text-blue-600 decoration-2 decoration-yellow-600"> View all</h3>
+        </a>
       </div>
 
       {/* Carousel Component */}
@@ -99,6 +102,7 @@ const Doctors = () => {
                       src={doctor.img}
                       alt={doctor.name}
                       className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
+                      loading="lazy"
                     />
                   </div>
                   <div className="flex flex-col items-center justify-start px-2">

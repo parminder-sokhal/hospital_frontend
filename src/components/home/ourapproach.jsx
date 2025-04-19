@@ -69,7 +69,7 @@ const OurApproach = () => {
 
   return (
     <div
-      className="py-10 px-4 bg-gray-50"
+      className="py-15 px-4 bg-gray-50"
       style={{
         backgroundImage: "url('/images/Treatmentbg.jpg')", // Replace with your background image
         backgroundSize: "cover",
@@ -79,7 +79,7 @@ const OurApproach = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between">
         {/* Left Section - Centered vertically */}
         <div className="w-full md:w-2/5 flex flex-col justify-center items-start space-y-4 mb-8 md:mb-0 sm:px-10 px-4">
-          <h2 className="text-3xl font-bold text-black">Our Approach</h2>
+          <h2 className="text-3xl text-black">Our Approach</h2>
           <p className="text-lg text-black text-start flex items-center ">
             Our approach is based on a holistic view of individual well-being,
             combining therapy, yoga, hypnotherapy, and self-regulation
@@ -117,7 +117,8 @@ const OurApproach = () => {
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
                   <div
                     className="h-40 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${item.image})` }}
+                    style={{ backgroundImage: `url(${item.image})`,loading:(`lazy`) }}
+                    loading="lazy"
                   ></div>
                   <div className="p-4 flex-grow">
                     <h3 className="text-2xl font-semibold text-gray-800">

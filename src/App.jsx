@@ -9,6 +9,7 @@ import HeaderMain from "./pages/header/headerMain.jsx";
 import Home from "./pages/home/Home";
 import About from "./pages/about/about.jsx";
 import Footer from "./pages/footer/footer.jsx";
+import Doctors from "./pages/Doctor/meetOurDoctor.jsx";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/doctors" element={<Doctors />} />
             
           </Routes>
           <Footer/>

@@ -10,7 +10,8 @@ const VideoPlayHeader = () => {
         muted
         className="w-full h-full object-cover"
       >
-        <source src="#" type="video/mp4" />
+        {/* Replace FILE_ID with the actual ID from your Google Drive link */}
+        <source src="/videos/bgvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

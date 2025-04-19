@@ -351,6 +351,7 @@ const SpecialitiesSlider = () => {
                     src={slide.image}
                     alt={`Slide ${slide.id}`}
                     className="w-36 h-36 object-fit rounded-t-lg mb-4 "
+                    loading="lazy"
                   />
                   <span className="text-md text-black font-bold">
                     {slide.description}
