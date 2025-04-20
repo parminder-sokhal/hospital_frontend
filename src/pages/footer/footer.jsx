@@ -20,90 +20,47 @@ const Footer = () => {
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Services</h3>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
-                General Psychiatry
+                  General Psychiatry
                 </a>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
-                De-addiction Services
+                  De-addiction Services
                 </a>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
-                Counseling & Psychotherapy
+                  Counseling & Psychotherapy
                 </a>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
-                Psycho-Diagnostic Services
+                  Psycho-Diagnostic Services
                 </a>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
-                Sexual Wellness Disorders
+                  Sexual Wellness Disorders
                 </a>
-                
               </div>
               {/* Treatments Links */}
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Treatments</h3>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Thyroid disorder
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  Psychiatry
                 </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Testing for Drugs of abuse
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  Counselling and therapy
                 </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Sigmoidoscopy
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  Mental health issues and children
                 </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Sexual Wellness
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  D addiction programme
                 </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Psycho diagnostic                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Neurological disorders
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  sexual wellness program
                 </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Naltrexone implant                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Headache
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  Headache clinic
                 </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Gut related disorders                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                General Psychiatry
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  Epilepsy clinic
                 </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Gastroenterology
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Epilepsy
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Endoscopy
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                EEG
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Diarrhoea
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Diabetes
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Detoxification
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Dengue
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Deaddiction
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Counselling and psychotherapy.
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Common cold & other infections
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                Child guidance
-                </a>
-                <a href="#" className="text-sm hover:text-[#DB8E00]">
-                asthma & Respiratory issues 
+                <a href="#" className="text-md hover:text-[#DB8E00]">
+                  Sleep clinic
                 </a>
               </div>
             </div>
