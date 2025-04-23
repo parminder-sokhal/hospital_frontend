@@ -31,7 +31,7 @@ const TrendingYoutube = () => {
 
   return (
     <div className="container mx-auto lg:px-40 px-6 py-10">
-      <h2 className="text-3xl text-start mb-8">Trending on Social Media</h2>
+      <h2 className="sm:text-3xl text-2xl text-start mb-8">Trending on Social Media</h2>
 
       <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
         {videos.map((video) => {

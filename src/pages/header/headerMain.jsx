@@ -65,7 +65,7 @@ function HeaderMain() {
           </a>
 
           {/* Desktop Navbar */}
-          <div className="hidden md:flex text-lg flex-grow justify-center">
+          <div className="hidden lg:flex text-lg flex-grow justify-center">
             <ul className="flex space-x-8">
               <li>
                 <a
@@ -120,35 +120,27 @@ function HeaderMain() {
 
                 <div
                   onMouseLeave={handleNavbarDropdownLeave}
-                  className={`z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 absolute mt-2 ${isDropdownNavbarOpen ? "block" : "hidden"}`}
+                  className={`z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 absolute mt-2 ${isDropdownNavbarOpen ? "block" : "hidden"}`}
                 >
-                  <ul className="py-2 text-sm text-gray-700">
+                  <ul className="py-2 text-sm text-black">
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        Youtube
+                      <a href="/Pictures" className="block px-4 py-2 hover:bg-gray-100">
+                        Pictures Gallery
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        Pictures
+                      <a href="/Youtube" className="block px-4 py-2 hover:bg-gray-100">
+                        Video Gallery
                       </a>
                     </li>
+
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        Other Activity
+                      <a href="/Instagram" className="block px-4 py-2 hover:bg-gray-100">
+                        Instagram
                       </a>
                     </li>
                   </ul>
                 </div>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
-                >
-                  Articles
-                </a>
               </li>
               <li>
                 <a
@@ -162,7 +154,7 @@ function HeaderMain() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block text-xl">
+          <div className="hidden lg:block text-xl">
             <button className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition duration-300">
               Book Appointment
             </button>
@@ -170,7 +162,7 @@ function HeaderMain() {
 
           {/* Hamburger */}
           <button
-            className="block md:hidden text-black"
+            className="block lg:hidden text-black"
             onClick={toggleMobileMenu}
           >
             <svg
@@ -196,39 +188,39 @@ function HeaderMain() {
         >
           {isDropdownOpen && (
             <div className="hidden md:block mt-2 absolute left-0 w-full bg-white z-40">
-              <div className="grid px-40 py-5 mx-auto text-gray-900 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+              <div className="grid px-40 py-5 mx-auto text-gray-900 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 ">
                 <ul>
                   <li>
                     <div className="font-semibold text-md">
                       Psychiatry treatment
                     </div>
                     <a
-                      href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      href="/depression"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       depression
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       anxiety
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       bipolar disorder
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       schizophrenia
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       OCD
                     </a>
@@ -241,43 +233,43 @@ function HeaderMain() {
                     <div className="font-semibold">Counselling and Therapy</div>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       CBT
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       DBT
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       individual counselling
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       stress management
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       behaviour therapy
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       relaxation therapy
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       social skills training
                     </a>
@@ -292,37 +284,37 @@ function HeaderMain() {
                     </div>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       ADHD
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       autism
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       incontinence
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       behaviour issues
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       conduct disorder
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       learning disability
                     </a>
@@ -335,25 +327,25 @@ function HeaderMain() {
                     <div className="font-semibold">De-addiction Programme</div>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       motivation enhancement therapy
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       relapse prevention therapy
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       individual counselling
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       motivation enhancement by hypnosis
                     </a>
@@ -366,31 +358,31 @@ function HeaderMain() {
                     <div className="font-semibold">Sexual Wellness Program</div>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       premature ejaculation
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       erectile dysfunction
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       reduced or high libido
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       anorgasmia
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       DHAT syndrome
                     </a>
@@ -402,37 +394,37 @@ function HeaderMain() {
                     <div className="font-semibold">Sleep Clinic</div>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       insomnia
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       disturbed sleep
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       non-refreshing sleep
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       sleep talking
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       sleep walking
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       nightmares
                     </a>
@@ -445,13 +437,13 @@ function HeaderMain() {
                     <div className="font-semibold">Headache Clinic</div>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       migraine
                     </a>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       tension headache
                     </a>
@@ -464,7 +456,7 @@ function HeaderMain() {
                     <div className="font-semibold">Epilepsy Clinic</div>
                     <a
                       href="#"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       seizure
                     </a>
@@ -479,9 +471,9 @@ function HeaderMain() {
 
         {/* ✅ Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "block" : "hidden"}`}
+          className={`md:hidden fixed inset-0 top-30 z-50 bg-white overflow-y-auto transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "block" : "hidden"}`}
         >
-          <div className="overflow-y-auto max-h-[calc(100vh-5rem)] pb-4">
+          <div className="overflow-y-auto  py-10 px-10">
             <ul className="flex flex-col text-lg space-y-4">
               <li>
                 <a
@@ -489,6 +481,14 @@ function HeaderMain() {
                   className="block py-2 px-3 text-black hover:bg-gray-100"
                 >
                   Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="block py-2 px-3 text-black hover:bg-gray-100"
+                >
+                  About
                 </a>
               </li>
               <li>
@@ -517,7 +517,7 @@ function HeaderMain() {
                   onClick={toggleNavbarDropdown}
                   className="flex justify-between w-full py-2 px-3 text-black hover:bg-gray-100"
                 >
-                  Dropdown
+                  Media
                   <svg
                     className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${isDropdownNavbarOpen ? "rotate-180" : ""}`}
                     fill="none"
@@ -537,38 +537,22 @@ function HeaderMain() {
                 >
                   <ul className="py-2 text-sm text-gray-700">
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        Dashboard
+                      <a href="/Pictures" className="block px-4 py-2 hover:bg-gray-100">
+                        Pictures Gallery
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        Earnings
+                      <a href="/youtube" className="block px-4 py-2 hover:bg-gray-100">
+                        video Gallery
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                        Sign out
+                      <a href="/Instagram" className="block px-4 py-2 hover:bg-gray-100">
+                        Instagram
                       </a>
                     </li>
                   </ul>
                 </div>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-black hover:bg-gray-100"
-                >
-                  Marketplace
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-black hover:bg-gray-100"
-                >
-                  Resources
-                </a>
               </li>
               <li>
                 <a
@@ -582,7 +566,7 @@ function HeaderMain() {
 
             {/* ✅ Mobile Mega Menu */}
             {isDropdownOpen && (
-              <div className="mt-4 overflow-y-auto max-h-[calc(100vh-20rem)] px-3">
+              <div className=" overflow-y-auto pt-10 bg-white ">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <ul>
                     <li>
@@ -590,32 +574,32 @@ function HeaderMain() {
                         Psychiatry treatment
                       </div>
                       <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        href="/depression"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         depression
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         anxiety
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         bipolar disorder
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         schizophrenia
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         OCD
                       </a>
@@ -630,43 +614,43 @@ function HeaderMain() {
                       </div>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         CBT
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         DBT
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         individual counselling
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         stress management
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         behaviour therapy
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         relaxation therapy
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         social skills training
                       </a>
@@ -681,37 +665,37 @@ function HeaderMain() {
                       </div>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         ADHD
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         autism
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         incontinence
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         behaviour issues
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         conduct disorder
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         learning disability
                       </a>
@@ -726,25 +710,25 @@ function HeaderMain() {
                       </div>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         motivation enhancement therapy
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         relapse prevention therapy
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         individual counselling
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         motivation enhancement by hypnosis
                       </a>
@@ -759,31 +743,31 @@ function HeaderMain() {
                       </div>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         premature ejaculation
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         erectile dysfunction
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         reduced or high libido
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         anorgasmia
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         DHAT syndrome
                       </a>
@@ -795,37 +779,37 @@ function HeaderMain() {
                       <div className="font-semibold">Sleep Clinic</div>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         insomnia
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         disturbed sleep
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         non-refreshing sleep
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         sleep talking
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         sleep walking
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         nightmares
                       </a>
@@ -838,13 +822,13 @@ function HeaderMain() {
                       <div className="font-semibold">Headache Clinic</div>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         migraine
                       </a>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         tension headache
                       </a>
@@ -857,7 +841,7 @@ function HeaderMain() {
                       <div className="font-semibold">Epilepsy Clinic</div>
                       <a
                         href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100"
+                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                       >
                         seizure
                       </a>

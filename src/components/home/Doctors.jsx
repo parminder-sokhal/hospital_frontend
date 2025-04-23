@@ -6,8 +6,9 @@ const Doctors = () => {
   const data = [
     {
       img: "/images/doctor1.jpeg",
-      name: "Dr. John Doe",
+      name: "testDr. John Doe",
       info: "Cardiologist at XYZ Hospital",
+      link: "/dr-Neeraj",
     },
     {
       img: "/images/doctor1.jpeg",
@@ -72,7 +73,7 @@ const Doctors = () => {
   return (
     <div className="container mx-auto my-20 lg:px-20 sm:px-14 md:px-18 ">
       <div className="flex justify-between items-center mb-4 px-5">
-        <h2 className="text-3xl ">Our Team of Experts</h2>
+        <h2 className="sm:text-3xl text-2xl ">Our Team of Experts</h2>
         <a href="/doctors">
         <h3 className="hover:underline underline-offset-10 hover:text-blue-600 decoration-2 decoration-yellow-600"> View all</h3>
         </a>
@@ -111,7 +112,7 @@ const Doctors = () => {
                   </div>
                   <div className="flex w-full space-x-2 mt-2">
                     <a
-                      href="#"
+                      href={doctor.link}
                       className="flex-grow text-sm text-center py-2 bg-blue-500 text-white rounded-sm"
                     >
                       View Full Profile

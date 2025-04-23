@@ -4,8 +4,7 @@ const AboutHeading = () => {
   return (
     <div className="bg-white px-6 sm:px-8 md:px-12 py-16 flex flex-col items-center justify-center">
       <div className="max-w-6xl w-full">
-        <h1 className="text-xl font-bold text-blue-500 mb-2">Loona Hospital</h1>
-        <h2 className="text-4xl md:text-5xl font-semibold text-black mb-6">About Us</h2>
+        <h1 className="sm:text-6xl text-3xl font-bold text-blue-700 mb-10">Loona Hospital</h1>
         <h3 className="text-2xl md:text-3xl font-semibold text-blue-600 mb-4">
           Our Commitment to Care
         </h3>

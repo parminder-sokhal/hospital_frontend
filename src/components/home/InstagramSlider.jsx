@@ -23,8 +23,7 @@ const InstagramPosts = () => {
   return (
     <div className="container mx-auto lg:px-40 px-10 py-10">
       <div className="flex justify-between items-center mb-4 px-5">
-        <h2 className="lg:text-3xl text-xl text-black">Instagram Highlights</h2>
-        
+        <h2 className="lg:text-3xl text-2xl text-black">Instagram Highlights</h2>
       </div>
 
       {/* Flex layout for Instagram posts */}
@@ -32,15 +31,11 @@ const InstagramPosts = () => {
         {instagramPosts.map((post) => (
           <div
             key={post.id}
-            className="relative w-full lg:w-1/3 md:w-1/2 sm:w-1/3 bg-white  shadow-lg "
-            
+            className="relative w-full  lg:w-1/3 md:w-1/2 sm:w-1/3 bg-white  shadow-lg "
           >
             {/* Instagram post (iframe for Reels) */}
             <a href={post.href} target="_blank" rel="noopener noreferrer">
-              <div
-                className="w-full  h-170 overflow-hidden" 
-                
-              >
+              <div className="w-full h-170  overflow-y-hidden">
                 <iframe
                   src={`https://www.instagram.com/p/${post.href.split("/")[4]}/embed`}
                   frameBorder="0"
@@ -51,7 +46,6 @@ const InstagramPosts = () => {
                   style={{
                     border: "none",
                     borderRadius: "8px", // Optional: Makes the iframe corners rounded
-                  
                   }}
                 />
               </div>

@@ -13,9 +13,9 @@ const Footer = () => {
     <>
       <footer className="bg-blue-600 text-white ">
         <div className="container mx-auto  lg:px-20 px-10 py-15">
-          <div className="flex flex-col gap-4 sm:flex-row md:flex-row lg:flex-row justify-between space-y-8 sm:space-y-0 lg:space-y-0 sm:space-x-0 md:space-x-8 lg:space-x-8">
+          <div className="flex flex-col gap-4 sm:flex-row md:flex-row lg:flex-row justify-center space-y-8 sm:space-y-0 lg:space-y-0 sm:space-x-0 md:space-x-8 lg:space-x-8">
             {/* 1st div - Specialty and Treatments */}
-            <div className="flex justify-between gap-15 w-1/3 sm:flex-col md:flex-row lg:flex-row space-y-8 sm:space-y-0 transform hover:scale-105 transition duration-300 ease-in-out">
+            <div className="flex justify-around gap-15 w-1/3 sm:flex-col md:flex-row lg:flex-row space-y-8 sm:space-y-0 transform hover:scale-105 transition duration-300 ease-in-out">
               {/* Speciality Links */}
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Services</h3>
@@ -38,7 +38,7 @@ const Footer = () => {
               {/* Treatments Links */}
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Treatments</h3>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/depression" className="text-md hover:text-[#DB8E00]">
                   Psychiatry
                 </a>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
@@ -66,7 +66,7 @@ const Footer = () => {
             </div>
 
             {/* 2nd div - Logo and Contact Information */}
-            <div className="flex flex-col items-center space-y-4  sm:w-1/3 transform hover:scale-105 transition duration-300 ease-in-out lg:border-x-2  hover:border-x-[#DB8E00]">
+            <div className="flex flex-col items-center space-y-4  sm:w-1/3 transform hover:scale-105 transition duration-300 ease-in-out  lg:border-x-2  py-10 hover:border-x-[#DB8E00]">
               <div className="w-4/5 justify-center">
                 <img
                   src="/logo/loonahospitalwhite.png"
@@ -103,7 +103,7 @@ const Footer = () => {
             </div>
 
             {/* 3rd div - Contact Info */}
-            <div className="flex flex-col space-y-4 sm:w-1/3 transform hover:scale-105 transition duration-300 ease-in-out">
+            <div className="flex flex-col justify-center space-y-4 sm:w-1/3 transform hover:scale-105 transition duration-300 ease-in-out">
               <div className="flex flex-col space-y-2 gap-4">
                 <h3 className="text-2xl font-semibold">Contact Info</h3>
                 <a

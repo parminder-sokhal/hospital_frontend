@@ -6,18 +6,44 @@ const SpecialitiesSlider = () => {
   const [slidesPerScreen, setSlidesPerScreen] = useState(3); // Initially set to 3 for desktop
 
   const slides = [
-    { id: 1, description: "Stress and Anxiety", image: "/images/AlcoholTreatment.png", href: "/link1" },
-    { id: 2, description: "Depression", image: "/images/DeAddictionTreatment.png", href: "/link2" },
-    { id: 3, description: "Bipolar Affective Disorder", image: "/images/DeAddictionTreatment.png", href: "/link3" },
-    { id: 4, description: "Obsessive Compulsion Disorder", image: "/images/DrugAddictionTreatment.png", href: "/link4" },
-    { id: 5, description: "Panic Attacks", image: "/images/DrugAddictionTreatment.png", href: "/link5" },
-    { id: 6, description: "Phobia", image: "/images/AlcoholTreatment.png", href: "/link6" },
-    { id: 7, description: "Generalized Anxiety Disorder", image: "/images/mental-disorder.png", href: "/link7" },
-    { id: 8, description: "Social Anxiety Disorder", image: "/images/paranoia.png", href: "/link8" },
-    { id: 9, description: "Schizophrenia", image: "/images/schizophrenia.png", href: "/link9" },
-    { id: 10, description: "Pseudo Seizure", image: "/images/migraine.png", href: "/link10" },
-    { id: 11, description: "TAT (Thematic Apperception Test)", image: "/images/107.jpg", href: "/link47" },
+    { id: 1, description: "Depression", image: "/images/depression.jpg", href: "/depression" },
+    { id: 2, description: "Anxiety", image: "/images/Anxiety.jpg", href: "/link2" },
+    { id: 3, description: "Bipolar Disorder", image: "/images/BipolarDisorder.jpg", href: "/link3" },
+    { id: 4, description: "Schizophrenia", image: "/images/depression.jpg", href: "/link4" },
+    { id: 5, description: "OCD", image: "/images/depression.jpg", href: "/link5" },
+    { id: 6, description: "CBT", image: "/images/depression.jpg", href: "/link6" },
+    { id: 7, description: "DBT", image: "/images/depression.jpg", href: "/link7" },
+    { id: 8, description: "Individual Counselling", image: "/images/depression.jpg", href: "/link8" },
+    { id: 9, description: "Stress Management", image: "/images/depression.jpg", href: "/link9" },
+    { id: 10, description: "Behaviour Therapy", image: "/images/depression.jpg", href: "/link10" },
+    { id: 11, description: "Relaxation Therapy", image: "/images/depression.jpg", href: "/link11" },
+    { id: 12, description: "Social Skills Training", image: "/images/depression.jpg", href: "/link12" },
+    { id: 13, description: "ADHD", image: "/images/depression.jpg", href: "/link13" },
+    { id: 14, description: "Autism", image: "/images/depression.jpg", href: "/link14" },
+    { id: 15, description: "Incontinence", image: "/images/depression.jpg", href: "/link15" },
+    { id: 16, description: "Behaviour Issues", image: "/images/depression.jpg", href: "/link16" },
+    { id: 17, description: "Conduct Disorder", image: "/images/depression.jpg", href: "/link17" },
+    { id: 18, description: "Learning Disability", image: "/images/depression.jpg", href: "/link18" },
+    { id: 19, description: "Motivation Enhancement Therapy", image: "/images/depression.jpg", href: "/link19" },
+    { id: 20, description: "Relapse Prevention Therapy", image: "/images/depression.jpg", href: "/link20" },
+    { id: 21, description: "Individual Counselling", image: "/images/depression.jpg", href: "/link21" },
+    { id: 22, description: "Motivation Enhancement by Hypnosis", image: "/images/depression.jpg", href: "/link22" },
+    { id: 23, description: "Premature Ejaculation", image: "/images/depression.jpg", href: "/link23" },
+    { id: 24, description: "Erectile Dysfunction", image: "/images/depression.jpg", href: "/link24" },
+    { id: 25, description: "Reduced or High Libido", image: "/images/depression.jpg", href: "/link25" },
+    { id: 26, description: "Anorgasmia", image: "/images/depression.jpg", href: "/link26" },
+    { id: 27, description: "DHAT Syndrome", image: "/images/depression.jpg", href: "/link27" },
+    { id: 28, description: "Insomnia", image: "/images/depression.jpg", href: "/link28" },
+    { id: 29, description: "Disturbed Sleep", image: "/images/depression.jpg", href: "/link29" },
+    { id: 30, description: "Non-refreshing Sleep", image: "/images/depression.jpg", href: "/link30" },
+    { id: 31, description: "Sleep Talking", image: "/images/depression.jpg", href: "/link31" },
+    { id: 32, description: "Sleep Walking", image: "/images/depression.jpg", href: "/link32" },
+    { id: 33, description: "Nightmares", image: "/images/depression.jpg", href: "/link33" },
+    { id: 34, description: "Migraine", image: "/images/depression.jpg", href: "/link34" },
+    { id: 35, description: "Tension Headache", image: "/images/depression.jpg", href: "/link35" },
+    { id: 36, description: "Seizure", image: "/images/depression.jpg", href: "/link36" },
   ];
+  
 
   const totalSlides = slides.length;
 
@@ -60,18 +86,16 @@ const SpecialitiesSlider = () => {
   return (
     <div className="container mx-auto my-10 lg:px-40 sm:px-14 md:px-18 mt-35">
       <div className="flex justify-between items-center mb-4 px-5">
-        <h2 className="text-3xl font-bold text-black">Our Treatments</h2>
-        <a href="/treatments" className="ml-4 text-lg hover:text-blue-600 ">
-          View all
-        </a>
+        <h2 className="text-4xl  text-black">Our Treatments</h2>
+       
       </div>
 
       {/* Carousel Component */}
-      <div id="centered" className="relative w-full">
+      <div id="centered" className="relative w-full transition-transform duration-500 ease-in-out">
         {/* Carousel container */}
-        <div className="carousel h-80 overflow-hidden">
+        <div className="carousel h-80 overflow-hidden ">
           <div
-            className="carousel-body h-full w-full flex transition-transform duration-500 ease-in-out"
+            className="carousel-body h-full w-full flex "
             style={{
               transform: `translateX(-${(currentIndex * 100) / slidesPerScreen}%)`, // Adjusted to slide based on index
             }}
