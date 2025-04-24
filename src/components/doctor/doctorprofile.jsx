@@ -51,7 +51,7 @@ const DoctorProfile = () => {
   if (error) return <p className="text-center mt-10 text-red-600">{error}</p>;
 
   return (
-    <div className="container mx-auto my-10 px-4 sm:px-10 md:px-20 lg:px-40">
+    <div className="container mt-34 mx-auto my-10 px-4 sm:px-10 md:px-20 lg:px-40">
       {/* Top Section */}
       <div className="bg-white py-6 border-b border-gray-300 flex flex-col md:flex-row items-center md:items-start gap-10">
         <div className="w-35 h-32 sm:w-45 sm:h-40 rounded-full overflow-hidden border-2 border-blue-400 shadow-md">
