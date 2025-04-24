@@ -1,156 +1,151 @@
 import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getDoctors } from "../../redux/actions/doctorAction";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Doctors = () => {
-  // Sample data
-  const data = [
-    {
-      img: "/images/doctor1.jpeg",
-      name: "testDr. John Doe",
-      info: "Cardiologist at XYZ Hospital",
-      link: "/dr-Neeraj",
-    },
-    {
-      img: "/images/doctor1.jpeg",
-      name: "Dr. Jane Smith",
-      info: "Dentist at ABC Clinic",
-    },
-    {
-      img: "/images/doctor1.jpeg",
-      name: "Dr. Michael Lee",
-      info: "Orthopedic Surgeon at LMN Hospital",
-    },
-    {
-      img: "/images/doctor1.jpeg",
-      name: "Dr. John Doe",
-      info: "Cardiologist at XYZ Hospital",
-    },
-   
-  ];
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { doctors, loading, error } = useSelector((state) => state.doctor);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slidesPerScreen, setSlidesPerScreen] = useState(4); // Default to 4 for desktop
+  const [slidesPerScreen, setSlidesPerScreen] = useState(4);
 
-  const totalSlides = data.length;
+  useEffect(() => {
+    dispatch(getDoctors());
+  }, [dispatch]);
 
-  // Update slidesPerScreen based on window size
   useEffect(() => {
     const updateSlidesPerScreen = () => {
       if (window.innerWidth >= 1024) {
-        setSlidesPerScreen(4); // Desktop: 4 items per screen
-      } else if (window.innerWidth >= 768) {
-        setSlidesPerScreen(1); // md & Tablet: 1 item per screen
+        setSlidesPerScreen(4);
       } else {
-        setSlidesPerScreen(1); // Mobile: 1 item per screen
+        setSlidesPerScreen(1);
       }
     };
 
-    updateSlidesPerScreen(); // Set initial value
-    window.addEventListener("resize", updateSlidesPerScreen); // Update on resize
-
-    return () => window.removeEventListener("resize", updateSlidesPerScreen); // Cleanup listener
+    updateSlidesPerScreen();
+    window.addEventListener("resize", updateSlidesPerScreen);
+    return () => window.removeEventListener("resize", updateSlidesPerScreen);
   }, []);
 
-  // Handle slide position changes (prev/next)
+  const filteredDoctors =
+    doctors?.filter((doc) => !doc.isdeleted && doc.isActive) || [];
+
+  const totalSlides = filteredDoctors.length;
+
   const updateSlidePosition = (newIndex) => {
     if (newIndex < 0) {
-      setCurrentIndex(totalSlides - slidesPerScreen); // Loop to last slide
+      setCurrentIndex(totalSlides - slidesPerScreen);
     } else if (newIndex >= totalSlides) {
-      setCurrentIndex(0); // Loop to first slide
+      setCurrentIndex(0);
     } else {
       setCurrentIndex(newIndex);
     }
   };
 
-  const handleNext = () => {
-    updateSlidePosition(currentIndex + slidesPerScreen);
-  };
-
-  const handlePrev = () => {
-    updateSlidePosition(currentIndex - slidesPerScreen);
-  };
+  const handleNext = () => updateSlidePosition(currentIndex + slidesPerScreen);
+  const handlePrev = () => updateSlidePosition(currentIndex - slidesPerScreen);
 
   return (
-    <div className="container mx-auto my-20 lg:px-20 sm:px-14 md:px-18 ">
+    <div className="container mx-auto my-20 lg:px-30 sm:px-14 md:px-18">
       <div className="flex justify-between items-center mb-4 px-5">
-        <h2 className="sm:text-3xl text-2xl ">Our Team of Experts</h2>
-        <a href="/doctors">
-        <h3 className="hover:underline underline-offset-10 hover:text-blue-600 decoration-2 decoration-yellow-600"> View all</h3>
-        </a>
+        <h2 className="sm:text-3xl text-2xl">Our Team of Experts</h2>
+        <Link to="/doctors">
+          <h3 className="hover:underline underline-offset-10 hover:text-blue-600 decoration-2 decoration-yellow-600">
+            View all
+          </h3>
+        </Link>
       </div>
 
-      {/* Carousel Component */}
-      <div id="centered" className="relative w-full">
-        {/* Carousel container */}
-        <div className="carousel h-[400px] overflow-hidden">
-          <div
-            className="carousel-body flex transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${(currentIndex * 100) / slidesPerScreen}%)`, // Adjust to slide based on index
-            }}
-          >
-            {data.map((doctor, index) => (
+      {loading ? (
+        <p className="text-center">Loading doctors...</p>
+      ) : error ? (
+        <p className="text-center text-red-500">{error}</p>
+      ) : (
+        <>
+          <div className="relative w-full">
+            <div className="carousel h-auto  overflow-hidden">
               <div
-                key={index}
-                className="carousel-slide flex-shrink-0 px-4"
+                className="carousel-body flex transition-transform duration-500 ease-in-out"
                 style={{
-                  width: `${100 / slidesPerScreen}%`, // Adjust width to screen size
+                  transform: `translateX(-${(currentIndex * 100) / slidesPerScreen}%)`,
                 }}
               >
-                <div className="flex flex-col justify-between items-center bg-white rounded-lg shadow-md">
-                  <div className="overflow-hidden w-full h-72 rounded-t-lg">
-                    <img
-                      src={doctor.img}
-                      alt={doctor.name}
-                      className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
-                      loading="lazy"
-                    />
+                {filteredDoctors.map((doctor, index) => (
+                  <div
+                    key={doctor._id || index}
+                    className="carousel-slide flex-shrink-0 px-2"
+                    style={{ width: `${100 / slidesPerScreen}%` }}
+                  >
+                    <div className="flex flex-col justify-between items-center bg-white rounded-lg shadow-lg overflow-hidden h-auto w-full">
+                      {/* Image Section */}
+                      <div className="w-full h-[300px] overflow-hidden">
+                        <img
+                          src={doctor.image?.url || "/images/doctor1.jpeg"}
+                          alt={doctor.name}
+                          className="w-full h-full object-cover transition-transform duration-300 transform hover:scale-105"
+                          loading="lazy"
+                        />
+                      </div>
+
+                      {/* Doctor Info */}
+                      <div className="flex flex-col items-start justify-start px-4 py-3 w-full">
+                        <p className="font-semibold text-lg truncate w-full">
+                          {doctor.name}
+                        </p>
+                        <p className="text-sm text-gray-600 truncate w-full">
+                          {doctor.hospital}
+                        </p>
+                        <p className="text-sm text-black truncate w-full">
+                          {doctor.specialization}
+                        </p>
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="flex w-full gap-1 pb-4 ">
+                        <button
+                          onClick={() => navigate(`/doctor/${doctor._id}`)}
+                          className="flex-grow text-sm text-center bg-blue-500 text-white "
+                        >
+                          View Full Profile
+                        </button>
+                        
+                        <button
+                          onClick={() => navigate(`/doctor/${doctor._id}`)}
+                          className="w-1/2 text-sm text-center py-2 bg-green-600 text-white  hover:bg-green-700 transition-all"
+                        >
+                          Book Appointment
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center justify-start px-2">
-                    <p className="font-semibold text-lg text-left">{doctor.name}</p>
-                    <p className="text-sm text-black text-left">{doctor.info}</p>
-                  </div>
-                  <div className="flex w-full space-x-2 mt-2">
-                    <a
-                      href={doctor.link}
-                      className="flex-grow text-sm text-center py-2 bg-blue-500 text-white rounded-sm"
-                    >
-                      View Full Profile
-                    </a>
-                    <a
-                      href="#"
-                      className="flex-grow text-sm text-center py-2 bg-green-500 text-white rounded-sm"
-                    >
-                      Book an Appointment
-                    </a>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
 
-        {/* Navigation Buttons */}
-      </div>
-      <div className="relative w-full flex justify-center gap-4 mt-4">
-        {/* Previous Button */}
-        <button
-          onClick={handlePrev}
-          className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
-        >
-          <FaChevronLeft size={24} />
-          <span className="sr-only">Previous</span>
-        </button>
-
-        {/* Next Button */}
-        <button
-          onClick={handleNext}
-          className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
-        >
-          <FaChevronRight size={24} />
-          <span className="sr-only">Next</span>
-        </button>
-      </div>
+          <div className="relative w-full flex justify-center gap-4 mt-4">
+            <button
+              onClick={handlePrev}
+              className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
+            >
+              <FaChevronLeft size={24} />
+              <span className="sr-only">Previous</span>
+            </button>
+            <button
+              onClick={handleNext}
+              className="bg-white text-black hover:text-blue-700 p-2 rounded-full shadow-md"
+            >
+              <FaChevronRight size={24} />
+              <span className="sr-only">Next</span>
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 };

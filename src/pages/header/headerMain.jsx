@@ -155,9 +155,10 @@ function HeaderMain() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block text-xl">
-            <button className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition duration-300">
+            <a href="/doctors"
+            className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition duration-300">
               Book Appointment
-            </button>
+            </a>
           </div>
 
           {/* Hamburger */}
