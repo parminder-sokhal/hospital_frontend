@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FaPhone, FaCalendarAlt, FaHospital } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -177,7 +177,7 @@ const DoctorAppointment = () => {
         {/* Add Patient Button */}
         <div className="bg-white p-6 rounded-md shadow">
           <button
-          type="button"
+            type="button"
             onClick={() => setShowModal(true)}
             className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
           >
@@ -226,10 +226,18 @@ const DoctorAppointment = () => {
       {/* Modal for Patient Form */}
       {showModal && (
         <div className="fixed inset-0 flex items-center backdrop-blur-sm justify-center bg-blur bg-opacity-40 z-50 px-4">
-          <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-2xl relative">
-            <h3 className="text-xl font-semibold mb-4 text-blue-700">
-              Add Patient Details
-            </h3>
+          <div className="bg-white px-10 py-5 rounded-lg shadow-xl w-full max-w-2xl relative">
+            <div className="flex justify-between items-start pb-4">
+              <h3 className="text-xl flex font-semibold mb-4 text-blue-700">
+                Add Patient Details
+              </h3>
+              <button
+                onClick={() => setShowModal(false)}
+                className="text-black   hover:text-red-500 text-4xl font-bold"
+              >
+                &times;
+              </button>
+            </div>
             <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Name Field */}
               <div className="flex flex-col">
@@ -270,7 +278,7 @@ const DoctorAppointment = () => {
               </div>
 
               {/* Gender Field */}
-              <div className="flex flex-col">
+              <div className="flex flex-col ">
                 <label className="text-sm font-medium capitalize mb-1">
                   Gender:
                 </label>
@@ -375,12 +383,6 @@ const DoctorAppointment = () => {
                   className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
                 >
                   Add Patient
-                </button>
-                <button
-                  onClick={() => setShowModal(false)}
-                  className="text-gray-600 hover:text-red-500 text-2xl font-bold"
-                >
-                  &times;
                 </button>
               </div>
             </form>
