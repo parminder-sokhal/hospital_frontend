@@ -154,7 +154,10 @@ const Footer = () => {
         <div className="flex w-full text-center justify-center bg-white text-black">
           <p className="sm:text-sm px-4 py-2">
             Loona Hospital© 2025 All Rights Reserved. | Designed & Developed
-            by: Loona Hospital
+            by: 
+            <a href="/dashboard" className="hover:text-gray-700">
+              Loona Hospital
+              </a>
           </p>
         </div>
       </footer>

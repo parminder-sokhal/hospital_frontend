@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import Headertop from "./pages/header/headertop.jsx";
 import HeaderMain from "./pages/header/headerMain.jsx";
@@ -11,8 +16,9 @@ import Media from "./pages/header/media.jsx";
 import DoctorProfile from "./components/doctor/doctorprofile.jsx";
 import DoctorAppointment from "./pages/Doctor/doctorAppointment.jsx";
 import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
-import Dashboard from "./pages/dashboard.jsx";
+import Dashboard from "./pages/dashboard/dashboard.jsx";
 import SignIn from "./pages/SignIn.jsx";
+import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
 
 function LayoutWrapper() {
   const location = useLocation();
@@ -30,9 +36,15 @@ function LayoutWrapper() {
         <Route path="/doctor/:id" element={<DoctorProfile />} />
         <Route path="/appointment" element={<DoctorAppointment />} />
         <Route path="/signin" element={<SignIn />} />
+
+        {/* Private dashboard route with nested child routes */}
         <Route element={<PrivateRoute />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path="AddDoctor" element={<AddDoctor />} />
+            
+          </Route>
         </Route>
+
         {TreatmentRoutes}
         {Media}
       </Routes>

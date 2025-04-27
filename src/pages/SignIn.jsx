@@ -9,7 +9,9 @@ export default function SignIn() {
   const [rememberPassword, setRememberPassword] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  const { loading, error, isAuthenticated } = useSelector((state) => state.user);
+  const { loading, error, isAuthenticated } = useSelector(
+    (state) => state.user
+  );
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -36,7 +38,7 @@ export default function SignIn() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
-      <div className="w-full max-w-md bg-white shadow-md rounded-lg p-8">
+      <div className="w-full max-w-md bg-white shadow-md rounded-lg p-10">
         <div className="flex items-center space-x-3 mb-6">
           <a href="/" className="flex items-center space-x-3">
             <img src="/logo/loonalogo.png" className="h-12" alt="Logo" />
@@ -45,7 +47,10 @@ export default function SignIn() {
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-700">
+            <label
+              htmlFor="email"
+              className="block mb-1 text-sm font-medium text-gray-700"
+            >
               Your Email
             </label>
             <input
@@ -58,7 +63,10 @@ export default function SignIn() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block mb-1 text-sm font-medium text-gray-700">
+            <label
+              htmlFor="password"
+              className="block mb-1 text-sm font-medium text-gray-700"
+            >
               Your Password
             </label>
             <div className="relative">
@@ -73,7 +81,11 @@ export default function SignIn() {
                 onClick={() => setPasswordVisible(!passwordVisible)}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer text-gray-500"
               >
-                {passwordVisible ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
+                {passwordVisible ? (
+                  <AiOutlineEyeInvisible size={20} />
+                ) : (
+                  <AiOutlineEye size={20} />
+                )}
               </span>
             </div>
           </div>
@@ -99,19 +111,6 @@ export default function SignIn() {
             {loading ? "Signing in..." : "Sign In"}
           </button>
         </form>
-
-        <div className="text-sm text-center mt-6">
-          <span>Don't have an account? </span>
-          <Link to="/signup" className="text-blue-600 hover:underline">
-            Sign Up
-          </Link>
-        </div>
-
-        <div className="text-sm text-center mt-2">
-          <Link to="/forgot-password" className="text-blue-600 hover:underline">
-            Forgot Password?
-          </Link>
-        </div>
 
         {error && (
           <div className="mt-4 text-red-600 text-sm text-center border border-red-300 bg-red-50 p-2 rounded">
