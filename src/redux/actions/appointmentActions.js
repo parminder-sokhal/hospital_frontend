@@ -40,6 +40,7 @@ export const getAppointmentByDate = (date) => async (dispatch) => {
 };
 
 // Create appointment
+// redux/actions/appointmentActions.js
 export const createAppointment = (id, appointmentData) => async (dispatch) => {
   try {
     dispatch(appointmentRequest());
@@ -53,9 +54,14 @@ export const createAppointment = (id, appointmentData) => async (dispatch) => {
 
     dispatch(addAppointment(data));
     dispatch(getAppointments());
+
+    // ✅ RETURN data so the component can access it
+    return data;
   } catch (error) {
     dispatch(
       appointmentFail(error.response?.data?.message || "Failed to create appointment")
     );
+    throw error; // Optional: propagate error
   }
 };
+

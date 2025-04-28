@@ -15,6 +15,7 @@
     "axios": "^1.8.4",
     "flowbite": "^3.1.2",
     "prettier": "^3.5.3",
+    "razorpay": "^2.9.6",
     "react": "^19.0.0",
     "react-card-slider-component": "^1.0.9",
     "react-dom": "^19.0.0",

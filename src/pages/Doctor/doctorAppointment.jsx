@@ -3,6 +3,11 @@ import { useLocation } from "react-router-dom";
 import { FaPhone, FaCalendarAlt, FaHospital } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { createAppointment } from "../../redux/actions/appointmentActions";
+import {
+  createPaymentOrder,
+  verifyPayment,
+} from "../../redux/actions/paymentActions";
+
 import Select from "react-select";
 
 const DoctorAppointment = () => {
@@ -92,16 +97,71 @@ const DoctorAppointment = () => {
     };
 
     try {
-      await dispatch(createAppointment(doctor?._id, appointmentData));
-      resetForm();
-      setNotification({
-        message: "Appointment booked successfully!",
-        type: "success",
-      });
+      // Step 1: Create Appointment
+      const appointmentRes = await dispatch(
+        createAppointment(doctor?._id, appointmentData)
+      );
+      const appointmentId = appointmentRes?.appointment?._id;
+
+      if (!appointmentId) throw new Error("Appointment ID not returned");
+
+      // Step 2: Create Razorpay Order via Redux
+      const paymentRes = await dispatch(createPaymentOrder(appointmentId));
+      const { order, key_id } = paymentRes;
+
+      // Step 3: Configure Razorpay
+      const options = {
+        key: key_id,
+        amount: order.amount,
+        currency: order.currency,
+        name: "Hospital Appointment",
+        description: "Appointment Fee",
+        order_id: order.id,
+        handler: async function (response) {
+          try {
+            // Step 4: Verify Payment via Redux
+            const verifyData = await dispatch(
+              verifyPayment({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+              })
+            );
+
+            if (verifyData?.success) {
+              setNotification({
+                message: "Payment successful!",
+                type: "success",
+              });
+              resetForm();
+            } else {
+              setNotification({
+                message: "Payment verification failed!",
+                type: "error",
+              });
+            }
+          } catch (verifyError) {
+            console.error("Verification error:", verifyError);
+            setNotification({
+              message: "Payment verification error",
+              type: "error",
+            });
+          }
+        },
+        prefill: {
+          name: patient.name,
+          email: patient.email,
+          contact: patient.phone,
+        },
+        theme: { color: "#2b6cb0" },
+      };
+
+      const rzp = new window.Razorpay(options);
+      rzp.open();
     } catch (error) {
-      console.error("Failed to book appointment:", error);
+      console.error("Payment Error:", error);
       setNotification({
-        message: "Something went wrong. Please try again.",
+        message: "Something went wrong during payment.",
         type: "error",
       });
     }
@@ -135,9 +195,9 @@ const DoctorAppointment = () => {
   }, [notification]);
 
   return (
-    <div className="container flex flex-col mt-34 lg:flex-row px-4 sm:px-10 mx-auto py-10 gap-8 bg-gray-50">
+    <div className="container flex flex-col mt-34 lg:flex-row px-4 sm:px-10 mx-auto py-10  ">
       {/* Left Section - Doctor Details */}
-      <div className="bg-white shadow-lg rounded-lg p-6 w-full lg:w-1/2 space-y-4 h-1/2">
+      <div className="bg-white  rounded-lg p-6 w-full lg:w-1/2 space-y-4 h-1/2">
         <h2 className="text-2xl font-bold text-gray-800">
           Doctor Appointment Details
         </h2>
@@ -173,15 +233,15 @@ const DoctorAppointment = () => {
       </div>
 
       {/* Right Section - Add Patient */}
-      <div className="w-full lg:w-1/2 flex flex-col gap-6">
+      <div className="w-full lg:w-1/2 flex  flex-col gap-10 bg-white rounded-lg p-6 shadow-md">
         {/* Add Patient Button */}
-        <div className="bg-white p-6 rounded-md shadow">
+        <div className="bg-white rounded-md ">
           <button
             type="button"
             onClick={() => setShowModal(true)}
             className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
           >
-            Add New Patient
+            {patient ? "Edit Patient Details" : "Add New Patient"}{" "}
           </button>
         </div>
         {/* Notification Box */}
@@ -199,7 +259,7 @@ const DoctorAppointment = () => {
 
         {/* Patient Info Display */}
         {patient && (
-          <div className="bg-white p-6 rounded-md shadow-md">
+          <div className="bg-white rounded-md shadow-neutral-50">
             <h2 className="text-xl font-bold text-blue-800 mb-4">
               Patient Info
             </h2>

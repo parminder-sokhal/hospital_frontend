@@ -3,6 +3,7 @@ import teacherSlice from "./reducers/teacherSlice.js";
 import doctorSlice from "./reducers/doctorSlice.js";
 import appointmentSlice from "./reducers/appointmentSlice.js";
 import userSlice from "./reducers/userSlice.js";
+import paymentSlice from "./reducers/paymentSlice.js";
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     doctor: doctorSlice,
     appointment: appointmentSlice,
     user: userSlice,
+    payment: paymentSlice,
   },
 });
 
