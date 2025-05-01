@@ -192,9 +192,9 @@ function HeaderMain() {
               <div className="grid px-40 py-5 mx-auto text-gray-900 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 ">
                 <ul>
                   <li>
-                    <div className="font-semibold text-md">
+                    <a href="/Psychiatry" className="font-semibold text-md  hover:text-blue-700">
                       Psychiatry treatment
-                    </div>
+                    </a>
                     <a
                       href="/depression"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
@@ -202,25 +202,25 @@ function HeaderMain() {
                       depression
                     </a>
                     <a
-                      href="#"
+                      href="/anxiety"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       anxiety
                     </a>
                     <a
-                      href="#"
+                      href="/bipolar-disorder"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       bipolar disorder
                     </a>
                     <a
-                      href="#"
+                      href="/schizophrenia"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       schizophrenia
                     </a>
                     <a
-                      href="#"
+                      href="/ocd"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       OCD

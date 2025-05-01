@@ -125,9 +125,7 @@ const OurApproach = () => {
                       {item.title}
                     </h3>
                     <p className="text-gray-600 mt-2">{item.description}</p>
-                    <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
-                      View More
-                    </button>
+                   
                   </div>
                 </div>
               </div>

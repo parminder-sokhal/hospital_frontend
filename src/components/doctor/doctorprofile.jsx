@@ -18,6 +18,8 @@ const DoctorProfile = () => {
     return new Date().toISOString().split("T")[0];
   });
   const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
+  const [visitType, setVisitType] = useState("hospital visit");
+
 
   useEffect(() => {
     dispatch(getDoctorById(id));
@@ -31,11 +33,11 @@ const DoctorProfile = () => {
 
     const doctorData = {
       _id: doctor?._id,
-      image: doctor?.image?.url || "/images/doctor1.jpeg",
+      image: { url: doctor?.image?.url }, // make sure this exists!
       name: doctor?.name,
       hospital: doctor?.hospital,
       specialists: doctor?.specialization,
-      visitType: "hospital visit",
+      visitType, // <- dynamically selected
       availableDate: selectedDate,
       availableTimeSlot: selectedTimeSlot,
     };
@@ -75,7 +77,7 @@ const DoctorProfile = () => {
               <span className="text-gray-500 block text-lg">Experience</span>
             </div>
             <div className="text-md font-semibold bg-gray-100 text-gray-800 border border-gray-300 px-4 py-2 rounded-md text-start">
-              <p>${doctor?.fees}</p>
+              <p>₹&nbsp;{doctor?.fees}</p>
               <span className="text-gray-500 block text-lg">Fees</span>
             </div>
           </div>
@@ -138,22 +140,55 @@ const DoctorProfile = () => {
               className="w-full border border-gray-300 px-3 py-2 rounded-md"
             />
 
-            <div className="text-sm font-semibold text-gray-700 mt-4">Available Time Slots:</div>
-            <div className="flex flex-wrap gap-2 mt-2">
-              {doctor?.slots?.map((time, i) => (
-                <button
-                  key={i}
-                  onClick={() => setSelectedTimeSlot(time)}
-                  className={`px-3 py-1 border ${
-                    selectedTimeSlot === time
-                      ? "bg-blue-700 text-white"
-                      : "text-blue-700 hover:bg-blue-700 hover:text-white"
-                  } border-blue-700 rounded-md text-sm transition`}
-                >
-                  {time}
-                </button>
-              ))}
-            </div>
+<div className="text-sm font-semibold text-gray-700 mt-4">Available Time Slots:</div>
+
+{/* Slot Type Toggle Buttons */}
+<div className="flex mb-4 gap-2">
+  <button
+    onClick={() => {
+      setSelectedTimeSlot("");
+      setVisitType("hospital visit");
+    }}
+    className={`w-1/2 py-2 rounded-md border ${
+      visitType === "hospital visit"
+        ? "bg-blue-700 text-white"
+        : "border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white"
+    }`}
+  >
+    Hospital Visit
+  </button>
+  <button
+    onClick={() => {
+      setSelectedTimeSlot("");
+      setVisitType("video consultancy");
+    }}
+    className={`w-1/2 py-2 rounded-md border ${
+      visitType === "video consultancy"
+        ? "bg-blue-700 text-white"
+        : "border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white"
+    }`}
+  >
+    Video Consultancy
+  </button>
+</div>
+
+{/* Time Slots Based on Selected Type */}
+<div className="flex flex-wrap gap-2">
+  {(visitType === "hospital visit" ? doctor?.hospitalSlots : doctor?.videoSlots)?.map((time, i) => (
+    <button
+      key={i}
+      onClick={() => setSelectedTimeSlot(time)}
+      className={`px-3 py-1 border ${
+        selectedTimeSlot === time
+          ? "bg-blue-700 text-white"
+          : "text-blue-700 hover:bg-blue-700 hover:text-white"
+      } border-blue-700 rounded-md text-sm transition`}
+    >
+      {time}
+    </button>
+  ))}
+</div>
+
 
             <button
               onClick={handleBookNow}

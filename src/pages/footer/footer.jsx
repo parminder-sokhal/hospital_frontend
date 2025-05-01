@@ -48,7 +48,7 @@ const Footer = () => {
                   Mental health issues and children
                 </a>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
-                  D addiction programme
+                  De-addiction programme
                 </a>
                 <a href="#" className="text-md hover:text-[#DB8E00]">
                   sexual wellness program

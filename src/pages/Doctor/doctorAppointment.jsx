@@ -13,6 +13,7 @@ import Select from "react-select";
 const DoctorAppointment = () => {
   const location = useLocation();
   const doctor = location.state?.doctor;
+  
 
   const dispatch = useDispatch();
 
@@ -31,9 +32,8 @@ const DoctorAppointment = () => {
     phone: "",
     email: "",
     address: "",
-    bloodGroup: "",
-    symptoms: "", // new field
   });
+  
 
   const resetForm = () => {
     setFormData({
@@ -90,12 +90,23 @@ const DoctorAppointment = () => {
       return;
     }
 
+    const normalizeVisitType = (type) => {
+      if (!type) return "Hospital Visit";
+      const formatted = type.trim().toLowerCase();
+      return formatted.includes("video") ? "Video Call" : "Hospital Visit";
+    };
+    
     const appointmentData = {
-      ...patient,
+      name: patient.name,
+      age: patient.age,
+      gender: patient.gender,
+      phone: patient.phone,
+      email: patient.email,
+      address: patient.address,
+      consultationMode: normalizeVisitType(doctor?.visitType),
       date: doctor?.availableDate,
       timeSlot: doctor?.availableTimeSlot,
     };
-
     try {
       // Step 1: Create Appointment
       const appointmentRes = await dispatch(
@@ -107,6 +118,9 @@ const DoctorAppointment = () => {
 
       // Step 2: Create Razorpay Order via Redux
       const paymentRes = await dispatch(createPaymentOrder(appointmentId));
+      if (!paymentRes?.order) {
+        throw new Error("Payment order not created");
+      }
       const { order, key_id } = paymentRes;
 
       // Step 3: Configure Razorpay
@@ -389,22 +403,6 @@ const DoctorAppointment = () => {
                   className="border px-3 py-2 rounded outline-blue-300"
                 />
               </div>
-              {/* Blood Group Field */}
-              <div className="flex flex-col ">
-                <label className="text-sm font-medium capitalize mb-1">
-                  Blood Group:
-                </label>
-                <Select
-                  options={bloodGroupOptions}
-                  value={bloodGroupOptions.find(
-                    (option) => option.value === formData.bloodGroup
-                  )}
-                  onChange={(selectedOption) =>
-                    handleSelectChange(selectedOption, "bloodGroup")
-                  }
-                />
-              </div>
-
               {/* Address Field */}
               <div className="flex flex-col col-span-full ">
                 <label className="text-sm font-medium capitalize mb-1">
@@ -422,18 +420,6 @@ const DoctorAppointment = () => {
                 {errors.address && (
                   <p className="text-red-500 text-xs">{errors.address}</p>
                 )}
-              </div>
-
-              {/* Symptoms Field */}
-              <div className="flex flex-col col-span-full">
-                <label className="text-sm font-medium mb-1">Symptoms:</label>
-                <input
-                  type="text"
-                  name="symptoms"
-                  value={formData.symptoms}
-                  onChange={handleChange}
-                  className="border px-3 py-2 rounded outline-blue-300"
-                />
               </div>
 
               <div className="mt-6 flex justify-between items-center">
