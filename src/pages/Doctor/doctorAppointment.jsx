@@ -13,7 +13,6 @@ import Select from "react-select";
 const DoctorAppointment = () => {
   const location = useLocation();
   const doctor = location.state?.doctor;
-  
 
   const dispatch = useDispatch();
 
@@ -33,7 +32,6 @@ const DoctorAppointment = () => {
     email: "",
     address: "",
   });
-  
 
   const resetForm = () => {
     setFormData({
@@ -95,7 +93,7 @@ const DoctorAppointment = () => {
       const formatted = type.trim().toLowerCase();
       return formatted.includes("video") ? "Video Call" : "Hospital Visit";
     };
-    
+
     const appointmentData = {
       name: patient.name,
       age: patient.age,
@@ -211,43 +209,50 @@ const DoctorAppointment = () => {
   return (
     <div className="container flex flex-col mt-34 lg:flex-row px-4 sm:px-10 mx-auto py-10  ">
       {/* Left Section - Doctor Details */}
-      <div className="bg-white  rounded-lg p-6 w-full lg:w-1/2 space-y-4 h-1/2">
-        <h2 className="text-2xl font-bold text-gray-800">
+      <div className="bg-white rounded-lg p-4 w-full lg:w-1/2 space-y-6 h-1/2 shadow-lg">
+        <h2 className="text-3xl font-bold text-gray-900">
           Doctor Appointment Details
         </h2>
+
         <div className="flex gap-6 items-start">
-          <img
-            src={doctor?.image?.url || "/images/doctor1.jpeg"}
-            alt="Doctor"
-            className="w-28 h-auto max-h-32 rounded object-cover border"
-          />
-          <div className="space-y-2">
-            <p className="text-xl font-semibold text-gray-900">
-              {doctor?.name}
-            </p>
-            <p className="flex items-center gap-2 text-gray-600">
-              <FaHospital className="text-blue-600" />
-              {doctor?.hospital}
-            </p>
-            <p className="text-sm text-purple-800 bg-purple-100 px-3 py-1 inline-block rounded">
-              {doctor?.specialists}
-            </p>
+          <div className="w-60 rounded-3xl overflow-hidden border-2 border-blue-500 shadow-md">
+            <img
+              src={doctor?.image?.url || "/images/doctor1.jpeg"}
+              alt={doctor?.name}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div className="flex flex-col w-full">
+            {/* Name, Hospital, Specialization */}
+            <div className="space-y-2">
+              <p className="text-xl text-gray-900 font-semibold">
+                {doctor?.name}
+              </p>
+              <p className="text-md text-gray-700">{doctor?.hospital}</p>
+              <p className="text-md text-gray-900">{doctor?.specialists}</p>
+            </div>
           </div>
         </div>
 
-        <div className="border-t pt-4 mt-4 text-gray-700 space-y-2">
-          <p className="flex items-center gap-2">
+        <div className="border-t pt-4 mt-4 text-gray-700">
+          <p className="flex items-center text-2xl gap-4">
             <FaCalendarAlt className="text-blue-600" />
-            <span>
-              {doctor?.visitType}, {doctor?.availableDate},{" "}
-              {doctor?.availableTimeSlot}
-            </span>
+            <p className="text-xl text-gray-700 font-medium">
+              {doctor?.visitType},{" "}
+              <span className="text-lg font-semibold">
+                {doctor?.availableDate}
+              </span>
+              ,
+              <span className="text-lg font-semibold">
+                {doctor?.availableTimeSlot}
+              </span>
+            </p>
           </p>
         </div>
       </div>
 
       {/* Right Section - Add Patient */}
-      <div className="w-full lg:w-1/2 flex  flex-col gap-10 bg-white rounded-lg p-6 shadow-md">
+      <div className="w-full lg:w-1/2 flex  flex-col gap-10 bg-white rounded-lg p-6">
         {/* Add Patient Button */}
         <div className="bg-white rounded-md ">
           <button

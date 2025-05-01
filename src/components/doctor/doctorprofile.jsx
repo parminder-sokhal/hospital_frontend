@@ -20,7 +20,6 @@ const DoctorProfile = () => {
   const [selectedTimeSlot, setSelectedTimeSlot] = useState("");
   const [visitType, setVisitType] = useState("hospital visit");
 
-
   useEffect(() => {
     dispatch(getDoctorById(id));
   }, [dispatch, id]);
@@ -49,36 +48,53 @@ const DoctorProfile = () => {
     });
   };
 
-  if (loading) return <p className="text-center mt-10">Loading doctor info...</p>;
+  if (loading)
+    return <p className="text-center mt-10">Loading doctor info...</p>;
   if (error) return <p className="text-center mt-10 text-red-600">{error}</p>;
 
   return (
     <div className="container mt-34 mx-auto my-10 px-4 sm:px-10 md:px-20 lg:px-40">
       {/* Top Section */}
-      <div className="bg-white py-6 border-b border-gray-300 flex flex-col md:flex-row items-center md:items-start gap-10">
-        <div className="w-35 h-32 sm:w-45 sm:h-40 rounded-full overflow-hidden border-2 border-blue-400 shadow-md">
-          <img
-            src={doctor?.image?.url || "/images/doctor1.jpeg"}
-            alt={doctor?.name}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-
-        <div className="flex flex-col sm:flex-row justify-start w-full gap-10 items-center">
-          <div className="flex flex-col justify-center gap-1">
-            <h2 className="text-2xl sm:text-3xl font-bold text-blue-700">{doctor?.name}</h2>
-            <p className="text-sm sm:text-base text-gray-600">{doctor?.hospital}</p>
-            <p className="text-sm sm:text-base text-gray-800 font-medium">{doctor?.specialization}</p>
+      <div className="bg-white py-8 px-4 sm:px-10 border-b border-gray-200">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-15">
+          {/* Left - Doctor Image */}
+          <div className="w-60  rounded-3xl overflow-hidden border-2 border-blue-500 shadow-md">
+            <img
+              src={doctor?.image?.url || "/images/doctor1.jpeg"}
+              alt={doctor?.name}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
           </div>
 
-          <div className="flex flex-row gap-1">
-            <div className="text-md font-semibold bg-gray-100 text-gray-800 border border-gray-300 px-4 py-2 rounded-md text-start">
-              <p>{doctor?.experience}</p>
-              <span className="text-gray-500 block text-lg">Experience</span>
+          {/* Right - Details */}
+          <div className="flex flex-col w-full">
+            {/* Name, Hospital, Specialization */}
+            <div className="space-y-1">
+              <h2 className="text-3xl sm:text-4xl font-bold text-blue-800">
+                {doctor?.name}
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-700 font-medium">
+                {doctor?.hospital}
+              </p>
+              <p className="text-base sm:text-lg text-gray-600 italic">
+                {doctor?.specialization}
+              </p>
             </div>
-            <div className="text-md font-semibold bg-gray-100 text-gray-800 border border-gray-300 px-4 py-2 rounded-md text-start">
-              <p>₹&nbsp;{doctor?.fees}</p>
-              <span className="text-gray-500 block text-lg">Fees</span>
+
+            {/* Experience & Fees Badges */}
+            <div className="flex gap-4 mt-4 flex-wrap">
+              <div className="bg-blue-50 border border-blue-200 px-5 py-3 rounded-md shadow-sm flex flex-col items-center w-40 text-center">
+                <span className="text-xl font-semibold text-blue-700">
+                  {doctor?.experience}
+                </span>
+                <span className="text-sm text-gray-600">Experience</span>
+              </div>
+              <div className="bg-green-50 border border-green-200 px-5 py-3 rounded-md shadow-sm flex flex-col items-center w-40 text-center">
+                <span className="text-xl font-semibold text-green-700">
+                  ₹ {doctor?.fees}
+                </span>
+                <span className="text-sm text-gray-600">Consultation Fee</span>
+              </div>
             </div>
           </div>
         </div>
@@ -116,7 +132,9 @@ const DoctorProfile = () => {
               <FaAward /> <h3 className="text-2xl font-semibold">Awards</h3>
             </div>
             <p className="text-gray-700 text-md">
-              {showAwards ? doctor?.awards : `${doctor?.awards?.slice(0, 100)}...`}
+              {showAwards
+                ? doctor?.awards
+                : `${doctor?.awards?.slice(0, 100)}...`}
             </p>
             <button
               className="text-blue-700 text-sm mt-2 hover:underline"
@@ -129,9 +147,13 @@ const DoctorProfile = () => {
 
         {/* Booking Form */}
         <div className="lg:w-1/2 bg-gray-100 p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-bold text-blue-700 mb-4">Schedule Appointment</h2>
+          <h2 className="text-xl font-bold text-blue-700 mb-4">
+            Schedule Appointment
+          </h2>
           <div className="space-y-4">
-            <div className="text-sm font-semibold text-gray-700">Select Date:</div>
+            <div className="text-sm font-semibold text-gray-700">
+              Select Date:
+            </div>
             <input
               type="date"
               min={new Date().toISOString().split("T")[0]}
@@ -140,61 +162,67 @@ const DoctorProfile = () => {
               className="w-full border border-gray-300 px-3 py-2 rounded-md"
             />
 
-<div className="text-sm font-semibold text-gray-700 mt-4">Available Time Slots:</div>
+            <div className="text-sm font-semibold text-gray-700 mt-4">
+              Available Time Slots:
+            </div>
 
-{/* Slot Type Toggle Buttons */}
-<div className="flex mb-4 gap-2">
-  <button
-    onClick={() => {
-      setSelectedTimeSlot("");
-      setVisitType("hospital visit");
-    }}
-    className={`w-1/2 py-2 rounded-md border ${
-      visitType === "hospital visit"
-        ? "bg-blue-700 text-white"
-        : "border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white"
-    }`}
-  >
-    Hospital Visit
-  </button>
-  <button
-    onClick={() => {
-      setSelectedTimeSlot("");
-      setVisitType("video consultancy");
-    }}
-    className={`w-1/2 py-2 rounded-md border ${
-      visitType === "video consultancy"
-        ? "bg-blue-700 text-white"
-        : "border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white"
-    }`}
-  >
-    Video Consultancy
-  </button>
-</div>
+            {/* Slot Type Toggle Buttons */}
+            <div className="flex mb-4 gap-2">
+              <button
+                onClick={() => {
+                  setSelectedTimeSlot("");
+                  setVisitType("hospital visit");
+                }}
+                className={`w-1/2 py-2 rounded-md border ${
+                  visitType === "hospital visit"
+                    ? "bg-blue-700 text-white"
+                    : "border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white"
+                }`}
+              >
+                Hospital Visit
+              </button>
+              <button
+                onClick={() => {
+                  setSelectedTimeSlot("");
+                  setVisitType("video consultancy");
+                }}
+                className={`w-1/2 py-2 rounded-md border ${
+                  visitType === "video consultancy"
+                    ? "bg-blue-700 text-white"
+                    : "border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white"
+                }`}
+              >
+                Video Consultancy
+              </button>
+            </div>
 
-{/* Time Slots Based on Selected Type */}
-<div className="flex flex-wrap gap-2">
-  {(visitType === "hospital visit" ? doctor?.hospitalSlots : doctor?.videoSlots)?.map((time, i) => (
-    <button
-      key={i}
-      onClick={() => setSelectedTimeSlot(time)}
-      className={`px-3 py-1 border ${
-        selectedTimeSlot === time
-          ? "bg-blue-700 text-white"
-          : "text-blue-700 hover:bg-blue-700 hover:text-white"
-      } border-blue-700 rounded-md text-sm transition`}
-    >
-      {time}
-    </button>
-  ))}
-</div>
-
+            {/* Time Slots Based on Selected Type */}
+            <div className="flex flex-wrap gap-2">
+              {(visitType === "hospital visit"
+                ? doctor?.hospitalSlots
+                : doctor?.videoSlots
+              )?.map((time, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelectedTimeSlot(time)}
+                  className={`px-3 py-1 border ${
+                    selectedTimeSlot === time
+                      ? "bg-blue-700 text-white"
+                      : "text-blue-700 hover:bg-blue-700 hover:text-white"
+                  } border-blue-700 rounded-md text-sm transition`}
+                >
+                  {time}
+                </button>
+              ))}
+            </div>
 
             <button
               onClick={handleBookNow}
               disabled={!selectedTimeSlot}
               className={`mt-4 w-full ${
-                selectedTimeSlot ? "bg-blue-700 hover:bg-blue-800" : "bg-gray-400 cursor-not-allowed"
+                selectedTimeSlot
+                  ? "bg-blue-700 hover:bg-blue-800"
+                  : "bg-gray-400 cursor-not-allowed"
               } text-white py-2 rounded-md transition`}
             >
               Book Appointment

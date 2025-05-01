@@ -19,6 +19,8 @@ import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
 import Dashboard from "./pages/dashboard/dashboard.jsx";
 import SignIn from "./pages/SignIn.jsx";
 import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
+import AllAppointments from "./components/dashboard/Appointment/allAppointment.jsx";
+import AllPayments from "./components/dashboard/payment/allpayment.jsx";
 
 function LayoutWrapper() {
   const location = useLocation();
@@ -41,7 +43,8 @@ function LayoutWrapper() {
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="AddDoctor" element={<AddDoctor />} />
-            
+            <Route path="AllAppointment" element={<AllAppointments />} />
+            <Route path="AllPayments" element={<AllPayments />} />
           </Route>
         </Route>
 
