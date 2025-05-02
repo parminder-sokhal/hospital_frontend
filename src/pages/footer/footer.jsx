@@ -19,21 +19,16 @@ const Footer = () => {
               {/* Speciality Links */}
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Services</h3>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
-                  General Psychiatry
+                <a href="/deaddiction" className="text-sm hover:text-[#DB8E00]">
+                Expert De-addiction Programs
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
-                  De-addiction Services
+                <a href="/sexual-wellness" className="text-md hover:text-[#DB8E00]">
+                Sexual Wellness Services
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
-                  Counseling & Psychotherapy
+                <a href="/psychiatric-care" className="text-md hover:text-[#DB8E00]">
+                Psychiatric Care
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
-                  Psycho-Diagnostic Services
-                </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
-                  Sexual Wellness Disorders
-                </a>
+               
               </div>
               {/* Treatments Links */}
               <div className="flex flex-col space-y-2 w-full">

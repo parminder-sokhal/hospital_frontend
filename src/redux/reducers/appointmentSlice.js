@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   loading: false,
   appointments: [],
+  appointmentsByDate: [], // 🔹 Add this line
   appointment: {},
   error: null,
 };
@@ -21,7 +22,7 @@ const appointmentSlice = createSlice({
     },
     getAppointmentByDateSuccess(state, action) {
       state.loading = false;
-      state.appointment = action.payload.appointment;
+      state.appointmentsByDate = action.payload.appointments; // 🔹 Fix here
     },
     appointmentFail(state, action) {
       state.loading = false;

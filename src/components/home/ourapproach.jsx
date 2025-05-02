@@ -81,25 +81,28 @@ const OurApproach = () => {
         <div className="w-full md:w-2/5 flex flex-col justify-center items-start space-y-4 mb-8 md:mb-0 sm:px-10 px-4">
           <h2 className="text-3xl text-black">Our Approach</h2>
           <p className="text-lg text-black text-start flex items-center ">
-            Our approach is based on a holistic view of individual well-being,
-            combining therapy, yoga, hypnotherapy, and self-regulation
-            techniques. We aim to help you achieve balance in both mind and
-            body.
+            Transform Your Life Today!<br/> Are you or a loved one struggling with
+            mental health issues, addiction, or sexual wellness challenges? Our
+            specialized hospital is here to help you reclaim your life and
+            achieve lasting well-being.
           </p>
           <div className="flex items-center flex-row space-x-2">
-           
             <a href="tel:+1234567890" className="flex items-center space-x-2">
-            <div className="flex items-center "> <FaPhoneAlt size={30} className="text-red-700 hover:text-blue-800"  /></div>
-            <div href="tel:+1234567890" >
-              <span className="text-md text-black hover:text-blue-900 ">
-                For more information, call
-              </span>
-              <span
-                className="text-lg text-black flex  hover:text-blue-900 transition-colors "
-              >
-                +91 234 567 890
-              </span>
-            </div>
+              <div className="flex items-center ">
+                {" "}
+                <FaPhoneAlt
+                  size={30}
+                  className="text-red-700 hover:text-blue-800"
+                />
+              </div>
+              <div href="tel:+1234567890">
+                <span className="text-md text-black hover:text-blue-900 ">
+                  For more information, call
+                </span>
+                <span className="text-lg text-black flex  hover:text-blue-900 transition-colors ">
+                  +91 234 567 890
+                </span>
+              </div>
             </a>
           </div>
         </div>
@@ -111,13 +114,16 @@ const OurApproach = () => {
                 key={index}
                 className="flex-shrink-0 w-full md:w-1/2 p-4"
                 style={{
-                  minHeight: "400px", 
+                  minHeight: "400px",
                 }}
               >
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
                   <div
                     className="h-40 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${item.image})`,loading:(`lazy`) }}
+                    style={{
+                      backgroundImage: `url(${item.image})`,
+                      loading: `lazy`,
+                    }}
                     loading="lazy"
                   ></div>
                   <div className="p-4 flex-grow">
@@ -125,7 +131,6 @@ const OurApproach = () => {
                       {item.title}
                     </h3>
                     <p className="text-gray-600 mt-2">{item.description}</p>
-                   
                   </div>
                 </div>
               </div>

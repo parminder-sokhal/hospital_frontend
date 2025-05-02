@@ -36,9 +36,10 @@ export default function Dashboard() {
             </button>
           </div>
           <ul className="flex-1 px-2 overflow-y-auto">
-            <SidebarItem icon={<FaUserGraduate />} text="AllAppointment" to="/dashboard/AllAppointment" active={location.pathname === "/dashboard/AllAppointment"} />
-            <SidebarItem icon={<FaUserGraduate />} text="AllPayments" to="/dashboard/AllPayments" active={location.pathname === "/dashboard/AllPayments"} />
-            <SidebarItem icon={<FaUserGraduate />} text="AddDoctor" to="/dashboard/AddDoctor" active={location.pathname === "/dashboard/AddDoctor"} />
+            <SidebarItem icon={<FaUserGraduate />} text="Today All Appointments" to="/dashboard/TodayAppointments" active={location.pathname === "/dashboard/TodayAppointments"} />
+            <SidebarItem icon={<FaUserGraduate />} text="All Appointment" to="/dashboard/AllAppointment" active={location.pathname === "/dashboard/AllAppointment"} />
+            <SidebarItem icon={<FaUserGraduate />} text="All Payments" to="/dashboard/AllPayments" active={location.pathname === "/dashboard/AllPayments"} />
+            <SidebarItem icon={<FaUserGraduate />} text="Add Doctor" to="/dashboard/AddDoctor" active={location.pathname === "/dashboard/AddDoctor"} />
             <SidebarItem icon={<FaChalkboardTeacher />} text="logout" to="/" active={location.pathname === "/"} />
            
           </ul>
