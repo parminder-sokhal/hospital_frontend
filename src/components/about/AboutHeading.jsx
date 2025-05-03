@@ -4,10 +4,8 @@ const AboutHeading = () => {
   return (
     <div className="bg-white px-6 sm:px-8 md:px-12 py-16 flex flex-col items-center justify-center">
       <div className="max-w-6xl w-full">
-        <h1 className="sm:text-6xl text-3xl font-bold text-blue-700 mb-10">Loona Hospital</h1>
-        <h3 className="text-2xl md:text-3xl font-semibold text-blue-600 mb-4">
-          Our Commitment to Care
-        </h3>
+        <h1 className="sm:text-7xl text-3xl justify-center flex font-bold text-blue-800 mb-10">Loona Hospital</h1>
+        
         <p className="text-gray-600 text-lg leading-relaxed mb-6">
           Loona Hospital is a dedicated mental health and wellness center offering expert care in psychiatry, sexual wellness, and de-addiction. Our experienced team provides personalized treatment in a safe, supportive environment—helping you heal, grow, and thrive.
         </p>
