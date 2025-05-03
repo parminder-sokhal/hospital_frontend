@@ -1,4 +1,6 @@
 import { FaPhoneAlt } from "react-icons/fa"; // Import the phone icon
+import { Link } from "react-router-dom";
+
 
 const VideoPlayHeader = () => {
   return (
@@ -16,8 +18,8 @@ const VideoPlayHeader = () => {
       </video>
 
       <div className="absolute top-1/2 right-12 transform -translate-y-1/2 translate-x-1/2 rotate-90 flex justify-around items-center">
-        <a
-          href="tel:+91-9812345678"
+        <Link
+          to="tel:+91-9812345678"
           className="flex items-center text-white space-x-2"
         >
           <div className="icon text-red-700 hover:text-blue-700 hover:bg-red-700 bg-blue-500 rounded-full p-2 shadow-lg flex justify-center items-center">
@@ -28,7 +30,7 @@ const VideoPlayHeader = () => {
               {"+91-9812345678"}
             </span>
           </div>
-        </a>
+        </Link>
       </div>
     </header>
   );

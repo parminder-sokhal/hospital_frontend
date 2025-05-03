@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 const SpecialitiesSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -323,12 +325,12 @@ const SpecialitiesSlider = () => {
       <div className="flex justify-center items-center mb-6">
         <h2 className="text-4xl font-bold">Specialities</h2>
       </div>
-      <a
-        href="/"
+      <Link
+        to="/"
         className="text-md font-bold flex justify-end mb-6 hover:text-blue-800"
       >
         <h3>View All Specialities</h3>
-      </a>
+      </Link>
 
       {/* Carousel Component */}
       <div id="centered" className="relative w-full">
@@ -341,9 +343,9 @@ const SpecialitiesSlider = () => {
             }}
           >
             {slides.map((slide) => (
-              <a
+              <Link
                 key={slide.id}
-                href={slide.href}
+                to={slide.href}
                 className="carousel-slide h-60 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-4"
               >
                 <div className="flex flex-col justify-between items-center bg-white rounded-lg hover:bg-blue-200 p-4">
@@ -357,7 +359,7 @@ const SpecialitiesSlider = () => {
                     {slide.description}
                   </span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

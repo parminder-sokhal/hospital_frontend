@@ -4,6 +4,7 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 import "./App.css";
 import Headertop from "./pages/header/headertop.jsx";
 import HeaderMain from "./pages/header/headerMain.jsx";
@@ -62,6 +63,7 @@ function LayoutWrapper() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <LayoutWrapper />
     </Router>
   );

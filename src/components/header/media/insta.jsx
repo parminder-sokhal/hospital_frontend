@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function insta() {
   const instagramPosts = [
@@ -27,10 +28,8 @@ function insta() {
         </span>
       </div>
       <div className="flex flex-col mx-auto lg:px-60 gap-10 px-6 py-10">
-        <div >
-          <h2 className="sm:text-3xl py-4 text-center">
-            Trending Highlights
-          </h2>
+        <div>
+          <h2 className="sm:text-3xl py-4 text-center">Trending Highlights</h2>
 
           {/* Flex layout for Instagram posts */}
           <div className="flex flex-col lg:flex-row gap-6 justify-between">
@@ -40,7 +39,7 @@ function insta() {
                 className="relative w-full lg:w-1/3 md:w-1/2 sm:w-1/3 bg-white  shadow-lg "
               >
                 {/* Instagram post (iframe for Reels) */}
-                <a href={post.href} target="_blank" rel="noopener noreferrer">
+                <Link to={post.href} target="_blank" rel="noopener noreferrer">
                   <div className="w-full  h-170 overflow-hidden">
                     <iframe
                       src={`https://www.instagram.com/p/${post.href.split("/")[4]}/embed`}
@@ -54,7 +53,7 @@ function insta() {
                       }}
                     />
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

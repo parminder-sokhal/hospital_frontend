@@ -1,21 +1,62 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 const SpecialitiesSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerScreen, setSlidesPerScreen] = useState(3); // Initially set to 3 for desktop
 
   const slides = [
-    { id: 1, description: "Psychiatry", image: "/images/depression.jpg", href: "/depression" },
-    { id: 2, description: " Counselling and therapy", image: "/images/Anxiety.jpg", href: "/link2" },
-    { id: 3, description: " Mental health issues and children", image: "/images/BipolarDisorder.jpg", href: "/link3" },
-    { id: 4, description: "De-addiction programme", image: "/images/depression.jpg", href: "/link4" },
-    { id: 5, description: "sexual wellness program", image: "/images/depression.jpg", href: "/link5" },
-    { id: 6, description: "Headache clinic", image: "/images/depression.jpg", href: "/link6" },
-    { id: 7, description: "Epilepsy clinic", image: "/images/depression.jpg", href: "/link7" },
-    { id: 8, description: " Sleep clinic ", image: "/images/depression.jpg", href: "/link8" },
+    {
+      id: 1,
+      description: "Psychiatry",
+      image: "/images/depression.jpg",
+      href: "/depression",
+    },
+    {
+      id: 2,
+      description: " Counselling and therapy",
+      image: "/images/Anxiety.jpg",
+      href: "/link2",
+    },
+    {
+      id: 3,
+      description: " Mental health issues and children",
+      image: "/images/BipolarDisorder.jpg",
+      href: "/link3",
+    },
+    {
+      id: 4,
+      description: "De-addiction programme",
+      image: "/images/depression.jpg",
+      href: "/link4",
+    },
+    {
+      id: 5,
+      description: "sexual wellness program",
+      image: "/images/depression.jpg",
+      href: "/link5",
+    },
+    {
+      id: 6,
+      description: "Headache clinic",
+      image: "/images/depression.jpg",
+      href: "/link6",
+    },
+    {
+      id: 7,
+      description: "Epilepsy clinic",
+      image: "/images/depression.jpg",
+      href: "/link7",
+    },
+    {
+      id: 8,
+      description: " Sleep clinic ",
+      image: "/images/depression.jpg",
+      href: "/link8",
+    },
   ];
-  
 
   const totalSlides = slides.length;
 
@@ -59,11 +100,13 @@ const SpecialitiesSlider = () => {
     <div className="container mx-auto my-10 lg:px-40 sm:px-14 md:px-18 mt-35">
       <div className="flex justify-between items-center mb-4 px-5">
         <h2 className="text-4xl  text-black">Our Treatments</h2>
-       
       </div>
 
       {/* Carousel Component */}
-      <div id="centered" className="relative w-full transition-transform duration-500 ease-in-out">
+      <div
+        id="centered"
+        className="relative w-full transition-transform duration-500 ease-in-out"
+      >
         {/* Carousel container */}
         <div className="carousel h-80 overflow-hidden ">
           <div
@@ -73,9 +116,9 @@ const SpecialitiesSlider = () => {
             }}
           >
             {slides.map((slide) => (
-              <a
+              <Link
                 key={slide.id}
-                href={slide.href}
+                to={slide.href}
                 className="carousel-slide h-72 flex-shrink-0 w-full sm:w-full md:w-full lg:w-1/3 xl:w-1/3 p-4" // Responsive layout: 3 items per screen on large screens
               >
                 <div className="flex flex-col justify-between items-center bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
@@ -95,7 +138,7 @@ const SpecialitiesSlider = () => {
                     {slide.description}
                   </button>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

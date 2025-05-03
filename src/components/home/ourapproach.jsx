@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa"; // Importing phone icon
+import { Link } from "react-router-dom";
+
 
 const OurApproach = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,13 +83,14 @@ const OurApproach = () => {
         <div className="w-full md:w-2/5 flex flex-col justify-center items-start space-y-4 mb-8 md:mb-0 sm:px-10 px-4">
           <h2 className="text-3xl text-black">Our Approach</h2>
           <p className="text-lg text-black text-start flex items-center ">
-            Transform Your Life Today!<br/> Are you or a loved one struggling with
-            mental health issues, addiction, or sexual wellness challenges? Our
-            specialized hospital is here to help you reclaim your life and
-            achieve lasting well-being.
+            Transform Your Life Today!
+            <br /> Are you or a loved one struggling with mental health issues,
+            addiction, or sexual wellness challenges? Our specialized hospital
+            is here to help you reclaim your life and achieve lasting
+            well-being.
           </p>
           <div className="flex items-center flex-row space-x-2">
-            <a href="tel:+1234567890" className="flex items-center space-x-2">
+            <Link to="tel:+1234567890" className="flex items-center space-x-2">
               <div className="flex items-center ">
                 {" "}
                 <FaPhoneAlt
@@ -95,7 +98,7 @@ const OurApproach = () => {
                   className="text-red-700 hover:text-blue-800"
                 />
               </div>
-              <div href="tel:+1234567890">
+              <div to="tel:+1234567890">
                 <span className="text-md text-black hover:text-blue-900 ">
                   For more information, call
                 </span>
@@ -103,7 +106,7 @@ const OurApproach = () => {
                   +91 234 567 890
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 

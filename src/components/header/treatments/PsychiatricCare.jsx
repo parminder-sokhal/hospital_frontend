@@ -1,14 +1,15 @@
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const data = {
-    bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path
-    sidebarLinks: [
-      { title: "Expert De-addiction Programs", link: "/deaddiction" },
-      { title: "Sexual Wellness Services", link: "/sexual-wellness" },
-      { title: " Psychiatric Care", link: "/psychiatric-care" },
-    ],
-  };
+  bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path
+  sidebarLinks: [
+    { title: "Expert De-addiction Programs", link: "/deaddiction" },
+    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
+    { title: " Psychiatric Care", link: "/psychiatric-care" },
+  ],
+};
 
 const PsychiatricCare = () => {
   return (
@@ -29,36 +30,64 @@ const PsychiatricCare = () => {
               Welcome to Our Psychiatric Care Services
             </h2>
             <p>
-              At [Your Clinic Name], we understand that mental health is a crucial component of overall well-being.
-              Our team of experienced psychiatrists is committed to providing compassionate, personalized, and evidence-based care.
+              At [Your Clinic Name], we understand that mental health is a
+              crucial component of overall well-being. Our team of experienced
+              psychiatrists is committed to providing compassionate,
+              personalized, and evidence-based care.
             </p>
 
             <h2 className="font-semibold text-xl">Our Services</h2>
 
-            <h3 className="font-semibold text-lg">Personalized Treatment Plans</h3>
+            <h3 className="font-semibold text-lg">
+              Personalized Treatment Plans
+            </h3>
             <p>
-              We tailor every treatment to the individual, considering your medical history, lifestyle, and goals to
-              develop a comprehensive strategy.
+              We tailor every treatment to the individual, considering your
+              medical history, lifestyle, and goals to develop a comprehensive
+              strategy.
             </p>
 
             <h3 className="font-semibold text-lg">Evidence-Based Therapies</h3>
             <ul className="list-disc pl-6">
-              <li><strong>Depression:</strong> Effective techniques to improve mood.</li>
-              <li><strong>Anxiety Disorders:</strong> Practical strategies to manage anxiety.</li>
-              <li><strong>Bipolar Disorder:</strong> Support for managing emotional stability.</li>
-              <li><strong>Other Conditions:</strong> Including PTSD, OCD, ADHD, and more.</li>
+              <li>
+                <strong>Depression:</strong> Effective techniques to improve
+                mood.
+              </li>
+              <li>
+                <strong>Anxiety Disorders:</strong> Practical strategies to
+                manage anxiety.
+              </li>
+              <li>
+                <strong>Bipolar Disorder:</strong> Support for managing
+                emotional stability.
+              </li>
+              <li>
+                <strong>Other Conditions:</strong> Including PTSD, OCD, ADHD,
+                and more.
+              </li>
             </ul>
 
             <h3 className="font-semibold text-lg">Holistic Healing Approach</h3>
             <ul className="list-disc pl-6">
-              <li><strong>Medication Management:</strong> Careful prescribing and monitoring of psychiatric medication.</li>
-              <li><strong>Psychotherapy:</strong> CBT, DBT, and mindfulness-based therapies.</li>
-              <li><strong>Lifestyle Integration:</strong> Focus on nutrition, exercise, and stress reduction.</li>
+              <li>
+                <strong>Medication Management:</strong> Careful prescribing and
+                monitoring of psychiatric medication.
+              </li>
+              <li>
+                <strong>Psychotherapy:</strong> CBT, DBT, and mindfulness-based
+                therapies.
+              </li>
+              <li>
+                <strong>Lifestyle Integration:</strong> Focus on nutrition,
+                exercise, and stress reduction.
+              </li>
             </ul>
 
             <h2 className="font-semibold text-xl">Conclusion</h2>
             <p>
-              Our mission is to support your mental health with integrity, expertise, and compassion. Contact us to begin your journey toward wellness.
+              Our mission is to support your mental health with integrity,
+              expertise, and compassion. Contact us to begin your journey toward
+              wellness.
             </p>
           </div>
 
@@ -73,7 +102,7 @@ const PsychiatricCare = () => {
                   className="flex items-center text-blue-600 hover:text-blue-800 cursor-pointer"
                 >
                   <FaAngleRight className="mr-2" />
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 </li>
               ))}
             </ul>

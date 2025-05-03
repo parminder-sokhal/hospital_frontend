@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const data = {
   bgImage: "/images/ocd.jpg", // Replace with the correct image path
@@ -274,7 +275,7 @@ const OCD = () => {
                   className="flex items-center text-blue-600 hover:text-blue-800 cursor-pointer"
                 >
                   <FaAngleRight className="mr-2" />
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 </li>
               ))}
             </ul>

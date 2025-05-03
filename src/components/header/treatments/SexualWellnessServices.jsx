@@ -1,5 +1,6 @@
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const data = {
   bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path
@@ -27,16 +28,19 @@ const SexualWellnessServices = () => {
           <div className="lg:w-3/4 space-y-6 text-gray-700">
             <h2 className="font-semibold text-xl">Introduction</h2>
             <p>
-              Understanding and addressing sexual health is crucial for overall well-being. At [Your Clinic Name],
-              we believe that sexual wellness is an integral part of a healthy lifestyle. Our dedicated specialists
-              provide support and care in a safe, confidential environment.
+              Understanding and addressing sexual health is crucial for overall
+              well-being. At [Your Clinic Name], we believe that sexual wellness
+              is an integral part of a healthy lifestyle. Our dedicated
+              specialists provide support and care in a safe, confidential
+              environment.
             </p>
 
             <h2 className="font-semibold text-xl">Our Services</h2>
 
             <h3 className="font-semibold text-lg">1. Erectile Dysfunction</h3>
             <p>
-              ED can affect men of all ages and may result from physical or psychological causes. We provide:
+              ED can affect men of all ages and may result from physical or
+              psychological causes. We provide:
               <ul className="list-disc pl-6">
                 <li>Medications</li>
                 <li>Lifestyle changes</li>
@@ -46,7 +50,8 @@ const SexualWellnessServices = () => {
 
             <h3 className="font-semibold text-lg">2. Low Libido</h3>
             <p>
-              Decreased desire can stem from hormonal, emotional, or relational factors. We offer:
+              Decreased desire can stem from hormonal, emotional, or relational
+              factors. We offer:
               <ul className="list-disc pl-6">
                 <li>Hormonal therapy</li>
                 <li>Counseling</li>
@@ -64,26 +69,37 @@ const SexualWellnessServices = () => {
               </ul>
             </p>
 
-            <h2 className="font-semibold text-xl">Confidential Consultations</h2>
+            <h2 className="font-semibold text-xl">
+              Confidential Consultations
+            </h2>
             <p>
-              Your privacy is our priority. All consultations are confidential, offering you a safe space to speak openly.
+              Your privacy is our priority. All consultations are confidential,
+              offering you a safe space to speak openly.
             </p>
 
             <h2 className="font-semibold text-xl">Highest Standard of Care</h2>
             <p>
-              Our team is dedicated to providing evidence-based and compassionate care, always prioritizing your well-being.
+              Our team is dedicated to providing evidence-based and
+              compassionate care, always prioritizing your well-being.
             </p>
 
             <h2 className="font-semibold text-xl">How to Get Started</h2>
             <ul className="list-disc pl-6">
-              <li><strong>Phone:</strong> [Your Phone Number]</li>
-              <li><strong>Email:</strong> [Your Email Address]</li>
-              <li><strong>Online Booking:</strong> [Link to Booking Page]</li>
+              <li>
+                <strong>Phone:</strong> [Your Phone Number]
+              </li>
+              <li>
+                <strong>Email:</strong> [Your Email Address]
+              </li>
+              <li>
+                <strong>Online Booking:</strong> [Link to Booking Page]
+              </li>
             </ul>
 
             <h2 className="font-semibold text-xl">Conclusion</h2>
             <p>
-              Don’t let sexual health concerns hold you back. Contact us today to begin your journey toward wellness.
+              Don’t let sexual health concerns hold you back. Contact us today
+              to begin your journey toward wellness.
             </p>
           </div>
 
@@ -98,7 +114,7 @@ const SexualWellnessServices = () => {
                   className="flex items-center text-blue-600 hover:text-blue-800 cursor-pointer"
                 >
                   <FaAngleRight className="mr-2" />
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 </li>
               ))}
             </ul>

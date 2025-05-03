@@ -40,9 +40,9 @@ export default function SignIn() {
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
       <div className="w-full max-w-md bg-white shadow-md rounded-lg p-10">
         <div className="flex items-center space-x-3 mb-6">
-          <a href="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <img src="/logo/loonalogo.png" className="h-12" alt="Logo" />
-          </a>
+          </Link>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">

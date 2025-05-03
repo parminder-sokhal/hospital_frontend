@@ -1,15 +1,16 @@
-import React from 'react';
+import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: '/images/depression.jpg', // You may want to update this image too
+  bgImage: "/images/depression.jpg", // You may want to update this image too
   sidebarLinks: [
-    { title: 'Depression', link: '/depression' },
-    { title: 'Anxiety', link: '/anxiety' },
-    { title: 'Bipolar Disorder', link: '/bipolar-disorder' },
-    { title: 'Schizophrenia', link: '/schizophrenia' },
-    { title: 'OCD', link: '/ocd' },
-  ]
+    { title: "Depression", link: "/depression" },
+    { title: "Anxiety", link: "/anxiety" },
+    { title: "Bipolar Disorder", link: "/bipolar-disorder" },
+    { title: "Schizophrenia", link: "/schizophrenia" },
+    { title: "OCD", link: "/ocd" },
+  ],
 };
 
 const Psychiatry = () => {
@@ -23,30 +24,48 @@ const Psychiatry = () => {
 
       {/* ✅ Bottom Div */}
       <div className="px-10 lg:px-40 py-10">
-        <h1 className="text-3xl font-bold mb-8 text-gray-800">Psychiatry: A Comprehensive Guide</h1>
+        <h1 className="text-3xl font-bold mb-8 text-gray-800">
+          Psychiatry: A Comprehensive Guide
+        </h1>
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* ✅ Left Div - Main Content */}
           <div className="lg:w-3/4 space-y-6 text-gray-700">
             <p>
-              <strong>What is Psychiatry?</strong><br />
-              Psychiatry is a branch of medicine focused on the diagnosis, treatment, and prevention of mental, emotional, and behavioral disorders. Psychiatrists are medical doctors (MD or DO) who specialize in mental health and are qualified to assess both the mental and physical aspects of psychological problems.
+              <strong>What is Psychiatry?</strong>
+              <br />
+              Psychiatry is a branch of medicine focused on the diagnosis,
+              treatment, and prevention of mental, emotional, and behavioral
+              disorders. Psychiatrists are medical doctors (MD or DO) who
+              specialize in mental health and are qualified to assess both the
+              mental and physical aspects of psychological problems.
             </p>
             <p>
-              Unlike psychologists, psychiatrists can prescribe medications, order or interpret medical tests, and provide a wide range of treatments, including psychotherapy.
+              Unlike psychologists, psychiatrists can prescribe medications,
+              order or interpret medical tests, and provide a wide range of
+              treatments, including psychotherapy.
             </p>
 
-            <h2 className="font-semibold text-xl mt-4">What Do Psychiatrists Do?</h2>
+            <h2 className="font-semibold text-xl mt-4">
+              What Do Psychiatrists Do?
+            </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>Evaluate mental and emotional health</li>
-              <li>Diagnose mental disorders using clinical interviews, history, and tools (e.g., DSM-5)</li>
+              <li>
+                Diagnose mental disorders using clinical interviews, history,
+                and tools (e.g., DSM-5)
+              </li>
               <li>Prescribe and manage medications</li>
               <li>Provide psychotherapy and counseling</li>
-              <li>Monitor physical health in relation to psychiatric illness</li>
+              <li>
+                Monitor physical health in relation to psychiatric illness
+              </li>
               <li>Collaborate for comprehensive care</li>
             </ul>
 
-            <h2 className="font-semibold text-xl mt-4">Common Conditions Treated by Psychiatrists</h2>
+            <h2 className="font-semibold text-xl mt-4">
+              Common Conditions Treated by Psychiatrists
+            </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>Depression</li>
               <li>Anxiety Disorders</li>
@@ -60,7 +79,9 @@ const Psychiatry = () => {
               <li>Sleep & Personality Disorders</li>
             </ul>
 
-            <h2 className="font-semibold text-xl mt-4">Subspecialties in Psychiatry</h2>
+            <h2 className="font-semibold text-xl mt-4">
+              Subspecialties in Psychiatry
+            </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>Child and Adolescent Psychiatry</li>
               <li>Geriatric Psychiatry</li>
@@ -80,23 +101,39 @@ const Psychiatry = () => {
             </ul>
 
             <h2 className="font-semibold text-xl mt-4">Treatment Approaches</h2>
-            <p><strong>1. Medication</strong> – Antidepressants, antipsychotics, mood stabilizers, anxiolytics, and stimulants.</p>
-            <p><strong>2. Psychotherapy</strong> – CBT, DBT, Psychodynamic, IPT, and more.</p>
-            <p><strong>3. Other Treatments</strong> – ECT, rTMS, VNS, Ketamine infusions.</p>
-
-            <h2 className="font-semibold text-xl mt-4">The Role of Psychiatry in Integrated Healthcare</h2>
             <p>
-              Psychiatrists work with psychologists, GPs, neurologists, and others to deliver holistic care.
+              <strong>1. Medication</strong> – Antidepressants, antipsychotics,
+              mood stabilizers, anxiolytics, and stimulants.
+            </p>
+            <p>
+              <strong>2. Psychotherapy</strong> – CBT, DBT, Psychodynamic, IPT,
+              and more.
+            </p>
+            <p>
+              <strong>3. Other Treatments</strong> – ECT, rTMS, VNS, Ketamine
+              infusions.
             </p>
 
-            <h2 className="font-semibold text-xl mt-4">Becoming a Psychiatrist</h2>
+            <h2 className="font-semibold text-xl mt-4">
+              The Role of Psychiatry in Integrated Healthcare
+            </h2>
+            <p>
+              Psychiatrists work with psychologists, GPs, neurologists, and
+              others to deliver holistic care.
+            </p>
+
+            <h2 className="font-semibold text-xl mt-4">
+              Becoming a Psychiatrist
+            </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>Earn an MD or DO (4 years)</li>
               <li>Complete a residency in psychiatry (4 years)</li>
               <li>Optional: Fellowships in subspecialties (1–2 years)</li>
             </ul>
 
-            <h2 className="font-semibold text-xl mt-4">When to See a Psychiatrist</h2>
+            <h2 className="font-semibold text-xl mt-4">
+              When to See a Psychiatrist
+            </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>Persistent sadness, anxiety, or mood swings</li>
               <li>Thoughts of self-harm or suicide</li>
@@ -105,7 +142,9 @@ const Psychiatry = () => {
               <li>Ineffectiveness of therapy alone</li>
             </ul>
 
-            <h2 className="font-semibold text-xl mt-4">Psychiatry vs. Psychology</h2>
+            <h2 className="font-semibold text-xl mt-4">
+              Psychiatry vs. Psychology
+            </h2>
             <table className="table-auto w-full mt-4 border">
               <thead>
                 <tr className="bg-gray-200">
@@ -140,18 +179,26 @@ const Psychiatry = () => {
 
             <h2 className="font-semibold text-xl mt-4">Conclusion</h2>
             <p>
-              Psychiatry plays a vital role in healthcare, addressing the intricate connections between mind and body. If you or someone you know is facing mental health challenges, seeking help from a psychiatrist could be a life-changing step.
+              Psychiatry plays a vital role in healthcare, addressing the
+              intricate connections between mind and body. If you or someone you
+              know is facing mental health challenges, seeking help from a
+              psychiatrist could be a life-changing step.
             </p>
           </div>
 
           {/* ✅ Right Div - Sidebar */}
           <div className="lg:w-1/4 h-1/3 bg-gray-100 py-10 rounded-md shadow px-10">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Psychiatry Treatments</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-800">
+              Psychiatry Treatments
+            </h2>
             <ul className="space-y-4">
               {data.sidebarLinks.map((item, index) => (
-                <li key={index} className="flex items-center text-blue-600 hover:text-blue-800 cursor-pointer">
+                <li
+                  key={index}
+                  className="flex items-center text-blue-600 hover:text-blue-800 cursor-pointer"
+                >
                   <FaAngleRight className="mr-2" />
-                  <a href={item.link}>{item.title}</a>
+                  <Link to={item.link}>{item.title}</Link>
                 </li>
               ))}
             </ul>

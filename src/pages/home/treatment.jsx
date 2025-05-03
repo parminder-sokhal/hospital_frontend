@@ -1,6 +1,8 @@
 // treatment.jsx
 import React from 'react';
 import { Route } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 
 // Existing pages
 import DepressionPage from '../../components/header/treatments/DepressionPage.jsx';

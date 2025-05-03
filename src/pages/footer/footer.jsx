@@ -7,6 +7,7 @@ import {
   FaYoutube,
   FaFacebook,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -19,44 +20,73 @@ const Footer = () => {
               {/* Speciality Links */}
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Services</h3>
-                <a href="/deaddiction" className="text-sm hover:text-[#DB8E00]">
-                Expert De-addiction Programs
-                </a>
-                <a href="/sexual-wellness" className="text-md hover:text-[#DB8E00]">
-                Sexual Wellness Services
-                </a>
-                <a href="/psychiatric-care" className="text-md hover:text-[#DB8E00]">
-                Psychiatric Care
-                </a>
-               
+                <Link
+                  to="/deaddiction"
+                  className="text-sm hover:text-[#DB8E00]"
+                >
+                  Expert De-addiction Programs
+                </Link>
+                <Link
+                  to="/sexual-wellness"
+                  className="text-md hover:text-[#DB8E00]"
+                >
+                  Sexual Wellness Services
+                </Link>
+                <Link
+                  to="/psychiatric-care"
+                  className="text-md hover:text-[#DB8E00]"
+                >
+                  Psychiatric Care
+                </Link>
               </div>
               {/* Treatments Links */}
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Treatments</h3>
-                <a href="/psychiatry" className="text-md hover:text-[#DB8E00]">
+                <Link to="/psychiatry" className="text-md hover:text-[#DB8E00]">
                   Psychiatry
-                </a>
-                <a href="/counselling-and-therapy" className="text-md hover:text-[#DB8E00]">
+                </Link>
+                <Link
+                  to="/counselling-and-therapy"
+                  className="text-md hover:text-[#DB8E00]"
+                >
                   Counselling and therapy
-                </a>
-                <a href="/mental-health-children" className="text-md hover:text-[#DB8E00]">
+                </Link>
+                <Link
+                  to="/mental-health-children"
+                  className="text-md hover:text-[#DB8E00]"
+                >
                   Mental health issues and children
-                </a>
-                <a href="/deaddiction" className="text-md hover:text-[#DB8E00]">
+                </Link>
+                <Link
+                  to="/deaddiction"
+                  className="text-md hover:text-[#DB8E00]"
+                >
                   De-addiction programme
-                </a>
-                <a href="/sexual-wellness-program" className="text-md hover:text-[#DB8E00]">
+                </Link>
+                <Link
+                  to="/sexual-wellness-program"
+                  className="text-md hover:text-[#DB8E00]"
+                >
                   sexual wellness program
-                </a>
-                <a href="/headache-clinic" className="text-md hover:text-[#DB8E00]">
+                </Link>
+                <Link
+                  to="/headache-clinic"
+                  className="text-md hover:text-[#DB8E00]"
+                >
                   Headache clinic
-                </a>
-                <a href="/epilepsy-clinic" className="text-md hover:text-[#DB8E00]">
+                </Link>
+                <Link
+                  to="/epilepsy-clinic"
+                  className="text-md hover:text-[#DB8E00]"
+                >
                   Epilepsy clinic
-                </a>
-                <a href="/sleep-clinic" className="text-md hover:text-[#DB8E00]">
+                </Link>
+                <Link
+                  to="/sleep-clinic"
+                  className="text-md hover:text-[#DB8E00]"
+                >
                   Sleep clinic
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -72,27 +102,27 @@ const Footer = () => {
               <div className="space-y-2">
                 <h3 className="text-2xl font-semibold">Social Media</h3>
                 <div className="flex justify-center space-x-4">
-                  <a
-                    href="https://www.youtube.com"
+                  <Link
+                    to="https://www.youtube.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaYoutube className="text-white text-xl hover:text-red-600" />
-                  </a>
-                  <a
-                    href="https://www.facebook.com"
+                  </Link>
+                  <Link
+                    to="https://www.facebook.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaFacebook className="text-white text-xl hover:text-blue-600 hover:bg-white rounded-3xl" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com"
+                  </Link>
+                  <Link
+                    to="https://www.instagram.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaInstagram className="text-white text-xl hover:text-red-500" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -101,8 +131,8 @@ const Footer = () => {
             <div className="flex flex-col justify-center space-y-4 sm:w-1/3 transform hover:scale-105 transition duration-300 ease-in-out">
               <div className="flex flex-col space-y-2 gap-4">
                 <h3 className="text-2xl font-semibold">Contact Info</h3>
-                <a
-                  href="https://maps.app.goo.gl/qiHc2LCpLXkAJtdy6"
+                <Link
+                  to="https://maps.app.goo.gl/qiHc2LCpLXkAJtdy6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 hover:text-[#DB8E00]"
@@ -112,22 +142,22 @@ const Footer = () => {
                     Site No. 4, behind community centre, Sector 15,
                     <br /> Panchkula, Haryana, India
                   </span>
-                </a>
+                </Link>
 
-                <a
-                  href="tel:+1234567890"
+                <Link
+                  to="tel:+1234567890"
                   className="flex items-center space-x-2 hover:text-[#DB8E00]"
                 >
                   <FaPhoneAlt className="text-lg" />
                   <span>+91 9882123456</span>
-                </a>
-                <a
-                  href="mailto:example@example.com"
+                </Link>
+                <Link
+                  to="mailto:example@example.com"
                   className="flex items-center space-x-2 hover:text-[#DB8E00]"
                 >
                   <FaEnvelope className="text-lg" />
                   <span>abc@gmail.com</span>
-                </a>
+                </Link>
               </div>
 
               <div className="space-y-2 py-5">
@@ -149,10 +179,10 @@ const Footer = () => {
         <div className="flex w-full text-center justify-center bg-white text-black">
           <p className="sm:text-sm px-4 py-2">
             Loona Hospital© 2025 All Rights Reserved. | Designed & Developed
-            by: 
-            <a href="/dashboard" className="hover:text-gray-700">
+            by:
+            <Link to="/dashboard" className="hover:text-gray-700">
               Loona Hospital
-              </a>
+            </Link>
           </p>
         </div>
       </footer>
