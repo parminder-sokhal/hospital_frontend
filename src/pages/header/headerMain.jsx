@@ -124,18 +124,27 @@ function HeaderMain() {
                 >
                   <ul className="py-2 text-sm text-black">
                     <li>
-                      <a href="/Pictures" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="/Pictures"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
                         Pictures Gallery
                       </a>
                     </li>
                     <li>
-                      <a href="/Youtube" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="/Youtube"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
                         Video Gallery
                       </a>
                     </li>
 
                     <li>
-                      <a href="/Instagram" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="/Instagram"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
                         Instagram
                       </a>
                     </li>
@@ -155,8 +164,10 @@ function HeaderMain() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block text-xl">
-            <a href="/doctors"
-            className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition duration-300">
+            <a
+              href="/doctors"
+              className="px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition duration-300"
+            >
               Book Appointment
             </a>
           </div>
@@ -192,7 +203,10 @@ function HeaderMain() {
               <div className="grid px-40 py-5 mx-auto text-gray-900 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 ">
                 <ul>
                   <li>
-                    <a href="/Psychiatry" className="font-semibold text-md  hover:text-blue-700">
+                    <a
+                      href="/psychiatry"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
                       Psychiatry treatment
                     </a>
                     <a
@@ -231,45 +245,50 @@ function HeaderMain() {
                 {/* Counselling and Therapy */}
                 <ul>
                   <li>
-                    <div className="font-semibold">Counselling and Therapy</div>
                     <a
-                      href="#"
+                      href="/counselling-and-therapy"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Counselling and Therapy
+                    </a>
+                    <a
+                      href="/cbt"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       CBT
                     </a>
                     <a
-                      href="#"
+                      href="/dbt"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       DBT
                     </a>
                     <a
-                      href="#"
+                      href="/individual-counselling"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       individual counselling
                     </a>
                     <a
-                      href="#"
+                      href="/stress-management"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       stress management
                     </a>
                     <a
-                      href="#"
+                      href="/behaviour-therapy"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       behaviour therapy
                     </a>
                     <a
-                      href="#"
+                      href="/relaxation-therapy"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       relaxation therapy
                     </a>
                     <a
-                      href="#"
+                      href="/social-skills-training"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       social skills training
@@ -280,41 +299,44 @@ function HeaderMain() {
                 {/* Children Mental Health */}
                 <ul>
                   <li>
-                    <div className="font-semibold">
-                      Mental Health Issues and Children
-                    </div>
                     <a
-                      href="#"
+                      href="/mental-health-children"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Mental Health Issues and Children{" "}
+                    </a>
+                    <a
+                      href="/adhd"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       ADHD
                     </a>
                     <a
-                      href="#"
+                      href="/autism"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       autism
                     </a>
                     <a
-                      href="#"
+                      href="/incontinence"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       incontinence
                     </a>
                     <a
-                      href="#"
+                      href="/behaviour-issues"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       behaviour issues
                     </a>
                     <a
-                      href="#"
+                      href="/conduct-disorder"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       conduct disorder
                     </a>
                     <a
-                      href="#"
+                      href="/learning-disability"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       learning disability
@@ -325,27 +347,32 @@ function HeaderMain() {
                 {/* De-addiction Programme */}
                 <ul>
                   <li>
-                    <div className="font-semibold">De-addiction Programme</div>
                     <a
-                      href="#"
+                      href="/deaddiction"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      De-addiction Programme{" "}
+                    </a>
+                    <a
+                      href="/motivation-enhancement"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       motivation enhancement therapy
                     </a>
                     <a
-                      href="#"
+                      href="/relapse-prevention"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       relapse prevention therapy
                     </a>
                     <a
-                      href="#"
+                      href="/individual-counselling"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       individual counselling
                     </a>
                     <a
-                      href="#"
+                      href="/motivation-by-hypnosis"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       motivation enhancement by hypnosis
@@ -356,75 +383,86 @@ function HeaderMain() {
                 {/* Sexual Wellness */}
                 <ul>
                   <li>
-                    <div className="font-semibold">Sexual Wellness Program</div>
                     <a
-                      href="#"
+                      href="/sexual-wellness-program"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Sexual Wellness Program{" "}
+                    </a>
+                    <a
+                      href="/premature-ejaculation"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       premature ejaculation
                     </a>
                     <a
-                      href="#"
+                      href="/erectile-dysfunction"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       erectile dysfunction
                     </a>
                     <a
-                      href="#"
+                      href="/reduced-high-libido"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       reduced or high libido
                     </a>
                     <a
-                      href="#"
+                      href="/anorgasmia"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       anorgasmia
                     </a>
                     <a
-                      href="#"
+                      href="/dhat-syndrome"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       DHAT syndrome
                     </a>
                   </li>
                 </ul>
+
                 {/* Sleep Clinic */}
                 <ul>
                   <li>
-                    <div className="font-semibold">Sleep Clinic</div>
                     <a
-                      href="#"
+                      href="/sleep-clinic"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Sleep Clinic{" "}
+                    </a>
+                    <a
+                      href="/insomnia"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       insomnia
                     </a>
                     <a
-                      href="#"
+                      href="/disturbed-sleep"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       disturbed sleep
                     </a>
                     <a
-                      href="#"
+                      href="/non-refreshing-sleep"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       non-refreshing sleep
                     </a>
                     <a
-                      href="#"
+                      href="/sleep-talking"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       sleep talking
                     </a>
                     <a
-                      href="#"
+                      href="/sleep-walking"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       sleep walking
                     </a>
                     <a
-                      href="#"
+                      href="/nightmares"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       nightmares
@@ -435,15 +473,20 @@ function HeaderMain() {
                 {/* Headache Clinic */}
                 <ul>
                   <li>
-                    <div className="font-semibold">Headache Clinic</div>
                     <a
-                      href="#"
+                      href="/headache-clinic"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Headache Clinic{" "}
+                    </a>
+                    <a
+                      href="/migraine"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       migraine
                     </a>
                     <a
-                      href="#"
+                      href="/tension-headache"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       tension headache
@@ -454,9 +497,14 @@ function HeaderMain() {
                 {/* Epilepsy Clinic */}
                 <ul>
                   <li>
-                    <div className="font-semibold">Epilepsy Clinic</div>
                     <a
-                      href="#"
+                      href="/epilepsy-clinic"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Epilepsy Clinic{" "}
+                    </a>
+                    <a
+                      href="/seizure"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       seizure
@@ -464,7 +512,6 @@ function HeaderMain() {
                   </li>
                 </ul>
 
-                {/* Add the rest of your columns here... */}
               </div>
             </div>
           )}
@@ -538,17 +585,26 @@ function HeaderMain() {
                 >
                   <ul className="py-2 text-sm text-gray-700">
                     <li>
-                      <a href="/Pictures" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="/Pictures"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
                         Pictures Gallery
                       </a>
                     </li>
                     <li>
-                      <a href="/youtube" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="/youtube"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
                         video Gallery
                       </a>
                     </li>
                     <li>
-                      <a href="/Instagram" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="/Instagram"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
                         Instagram
                       </a>
                     </li>
@@ -569,286 +625,316 @@ function HeaderMain() {
             {isDropdownOpen && (
               <div className=" overflow-y-auto pt-10 bg-white ">
                 <div className="grid gap-6 sm:grid-cols-2">
-                  <ul>
-                    <li>
-                      <div className="font-semibold text-md">
-                        Psychiatry treatment
-                      </div>
-                      <a
-                        href="/depression"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        depression
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        anxiety
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        bipolar disorder
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        schizophrenia
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        OCD
-                      </a>
-                    </li>
-                  </ul>
+                <ul>
+                  <li>
+                    <a
+                      href="/psychiatry"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Psychiatry treatment
+                    </a>
+                    <a
+                      href="/depression"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      depression
+                    </a>
+                    <a
+                      href="/anxiety"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      anxiety
+                    </a>
+                    <a
+                      href="/bipolar-disorder"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      bipolar disorder
+                    </a>
+                    <a
+                      href="/schizophrenia"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      schizophrenia
+                    </a>
+                    <a
+                      href="/ocd"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      OCD
+                    </a>
+                  </li>
+                </ul>
 
-                  {/* Counselling and Therapy */}
-                  <ul>
-                    <li>
-                      <div className="font-semibold">
-                        Counselling and Therapy
-                      </div>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        CBT
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        DBT
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        individual counselling
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        stress management
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        behaviour therapy
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        relaxation therapy
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        social skills training
-                      </a>
-                    </li>
-                  </ul>
+                {/* Counselling and Therapy */}
+                <ul>
+                  <li>
+                    <a
+                      href="/counselling-and-therapy"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Counselling and Therapy
+                    </a>
+                    <a
+                      href="/cbt"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      CBT
+                    </a>
+                    <a
+                      href="/dbt"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      DBT
+                    </a>
+                    <a
+                      href="/individual-counselling"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      individual counselling
+                    </a>
+                    <a
+                      href="/stress-management"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      stress management
+                    </a>
+                    <a
+                      href="/behaviour-therapy"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      behaviour therapy
+                    </a>
+                    <a
+                      href="/relaxation-therapy"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      relaxation therapy
+                    </a>
+                    <a
+                      href="/social-skills-training"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      social skills training
+                    </a>
+                  </li>
+                </ul>
 
-                  {/* Children Mental Health */}
-                  <ul>
-                    <li>
-                      <div className="font-semibold">
-                        Mental Health Issues and Children
-                      </div>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        ADHD
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        autism
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        incontinence
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        behaviour issues
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        conduct disorder
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        learning disability
-                      </a>
-                    </li>
-                  </ul>
+                {/* Children Mental Health */}
+                <ul>
+                  <li>
+                    <a
+                      href="/mental-health-children"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Mental Health Issues and Children{" "}
+                    </a>
+                    <a
+                      href="/adhd"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      ADHD
+                    </a>
+                    <a
+                      href="/autism"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      autism
+                    </a>
+                    <a
+                      href="/incontinence"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      incontinence
+                    </a>
+                    <a
+                      href="/behaviour-issues"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      behaviour issues
+                    </a>
+                    <a
+                      href="/conduct-disorder"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      conduct disorder
+                    </a>
+                    <a
+                      href="/learning-disability"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      learning disability
+                    </a>
+                  </li>
+                </ul>
 
-                  {/* De-addiction Programme */}
-                  <ul>
-                    <li>
-                      <div className="font-semibold">
-                        De-addiction Programme
-                      </div>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        motivation enhancement therapy
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        relapse prevention therapy
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        individual counselling
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        motivation enhancement by hypnosis
-                      </a>
-                    </li>
-                  </ul>
+                {/* De-addiction Programme */}
+                <ul>
+                  <li>
+                    <a
+                      href="/deaddiction"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      De-addiction Programme{" "}
+                    </a>
+                    <a
+                      href="/motivation-enhancement"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      motivation enhancement therapy
+                    </a>
+                    <a
+                      href="/relapse-prevention"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      relapse prevention therapy
+                    </a>
+                    <a
+                      href="/individual-counselling"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      individual counselling
+                    </a>
+                    <a
+                      href="/motivation-by-hypnosis"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      motivation enhancement by hypnosis
+                    </a>
+                  </li>
+                </ul>
 
-                  {/* Sexual Wellness */}
-                  <ul>
-                    <li>
-                      <div className="font-semibold">
-                        Sexual Wellness Program
-                      </div>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        premature ejaculation
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        erectile dysfunction
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        reduced or high libido
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        anorgasmia
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        DHAT syndrome
-                      </a>
-                    </li>
-                  </ul>
-                  {/* Sleep Clinic */}
-                  <ul>
-                    <li>
-                      <div className="font-semibold">Sleep Clinic</div>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        insomnia
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        disturbed sleep
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        non-refreshing sleep
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        sleep talking
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        sleep walking
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        nightmares
-                      </a>
-                    </li>
-                  </ul>
+                {/* Sexual Wellness */}
+                <ul>
+                  <li>
+                    <a
+                      href="/sexual-wellness-program"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Sexual Wellness Program{" "}
+                    </a>
+                    <a
+                      href="/premature-ejaculation"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      premature ejaculation
+                    </a>
+                    <a
+                      href="/erectile-dysfunction"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      erectile dysfunction
+                    </a>
+                    <a
+                      href="/reduced-high-libido"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      reduced or high libido
+                    </a>
+                    <a
+                      href="/anorgasmia"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      anorgasmia
+                    </a>
+                    <a
+                      href="/dhat-syndrome"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      DHAT syndrome
+                    </a>
+                  </li>
+                </ul>
 
-                  {/* Headache Clinic */}
-                  <ul>
-                    <li>
-                      <div className="font-semibold">Headache Clinic</div>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        migraine
-                      </a>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        tension headache
-                      </a>
-                    </li>
-                  </ul>
+                {/* Sleep Clinic */}
+                <ul>
+                  <li>
+                    <a
+                      href="/sleep-clinic"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Sleep Clinic{" "}
+                    </a>
+                    <a
+                      href="/insomnia"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      insomnia
+                    </a>
+                    <a
+                      href="/disturbed-sleep"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      disturbed sleep
+                    </a>
+                    <a
+                      href="/non-refreshing-sleep"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      non-refreshing sleep
+                    </a>
+                    <a
+                      href="/sleep-talking"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      sleep talking
+                    </a>
+                    <a
+                      href="/sleep-walking"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      sleep walking
+                    </a>
+                    <a
+                      href="/nightmares"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      nightmares
+                    </a>
+                  </li>
+                </ul>
 
-                  {/* Epilepsy Clinic */}
-                  <ul>
-                    <li>
-                      <div className="font-semibold">Epilepsy Clinic</div>
-                      <a
-                        href="#"
-                        className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                      >
-                        seizure
-                      </a>
-                    </li>
-                  </ul>
+                {/* Headache Clinic */}
+                <ul>
+                  <li>
+                    <a
+                      href="/headache-clinic"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Headache Clinic{" "}
+                    </a>
+                    <a
+                      href="/migraine"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      migraine
+                    </a>
+                    <a
+                      href="/tension-headache"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      tension headache
+                    </a>
+                  </li>
+                </ul>
 
+                {/* Epilepsy Clinic */}
+                <ul>
+                  <li>
+                    <a
+                      href="/epilepsy-clinic"
+                      className="font-semibold text-md  hover:text-blue-700"
+                    >
+                      Epilepsy Clinic{" "}
+                    </a>
+                    <a
+                      href="/seizure"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      seizure
+                    </a>
+                  </li>
+                </ul>
                   {/* Add other mega menu sections here for mobile if needed */}
                 </div>
               </div>

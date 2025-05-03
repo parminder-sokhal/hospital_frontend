@@ -33,28 +33,28 @@ const Footer = () => {
               {/* Treatments Links */}
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Treatments</h3>
-                <a href="/depression" className="text-md hover:text-[#DB8E00]">
+                <a href="/psychiatry" className="text-md hover:text-[#DB8E00]">
                   Psychiatry
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/counselling-and-therapy" className="text-md hover:text-[#DB8E00]">
                   Counselling and therapy
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/mental-health-children" className="text-md hover:text-[#DB8E00]">
                   Mental health issues and children
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/deaddiction" className="text-md hover:text-[#DB8E00]">
                   De-addiction programme
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/sexual-wellness-program" className="text-md hover:text-[#DB8E00]">
                   sexual wellness program
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/headache-clinic" className="text-md hover:text-[#DB8E00]">
                   Headache clinic
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/epilepsy-clinic" className="text-md hover:text-[#DB8E00]">
                   Epilepsy clinic
                 </a>
-                <a href="#" className="text-md hover:text-[#DB8E00]">
+                <a href="/sleep-clinic" className="text-md hover:text-[#DB8E00]">
                   Sleep clinic
                 </a>
               </div>
