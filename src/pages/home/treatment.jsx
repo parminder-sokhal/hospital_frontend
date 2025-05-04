@@ -52,6 +52,7 @@ import Migraine from '../../components/header/treatments/migraine.jsx';
 import TensionHeadache from '../../components/header/treatments/tensionheadache.jsx';
 import EpilepsyClinic from '../../components/header/treatments/EpilepsyClinic.jsx';
 import Seizure from '../../components/header/treatments/seizure.jsx';
+import DeaddictionProgramme from '../../components/header/treatments/De-addictionProgramme.jsx';
 
 const TreatmentRoutes = (
   <>
@@ -62,6 +63,7 @@ const TreatmentRoutes = (
     <Route path="/bipolar-disorder" element={<BipolarDisorder />} />
     <Route path="/schizophrenia" element={<Schizophrenia />} />
     <Route path="/ocd" element={<OCD />} />
+    <Route path="/De-addictionProgramme" element={<DeaddictionProgramme />} />
     <Route path="/deaddiction" element={<DeaddictionPrograms />} />
     <Route path="/sexual-wellness" element={<SexualWellnessServices />} />
     <Route path="/psychiatric-care" element={<PsychiatricCare />} />
@@ -88,11 +90,13 @@ const TreatmentRoutes = (
     <Route path="/relapse-prevention" element={<RelapsePreventionTherapy />} />
     <Route path="/motivation-by-hypnosis" element={<MotivationEnhancementByHypnosis />} />
     <Route path="/sexual-wellness-program" element={<SexualWellnessProgram />} />
+
     <Route path="/premature-ejaculation" element={<PrematureEjaculation />} />
     <Route path="/erectile-dysfunction" element={<ErectileDysfunction />} />
     <Route path="/reduced-high-libido" element={<ReducedOrHighLibido />} />
     <Route path="/anorgasmia" element={<Anorgasmia />} />
     <Route path="/dhat-syndrome" element={<DHATSyndrome />} />
+
     <Route path="/sleep-clinic" element={<SleepClinic />} />
     <Route path="/insomnia" element={<Insomnia />} />
     <Route path="/disturbed-sleep" element={<DisturbedSleep />} />
@@ -100,9 +104,11 @@ const TreatmentRoutes = (
     <Route path="/sleep-talking" element={<SleepTalking />} />
     <Route path="/sleep-walking" element={<SleepWalking />} />
     <Route path="/nightmares" element={<Nightmares />} />
+
     <Route path="/headache-clinic" element={<HeadacheClinic />} />
     <Route path="/migraine" element={<Migraine />} />
     <Route path="/tension-headache" element={<TensionHeadache />} />
+    
     <Route path="/epilepsy-clinic" element={<EpilepsyClinic />} />
     <Route path="/seizure" element={<Seizure />} />
   </>

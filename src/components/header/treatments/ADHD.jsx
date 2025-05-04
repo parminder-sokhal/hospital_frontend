@@ -3,11 +3,14 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: "/images/adhd-therapy.jpg",
+  bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path if different
   sidebarLinks: [
-    { title: "Expert De-addiction Programs", link: "/deaddiction" },
-    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
-    { title: "Psychiatric Care", link: "/psychiatric-care" },
+    { title: "ADHD", link: "/ADHD" },
+    { title: "Autism", link: "/autism" },
+    { title: "Incontinence", link: "/incontinence" },
+    { title: "Behaviour Issues", link: "/behaviour-issues" },
+    { title: "Conduct Disorder", link: "/conduct-disorder" },
+    { title: "Learning Disability", link: "/learning-disability" },
   ],
 };
 

@@ -3,11 +3,14 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: "/images/conduct-disorder.jpg",
+  bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path if different
   sidebarLinks: [
-    { title: "Expert De-addiction Programs", link: "/deaddiction" },
-    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
-    { title: "Psychiatric Care", link: "/psychiatric-care" },
+    { title: "ADHD", link: "/ADHD" },
+    { title: "Autism", link: "/autism" },
+    { title: "Incontinence", link: "/incontinence" },
+    { title: "Behaviour Issues", link: "/behaviour-issues" },
+    { title: "Conduct Disorder", link: "/conduct-disorder" },
+    { title: "Learning Disability", link: "/learning-disability" },
   ],
 };
 
@@ -94,7 +97,7 @@ const ConductDisorder = () => {
           </div>
 
           <div className="lg:w-1/4 h-1/3 bg-gray-100 py-10 rounded-md shadow px-10">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Other Services</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-800">Mental Health Issues and Children</h2>
             <ul className="space-y-4">
               {data.sidebarLinks.map((item, index) => (
                 <li

@@ -3,11 +3,15 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: "/images/social-skills-training.jpg",
+  bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path if different
   sidebarLinks: [
-    { title: "Expert De-addiction Programs", link: "/deaddiction" },
-    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
-    { title: "Psychiatric Care", link: "/psychiatric-care" },
+    { title: "CBT", link: "/cbt" },
+    { title: "DBT", link: "/DBT" },
+    { title: "Individual Counselling", link: "/individual-counselling" },
+    { title: "Stress Management", link: "/stress-management" },
+    { title: "Behaviour Therapy", link: "/behaviour-therapy" },
+    { title: "Relaxation Therapy", link: "/relaxation-therapy" },
+    { title: "Social Skills Training", link: "/social-skills-training" },
   ],
 };
 
@@ -95,7 +99,7 @@ const SocialSkillsTraining = () => {
           </div>
 
           <div className="lg:w-1/4 h-1/3 bg-gray-100 py-10 rounded-md shadow px-10">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800">Other Services</h2>
+            <h2 className="text-xl font-semibold mb-4 text-gray-800">Other Counselling and Therapy</h2>
             <ul className="space-y-4">
               {data.sidebarLinks.map((item, index) => (
                 <li

@@ -351,7 +351,7 @@ function HeaderMain() {
                 <ul>
                   <li>
                     <Link
-                      to="/deaddiction"
+                      to="/De-addictionProgramme"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
                       De-addiction Programme{" "}
@@ -778,7 +778,7 @@ function HeaderMain() {
                     <ul>
                       <li>
                         <Link
-                          to="/deaddiction"
+                          to="/De-addictionProgramme"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
                           De-addiction Programme{" "}

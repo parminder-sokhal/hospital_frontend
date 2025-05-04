@@ -22,7 +22,7 @@ const SpecialitiesSlider = () => {
     },
     {
       id: 3,
-      description: " Mental health issues and children",
+      description: " Mental health issues",
       image: "/images/BipolarDisorder.jpg",
       href: "/link3",
     },

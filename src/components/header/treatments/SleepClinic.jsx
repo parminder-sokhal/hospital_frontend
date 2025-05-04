@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 const data = {
   bgImage: "/images/sleep-clinic.jpg", // Update this path to your actual image file
   sidebarLinks: [
-    { title: "Cognitive Behavioral Therapy", link: "/cbt" },
-    { title: "Mindfulness and Relaxation", link: "/mindfulness" },
-    { title: "Stress Management Program", link: "/stress-management" },
+    { title: "Insomnia", link: "/Insomnia" },
+    { title: "Disturbed Sleep", link: "/Disturbed-Sleep" },
+    { title: "Non Refreshing Sleep", link: "/Non-Refreshing-Sleep" },
+    { title: "Sleep Talking", link: "/Sleep-Talking" },
+    { title: "Sleep Walking", link: "/Sleep-Walking" },
+    { title: "Nightmares", link: "/Nightmares" },
   ],
 };
 
@@ -81,19 +84,20 @@ const SleepClinic = () => {
           </div>
 
           <div className="lg:w-1/4 h-1/3 bg-gray-100 py-10 rounded-md shadow px-10">
-            <div className="p-4 bg-gray-100 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Related Services</h3>
-              <ul className="space-y-4">
-                {data.sidebarLinks.map((item) => (
-                  <li key={item.link}>
-                    <Link to={item.link} className="flex items-center text-gray-600 hover:text-blue-600">
-                      <FaAngleRight className="mr-2" />
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <h2 className="text-xl font-semibold mb-4 text-gray-800">
+            Sleep Clinic 
+            </h2>
+            <ul className="space-y-4">
+              {data.sidebarLinks.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-center text-blue-600 hover:text-blue-800 cursor-pointer"
+                >
+                  <FaAngleRight className="mr-2" />
+                  <Link to={item.link}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

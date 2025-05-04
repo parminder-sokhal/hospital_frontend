@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 const data = {
   bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path if different
   sidebarLinks: [
-    { title: "Expert De-addiction Programs", link: "/deaddiction" },
-    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
-    { title: "Psychiatric Care", link: "/psychiatric-care" },
-    { title: "Expert De-addiction Programs", link: "/deaddiction" },
-    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
-    { title: "Psychiatric Care", link: "/psychiatric-care" },
+    { title: "CBT", link: "/cbt" },
+    { title: "DBT", link: "/DBT" },
+    { title: "Individual Counselling", link: "/individual-counselling" },
+    { title: "Stress Management", link: "/stress-management" },
+    { title: "Behaviour Therapy", link: "/behaviour-therapy" },
+    { title: "Relaxation Therapy", link: "/relaxation-therapy" },
+    { title: "Social Skills Training", link: "/social-skills-training" },
   ],
 };
 

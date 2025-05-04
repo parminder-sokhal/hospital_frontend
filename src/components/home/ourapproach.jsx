@@ -10,51 +10,27 @@ const OurApproach = () => {
     {
       title: "Game Therapy",
       description:
-        "Game therapy helps individuals overcome personal and emotional challenges using gaming techniques.",
+        "Game therapy utilizes interactive video games and play-based activities to enhance mental health, improve emotional regulation, and foster social skills in a fun and engaging way.",
       image: "/images/gametherapy.jpg",
     },
     {
       title: "Yoga & Meditation",
-      description:
-        "Yoga and meditation are holistic approaches for relaxation and stress management.",
+      description:"Yoga and meditation therapy combines physical postures, breath control, and mindfulness practices to promote relaxation, reduce stress, and enhance overall mental well-being.",
       image: "/images/yoga.jpg",
     },
     {
-      title: "Hypnotherapy",
+      title: "Gym ",
       description:
-        "Hypnotherapy uses hypnosis to promote healing and personal growth.",
+        "Gym therapy involves structured physical exercise in a gym setting to improve mental health, boost mood, and enhance overall well-being through physical activity and social interaction.",
       image: "/images/hypnotherapy.jpg",
     },
     {
-      title: "Autogenic Training",
+      title: "Recreational activities",
       description:
-        "Autogenic training is a relaxation technique to control the body's stress responses.",
+        "Recreational activities engage individuals in enjoyable pastimes to promote relaxation, social interaction, and mental well-being while reducing stress and enhancing overall life satisfaction.",
       image: "/images/autogenic.jpg",
     },
-    {
-      title: "Game Therapy",
-      description:
-        "Game therapy helps individuals overcome personal and emotional challenges using gaming techniques.",
-      image: "/images/gametherapy.jpg",
-    },
-    {
-      title: "Yoga & Meditation",
-      description:
-        "Yoga and meditation are holistic approaches for relaxation and stress management.",
-      image: "/images/yoga.jpg",
-    },
-    {
-      title: "Hypnotherapy",
-      description:
-        "Hypnotherapy uses hypnosis to promote healing and personal growth.",
-      image: "/images/hypnotherapy.jpg",
-    },
-    {
-      title: "Autogenic Training",
-      description:
-        "Autogenic training is a relaxation technique to control the body's stress responses.",
-      image: "/images/autogenic.jpg",
-    },
+    
   ];
 
   const itemsPerPage = 2;

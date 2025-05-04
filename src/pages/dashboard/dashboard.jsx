@@ -4,18 +4,17 @@ import {
   FaBars,
   FaUserGraduate,
   FaChalkboardTeacher,
-  FaWpforms,
-  FaMapMarkedAlt,
-  FaBook,
-  FaQuestionCircle,
-  FaComments,
-  FaUserFriends,
   FaTimes,
 } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { logout } from "../../redux/actions/userActions";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
   const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
   const closeSidebar = () => setSidebarOpen(false);
@@ -36,12 +35,42 @@ export default function Dashboard() {
             </button>
           </div>
           <ul className="flex-1 px-2 overflow-y-auto">
-            <SidebarItem icon={<FaUserGraduate />} text="Today All Appointments" to="/dashboard/TodayAppointments" active={location.pathname === "/dashboard/TodayAppointments"} />
-            <SidebarItem icon={<FaUserGraduate />} text="All Appointment" to="/dashboard/AllAppointment" active={location.pathname === "/dashboard/AllAppointment"} />
-            <SidebarItem icon={<FaUserGraduate />} text="All Payments" to="/dashboard/AllPayments" active={location.pathname === "/dashboard/AllPayments"} />
-            <SidebarItem icon={<FaUserGraduate />} text="Add Doctor" to="/dashboard/AddDoctor" active={location.pathname === "/dashboard/AddDoctor"} />
-            <SidebarItem icon={<FaChalkboardTeacher />} text="logout" to="/" active={location.pathname === "/"} />
-           
+            <SidebarItem
+              icon={<FaUserGraduate />}
+              text="Today All Appointments"
+              to="/dashboard/TodayAppointments"
+              active={location.pathname === "/dashboard/TodayAppointments"}
+            />
+            <SidebarItem
+              icon={<FaUserGraduate />}
+              text="All Appointment"
+              to="/dashboard/AllAppointment"
+              active={location.pathname === "/dashboard/AllAppointment"}
+            />
+            <SidebarItem
+              icon={<FaUserGraduate />}
+              text="All Payments"
+              to="/dashboard/AllPayments"
+              active={location.pathname === "/dashboard/AllPayments"}
+            />
+            <SidebarItem
+              icon={<FaUserGraduate />}
+              text="Add Doctor"
+              to="/dashboard/AddDoctor"
+              active={location.pathname === "/dashboard/AddDoctor"}
+            />
+            <li className="py-4 border-t">
+              <button
+                onClick={() => {
+                  dispatch(logout());
+                  navigate("/"); 
+                }}
+                className={`flex w-full items-center p-2 rounded-md text-sm font-medium transition-colors text-black hover:text-white hover:bg-red-600`}
+              >
+                <FaChalkboardTeacher />
+                <span className="ml-3">Logout</span>
+              </button>
+            </li>
           </ul>
         </nav>
       </aside>

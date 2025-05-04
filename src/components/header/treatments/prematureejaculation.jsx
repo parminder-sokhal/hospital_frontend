@@ -3,11 +3,22 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: "/images/premature-ejaculation.jpg", // Make sure this image exists
+  bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path if different
   sidebarLinks: [
-    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
-    { title: "Addiction Recovery Program", link: "/addiction-recovery" },
-    { title: "Motivation Enhancement by Hypnosis", link: "/motivation-enhancement" },
+    {
+      title: "Premature Ejaculation",
+      link: "/Premature-Ejaculation",
+    },
+    { title: "Erectile Dysfunction", link: "/Erectile-Dysfunction" },
+    { title: "Reduced Or High Libido", link: "/reduced-high-libido" },
+    {
+      title: "Anorgasmia",
+      link: "/Anorgasmia",
+    },
+    {
+      title: "DHAT Syndrome",
+      link: "/DHAT-Syndrome",
+    },
   ],
 };
 
@@ -94,19 +105,20 @@ const PrematureEjaculation = () => {
           </div>
 
           <div className="lg:w-1/4 h-1/3 bg-gray-100 py-10 rounded-md shadow px-10">
-            <div className="p-4 bg-gray-100 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Related Services</h3>
-              <ul className="space-y-4">
-                {data.sidebarLinks.map((item) => (
-                  <li key={item.link}>
-                    <Link to={item.link} className="flex items-center text-gray-600 hover:text-blue-600">
-                      <FaAngleRight className="mr-2" />
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <h2 className="text-xl font-semibold mb-4 text-gray-800">
+              Sexual Wellness Program
+            </h2>
+            <ul className="space-y-4">
+              {data.sidebarLinks.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-center text-blue-600 hover:text-blue-800 cursor-pointer"
+                >
+                  <FaAngleRight className="mr-2" />
+                  <Link to={item.link}>{item.title}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>
