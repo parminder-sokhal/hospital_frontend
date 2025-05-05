@@ -17,6 +17,7 @@ import {
   FaToggleOn,
   FaToggleOff,
 } from "react-icons/fa";
+import { MdEdit } from "react-icons/md";
 
 function AddDoctor() {
   const dispatch = useDispatch();
@@ -94,15 +95,15 @@ function AddDoctor() {
         </button>
       </div>
 
-      <div className="mb-4 relative">
+      <div className="mb-4 w-full md:w-1/3 relative">
+        <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
         <input
           type="text"
           placeholder="Search by name"
-          className="border border-gray-300 rounded pl-4 pr-10 py-2 w-full md:w-1/3"
+          className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <FaSearch className="absolute right-4 top-3 text-gray-400" />
       </div>
 
       <div className="overflow-x-auto">
@@ -142,21 +143,21 @@ function AddDoctor() {
                     <td className="p-2">{doctor.hospital}</td>
                     <td className="p-2">{doctor.experience}</td>
                     <td className="p-2">₹{doctor.fees}</td>
-                    <td className="p-2 flex items-center gap-2">
-                      {doctor.availability === "available"
-                        ? "Available"
-                        : "Unavailable"}
+                    <td className="p-2">
                       <span
                         onClick={() => handleToggleAvailability(doctor)}
-                        className="cursor-pointer text-lg"
+                        className={`cursor-pointer inline-block px-3 py-1 text-xs font-semibold rounded-full border transition duration-300 ${
+                          doctor.availability === "available"
+                            ? "bg-green-800 text-white border-green-700 hover:bg-green-700"
+                            : "bg-red-600 text-white border-red-500 hover:bg-red-500"
+                        }`}
                       >
-                        {doctor.availability === "available" ? (
-                          <FaToggleOn className="text-green-500" />
-                        ) : (
-                          <FaToggleOff className="text-gray-500" />
-                        )}
+                        {doctor.availability === "available"
+                          ? "Available"
+                          : "Unavailable"}
                       </span>
                     </td>
+
                     <td className="p-2">
                       <button
                         onClick={() => toggleExpand(doctor._id)}
@@ -168,14 +169,14 @@ function AddDoctor() {
                     <td className="p-2 flex gap-2 items-center">
                       <button
                         onClick={() => openEditDoctorModal(doctor)}
-                        className="text-blue-600"
+                        className="text-blue-600 hover:text-blue-800 transition"
                         title="Edit"
                       >
-                        <FaEdit />
+                        <MdEdit size={20} />
                       </button>
                       <button
                         onClick={() => setConfirmDeleteId(doctor._id)}
-                        className="text-red-600"
+                        className="text-red-600 hover:text-red-800 transition"
                         title="Delete"
                       >
                         <FaTrash />
@@ -185,7 +186,10 @@ function AddDoctor() {
 
                   {expandedDoctorId === doctor._id && (
                     <tr>
-                      <td colSpan="10" className="p-4 bg-gray-50 text-gray-700">
+                      <td
+                        colSpan="10"
+                        className="p-4 bg-gray-100 text-sm leading-relaxed space-y-1"
+                      >
                         <p>
                           <strong>About:</strong> {doctor.about}
                         </p>
