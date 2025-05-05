@@ -46,14 +46,11 @@ const OurApproach = () => {
   };
 
   return (
-    <div
-      className="py-15 px-4 bg-gray-50"
-      style={{
-        backgroundImage: "url('/images/Treatmentbg.jpg')", // Replace with your background image
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+
+    
+      
+      <div className="bg-fixed py-15 px-4 bg-[url(/images/Treatmentbg.png)]">
+    
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between">
         {/* Left Section - Centered vertically */}
         <div className="w-full md:w-2/5 flex flex-col justify-center items-start space-y-4 mb-8 md:mb-0 sm:px-10 px-4">

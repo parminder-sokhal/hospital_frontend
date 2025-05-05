@@ -7,6 +7,7 @@ import Doctors from '../../components/home/Doctors.jsx'
 import PhotoGallery from '../../components/home/PhotoGallery.jsx'
 import TrendingYoutube from '../../components/home/TrendingYoutube.jsx'
 import InstagramSlider from '../../components/home/InstagramSlider.jsx'
+import PatientReview from '../../components/home/PatientReview.jsx'
 
 function Home() {
   return (
@@ -15,10 +16,11 @@ function Home() {
     <VideoPlayHeader/>
     <Treatment/>
     <OurApproach/>
-    {/* <SpecialitiesSlider/> */}
     <Doctors/>
-    <PhotoGallery/>
+    <PatientReview/>
+    {/* <SpecialitiesSlider/> */}
     <TrendingYoutube/>
+    <PhotoGallery/>
     <InstagramSlider/>
     </>
   )

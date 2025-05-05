@@ -12,7 +12,7 @@ const SpecialitiesSlider = () => {
       id: 1,
       description: "stress and anxiety",
       image: "/images/stress.png",
-      href: "/link1",
+      href: "",
     },
     {
       id: 2,
@@ -325,12 +325,7 @@ const SpecialitiesSlider = () => {
       <div className="flex justify-center items-center mb-6">
         <h2 className="text-4xl font-bold">Specialities</h2>
       </div>
-      <Link
-        to="/"
-        className="text-md font-bold flex justify-end mb-6 hover:text-blue-800"
-      >
-        <h3>View All Specialities</h3>
-      </Link>
+      
 
       {/* Carousel Component */}
       <div id="centered" className="relative w-full">
