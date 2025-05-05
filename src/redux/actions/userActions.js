@@ -39,9 +39,11 @@ export const loginUser = (credentials) => async (dispatch) => {
         "Content-Type": "application/json",
       },
       withCredentials: true,
-    });
 
-    dispatch(userLoginSuccess(data));
+    });
+    localStorage.setItem("Bearer", data.token);
+dispatch(userLoginSuccess(data));
+
   } catch (error) {
     dispatch(
       userFail(error.response?.data?.message || "Login failed")

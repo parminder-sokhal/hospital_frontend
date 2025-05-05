@@ -4,6 +4,7 @@ const initialState = {
   loading: false,
   doctors: [],
   doctor: {},
+  availableDoctors: [],
   error: null,
 };
 
@@ -19,6 +20,10 @@ const doctorSlice = createSlice({
       state.loading = false;
       state.doctors = action.payload.doctors;
     },
+    fetchAvailableDoctorsSuccess(state, action) {
+      state.loading = false;
+      state.availableDoctors = action.payload.doctors;
+    },
     getDoctorByIdSuccess(state, action) {
       state.loading = false;
       state.doctor = action.payload.doctor;
@@ -31,14 +36,23 @@ const doctorSlice = createSlice({
       state.loading = false;
       state.doctors.push(action.payload.doctor);
     },
-    updateDoctorAvailability(state, action) {
+    updateDoctorSuccess(state, action) {
       state.loading = false;
-      const index = state.doctors.findIndex(
-        (doc) => doc._id === action.payload._id
-      );
+      const index = state.doctors.findIndex(doc => doc._id === action.payload._id);
       if (index !== -1) {
         state.doctors[index] = action.payload;
       }
+    },
+    updateDoctorAvailability(state, action) {
+      state.loading = false;
+      const index = state.doctors.findIndex(doc => doc._id === action.payload._id);
+      if (index !== -1) {
+        state.doctors[index] = action.payload;
+      }
+    },
+    deleteDoctorSuccess(state, action) {
+      state.loading = false;
+      state.doctors = state.doctors.filter(doc => doc._id !== action.payload);
     },
   },
 });
@@ -46,10 +60,13 @@ const doctorSlice = createSlice({
 export const {
   doctorRequest,
   fetchDoctorsSuccess,
+  fetchAvailableDoctorsSuccess,
   getDoctorByIdSuccess,
   doctorFail,
   addDoctor,
+  updateDoctorSuccess,
   updateDoctorAvailability,
+  deleteDoctorSuccess,
 } = doctorSlice.actions;
 
 export default doctorSlice.reducer;
