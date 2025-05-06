@@ -89,34 +89,45 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
   };
 
   const handleSubmit = (e) => {
-  e.preventDefault();
-  const data = new FormData();
-
-  data.append("hospitalSlots", JSON.stringify(formData.hospitalSlots));
-  data.append("videoSlots", JSON.stringify(formData.videoSlots));
-
-  Object.entries(formData).forEach(([key, value]) => {
-    if (value !== null && key !== "hospitalSlots" && key !== "videoSlots") {
-      if (key === "file") {
-        data.append(key, value);
-      } else {
-        data.append(key, String(value));
-      }
+    e.preventDefault();
+    const data = new FormData();
+  
+    if (isEditing) {
+      // Indexed array fields for PUT
+      formData.hospitalSlots.forEach((slot, index) => {
+        data.append(`hospitalSlots[${index}]`, slot);
+      });
+      formData.videoSlots.forEach((slot, index) => {
+        data.append(`videoSlots[${index}]`, slot);
+      });
+    } else {
+      // JSON stringified arrays for POST
+      data.append("hospitalSlots", JSON.stringify(formData.hospitalSlots));
+      data.append("videoSlots", JSON.stringify(formData.videoSlots));
     }
-  });
-
-  console.log("FormData being submitted:");
-  for (let [key, val] of data.entries()) {
-    console.log(key, val);
-  }
-
-  if (isEditing) {
-    dispatch(updateDoctor(doctor._id, data)).then(onClose);
-  } else {
-    dispatch(createDoctor(data)).then(onClose);
-  }
-};
-
+  
+    Object.entries(formData).forEach(([key, value]) => {
+      if (value !== null && key !== "hospitalSlots" && key !== "videoSlots") {
+        if (key === "file") {
+          data.append(key, value);
+        } else {
+          data.append(key, String(value));
+        }
+      }
+    });
+  
+    console.log("FormData being submitted:");
+    for (let [key, val] of data.entries()) {
+      console.log(key, val);
+    }
+  
+    if (isEditing) {
+      dispatch(updateDoctor(doctor._id, data)).then(onClose);
+    } else {
+      dispatch(createDoctor(data)).then(onClose);
+    }
+  };
+  
 
   if (!open) return null;
 
