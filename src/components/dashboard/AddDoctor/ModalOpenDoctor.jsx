@@ -42,13 +42,20 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
     qualification: "",
     awards: "",
     experience: "",
-    availability: "available", 
+    availability: "available",
     fees: "",
     phone: "",
     email: "",
     hospitalSlots: [],
     videoSlots: [],
     file: null,
+  });
+
+  const [errors, setErrors] = useState({
+    fees: "",
+    phone: "",
+    experience: "",
+    email: "",
   });
 
   useEffect(() => {
@@ -75,7 +82,11 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     if (type === "file") {
-      setFormData({ ...formData, [name]: files[0] });
+      const file = files[0];
+      if (file) {
+        setFormData({ ...formData, [name]: file });
+        setPreviewImage(URL.createObjectURL(file)); // Set preview image
+      }
     } else {
       setFormData({ ...formData, [name]: value });
     }
@@ -88,10 +99,51 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
     });
   };
 
+  const validateFields = () => {
+    let newErrors = {};
+
+    // Phone validation (10 digits)
+    if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits.";
+    } else {
+      newErrors.phone = "";
+    }
+
+    // Fees validation (numbers only)
+    if (!/^\d+$/.test(formData.fees)) {
+      newErrors.fees = "Fees must be a number.";
+    } else {
+      newErrors.fees = "";
+    }
+
+    // Experience validation (numbers only)
+    if (!/^\d+$/.test(formData.experience)) {
+      newErrors.experience = "Experience must be a number.";
+    } else {
+      newErrors.experience = "";
+    }
+
+    // Email validation (basic email format)
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(formData.email)) {
+      newErrors.email = "Email format is not correct (e.g., abc@gmail.com).";
+    } else {
+      newErrors.email = "";
+    }
+
+    setErrors(newErrors);
+    return Object.values(newErrors).every((error) => error === "");
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateFields()) {
+      return;
+    }
+
     const data = new FormData();
-  
+
     if (isEditing) {
       // Indexed array fields for PUT
       formData.hospitalSlots.forEach((slot, index) => {
@@ -105,7 +157,7 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
       data.append("hospitalSlots", JSON.stringify(formData.hospitalSlots));
       data.append("videoSlots", JSON.stringify(formData.videoSlots));
     }
-  
+
     Object.entries(formData).forEach(([key, value]) => {
       if (value !== null && key !== "hospitalSlots" && key !== "videoSlots") {
         if (key === "file") {
@@ -115,19 +167,13 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
         }
       }
     });
-  
-    console.log("FormData being submitted:");
-    for (let [key, val] of data.entries()) {
-      console.log(key, val);
-    }
-  
+
     if (isEditing) {
       dispatch(updateDoctor(doctor._id, data)).then(onClose);
     } else {
       dispatch(createDoctor(data)).then(onClose);
     }
   };
-  
 
   if (!open) return null;
 
@@ -171,7 +217,7 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
           <input
             type="text"
             name="hospital"
-            placeholder="Hospital"
+            placeholder="Hospital or 1st description"
             value={formData.hospital}
             onChange={handleChange}
             required
@@ -180,22 +226,30 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
           <input
             type="text"
             name="experience"
-            placeholder="Experience"
+            placeholder="Experience in Years (only Numbers)"
             value={formData.experience}
             onChange={handleChange}
             required
-            className="border p-2 rounded"
+            pattern="\d+" // Only allow numbers
+            className={`border p-2 rounded ${errors.experience ? "border-red-500" : ""}`}
           />
+          {errors.experience && (
+            <span className="text-red-500 text-sm">{errors.experience}</span>
+          )}
 
           <input
             type="text"
             name="fees"
-            placeholder="Fees"
+            placeholder="Fees ₹ (only numbers)"
             value={formData.fees}
             onChange={handleChange}
             required
-            className="border p-2 rounded"
+            pattern="\d+" // Only allow numbers
+            className={`border p-2 rounded ${errors.fees ? "border-red-500" : ""}`}
           />
+          {errors.fees && (
+            <span className="text-red-500 text-sm">{errors.fees}</span>
+          )}
 
           <input
             type="text"
@@ -204,20 +258,28 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
             value={formData.phone}
             onChange={handleChange}
             required
-            pattern="\d{10}"
+            pattern="\d{10}" // Only allow 10-digit phone numbers
             maxLength={10}
-            className="border p-2 rounded"
+            className={`border p-2 rounded ${errors.phone ? "border-red-500" : ""}`}
           />
+          {errors.phone && (
+            <span className="text-red-500 text-sm">{errors.phone}</span>
+          )}
+
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="YourEmail@gmail.com"
             value={formData.email}
             onChange={handleChange}
             required
-            className="border p-2 rounded"
+            className={`border p-2 rounded ${errors.email ? "border-red-500" : ""}`}
           />
-<div className="md:col-span-1">
+          {errors.email && (
+            <span className="text-red-500 text-sm">{errors.email}</span>
+          )}
+
+          <div className="md:col-span-1">
             <label className="block mb-1 font-medium">Upload Image</label>
             <input
               type="file"
@@ -226,6 +288,25 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
               onChange={handleChange}
               className="w-full text-blue-600 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
             />
+            {previewImage && (
+              <div className="relative mt-2 w-32 h-32">
+                <img
+                  src={previewImage}
+                  alt="Preview"
+                  className="w-full h-full object-cover rounded border"
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setPreviewImage(null);
+                    setFormData({ ...formData, file: null });
+                  }}
+                  className="absolute top-0 right-0 bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center transform translate-x-1/2 -translate-y-1/2 hover:bg-red-700"
+                >
+                  &times;
+                </button>
+              </div>
+            )}
           </div>
           <div className="md:col-span-1">
             <label className="block mb-1 font-medium">Hospital Slots</label>
@@ -253,8 +334,6 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
               }
             />
           </div>
-
-          
 
           {/* Textareas at the bottom */}
           <div className="md:col-span-2">

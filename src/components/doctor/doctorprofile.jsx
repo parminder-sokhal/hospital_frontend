@@ -84,8 +84,9 @@ const DoctorProfile = () => {
             {/* Experience & Fees Badges */}
             <div className="flex gap-4 mt-4 flex-wrap">
               <div className="bg-blue-50 border border-blue-200 px-5 py-3 rounded-md shadow-sm flex flex-col items-center w-40 text-center">
-                <span className="text-xl font-semibold text-blue-700">
-                  {doctor?.experience}
+                <span className="text-xl flex font-semibold text-blue-700">
+                  {doctor?.experience} 
+                  <span className="text-md items-center justify-center flex text-blue-700 ml-1">Years</span>
                 </span>
                 <span className="text-sm text-gray-600">Experience</span>
               </div>
