@@ -20,7 +20,7 @@ function Home() {
     <PatientReview/>
     {/* <SpecialitiesSlider/> */}
     <TrendingYoutube/>
-    <PhotoGallery/>
+    <PhotoGallery/> 
     <InstagramSlider/>
     </>
   )

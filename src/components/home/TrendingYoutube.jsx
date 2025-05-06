@@ -30,7 +30,7 @@ const TrendingYoutube = () => {
   };
 
   return (
-    <div className="container mx-auto lg:px-40 px-6 py-10">
+    <div className="container mx-auto lg:px-40 px-6 py-20">
       <h2 className="sm:text-3xl text-2xl text-start mb-8">Trending on Social Media</h2>
 
       <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">

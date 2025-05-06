@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa"; // Importing phone icon
 import { Link } from "react-router-dom";
 
-
 const OurApproach = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -15,7 +14,8 @@ const OurApproach = () => {
     },
     {
       title: "Yoga & Meditation",
-      description:"Yoga and meditation therapy combines physical postures, breath control, and mindfulness practices to promote relaxation, reduce stress, and enhance overall mental well-being.",
+      description:
+        "Yoga and meditation therapy combines physical postures, breath control, and mindfulness practices to promote relaxation, reduce stress, and enhance overall mental well-being.",
       image: "/images/yoga.jpg",
     },
     {
@@ -30,7 +30,6 @@ const OurApproach = () => {
         "Recreational activities engage individuals in enjoyable pastimes to promote relaxation, social interaction, and mental well-being while reducing stress and enhancing overall life satisfaction.",
       image: "/images/autogenic.jpg",
     },
-    
   ];
 
   const itemsPerPage = 2;
@@ -46,11 +45,7 @@ const OurApproach = () => {
   };
 
   return (
-
-    
-      
-      <div className="bg-fixed py-15 px-4 bg-[url(/images/Treatmentbg.png)]">
-    
+    <div  className="bg-cover py-15 px-4 bg-[url(/images/bgourapp.jpeg)]">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between">
         {/* Left Section - Centered vertically */}
         <div className="w-full md:w-2/5 flex flex-col justify-center items-start space-y-4 mb-8 md:mb-0 sm:px-10 px-4">
@@ -63,9 +58,11 @@ const OurApproach = () => {
             well-being.
           </p>
           <div className="flex items-center flex-row space-x-2">
-            <Link to="tel:+919815015212" className="flex items-center space-x-2">
+            <Link
+              to="tel:+919815015212"
+              className="flex items-center space-x-2"
+            >
               <div className="flex items-center ">
-           
                 <FaPhoneAlt
                   size={30}
                   className="text-red-700 hover:text-blue-800"
@@ -76,7 +73,7 @@ const OurApproach = () => {
                   For more information, call
                 </span>
                 <span className="text-lg text-black flex  hover:text-blue-900 transition-colors ">
-                +91 9815015212
+                  +91 9815015212
                 </span>
               </div>
             </Link>

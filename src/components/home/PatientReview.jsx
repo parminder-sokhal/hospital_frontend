@@ -77,8 +77,8 @@ const PatientReview = () => {
   };
 
   return (
-    <div className="bg-fixed bg-[url(/images/Treatmentbg.png)]">
-      <div className="flex flex-col lg:flex-row container mx-auto py-20 px-4 lg:px-30">
+    <div className="bg-cover bg-blend-soft-light bg-[url(/images/bgour.jpg)]">
+      <div className="flex flex-col lg:flex-row container mx-auto py-20 px-4 lg:px-30 ">
         {/* Left static section */}
         <div className="w-full lg:w-1/3 mb-10 lg:mb-0 flex flex-col justify-center items-start">
           <h2 className="text-4xl font-bold mb-4">Our Patient Stories</h2>
@@ -102,7 +102,7 @@ const PatientReview = () => {
                 className="p-4 flex-shrink-0"
                 style={{ width: `${100 / patientStories.length}%` }}
               >
-                <div className="flex flex-row bg-white shadow-md rounded-lg overflow-hidden h-full">
+                <div className="flex flex-row bg-white shadow-lg rounded-lg overflow-hidden h-full">
                   {/* Left section */}
                   <div className="w-1/3 flex flex-col items-center justify-start py-10">
                     <div className="w-24 h-24 mb-4 rounded-full overflow-hidden border-2 border-blue-500">
