@@ -19,7 +19,7 @@ const VideoPlayHeader = () => {
 
       <div className="absolute top-1/2 right-12 transform -translate-y-1/2 translate-x-1/2 rotate-90 flex justify-around items-center">
         <Link
-          to="tel:+91-9812345678"
+          to="tel:+919815015212"
           className="flex items-center text-white space-x-2"
         >
           <div className="icon text-red-700 hover:text-blue-700 hover:bg-red-700 bg-blue-500 rounded-full p-2 shadow-lg flex justify-center items-center">
@@ -27,7 +27,7 @@ const VideoPlayHeader = () => {
           </div>
           <div className="call lg:text-2xl sm:text-xl md:text-xl text-black hover:text-blue-700 font-semibold text-center flex flex-col gap-1 items-center">
             <span className="bg-white px-1 py-1 rounded-sm">
-              {"+91-9812345678"}
+              {"+91 9815015212"}
             </span>
           </div>
         </Link>

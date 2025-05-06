@@ -104,7 +104,7 @@ const PatientReview = () => {
               >
                 <div className="flex flex-row bg-white shadow-md rounded-lg overflow-hidden h-full">
                   {/* Left section */}
-                  <div className="w-1/3 flex flex-col items-center justify-center p-2">
+                  <div className="w-1/3 flex flex-col items-center justify-start py-10">
                     <div className="w-24 h-24 mb-4 rounded-full overflow-hidden border-2 border-blue-500">
                       {story.video.includes("youtube") ? (
                         <iframe
@@ -130,7 +130,7 @@ const PatientReview = () => {
                   </div>
 
                   {/* Right section */}
-                  <div className="w-2/3 p-4 flex flex-col justify-between">
+                  <div className="w-2/3 p-4 flex flex-col justify-evenly">
                     <h3 className="text-md lg:text-lg font-bold mb-2">
                       {story.heading}
                     </h3>

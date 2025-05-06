@@ -41,18 +41,18 @@ const Headertop = () => {
         <div className="container mx-auto items-center justify-around space-x-4 hidden lg:flex">
           <div className="flex items-center space-x-6 text-sm">
             <Link
-              to="tel:+1234567890"
+              to="tel:+919815015212"
               className="flex items-center space-x-2 hover:text-[#DB8E00]"
             >
               <FaPhoneAlt className="text-xl" />
-              <span>+91 9882123456</span>
+              <span>+91 9815015212</span>
             </Link>
             <Link
-              to="mailto:example@example.com"
+              to="mailto:Loonahospital@gmail.com"
               className="flex items-center space-x-2 hover:text-[#DB8E00]"
             >
               <FaEnvelope className="text-xl" />
-              <span>abc@gmail.com</span>
+              <span>Loonahospital@gmail.com</span>
             </Link>
             <Link
               to="https://maps.app.goo.gl/qiHc2LCpLXkAJtdy6"

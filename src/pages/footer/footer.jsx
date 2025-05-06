@@ -145,18 +145,18 @@ const Footer = () => {
                 </Link>
 
                 <Link
-                  to="tel:+1234567890"
+                  to="tel:+919815015212"
                   className="flex items-center space-x-2 hover:text-[#DB8E00]"
                 >
                   <FaPhoneAlt className="text-lg" />
-                  <span>+91 9882123456</span>
+                  <span>+91 9815015212</span>
                 </Link>
                 <Link
-                  to="mailto:example@example.com"
+                  to="mailto:Loonahospital@gmail.com"
                   className="flex items-center space-x-2 hover:text-[#DB8E00]"
                 >
                   <FaEnvelope className="text-lg" />
-                  <span>abc@gmail.com</span>
+                  <span>Loonahospital@gmail.com</span>
                 </Link>
               </div>
 
