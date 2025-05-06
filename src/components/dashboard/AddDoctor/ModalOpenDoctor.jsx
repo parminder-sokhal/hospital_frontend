@@ -1,14 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Select from "react-select";
-import { createDoctor, updateDoctor } from "../../../redux/actions/doctorAction";
+import {
+  createDoctor,
+  updateDoctor,
+} from "../../../redux/actions/doctorAction";
 import { FaTimes } from "react-icons/fa";
 
 const timeSlots = [
-  "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM",
-  "12:00 PM", "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM",
-  "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM", "05:00 PM", "05:30 PM",
-  "06:00 PM", "06:30 PM"
+  "09:00 AM",
+  "09:30 AM",
+  "10:00 AM",
+  "10:30 AM",
+  "11:00 AM",
+  "11:30 AM",
+  "12:00 PM",
+  "12:30 PM",
+  "01:00 PM",
+  "01:30 PM",
+  "02:00 PM",
+  "02:30 PM",
+  "03:00 PM",
+  "03:30 PM",
+  "04:00 PM",
+  "04:30 PM",
+  "05:00 PM",
+  "05:30 PM",
+  "06:00 PM",
+  "06:30 PM",
 ];
 
 function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
@@ -23,8 +42,8 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
     qualification: "",
     awards: "",
     experience: "",
+    availability: "available", 
     fees: "",
-    availability: "available",
     phone: "",
     email: "",
     hospitalSlots: [],
@@ -65,51 +84,61 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
   const handleSelectChange = (name, selectedOptions) => {
     setFormData({
       ...formData,
-      [name]: selectedOptions.map(option => option.value),
+      [name]: selectedOptions.map((option) => option.value),
     });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      if (value !== null) {
-        if (key === "experience") {
-          data.append(key, `${value} yrs`);
-        } else if (key === "hospitalSlots" || key === "videoSlots") {
-          data.append(key, JSON.stringify(value));
-        } else {
-          data.append(key, value);
-        }
-      }
-    });
+  e.preventDefault();
+  const data = new FormData();
 
-    if (isEditing) {
-      dispatch(updateDoctor(doctor._id, data)).then(onClose);
-    } else {
-      dispatch(createDoctor(data)).then(onClose);
+  data.append("hospitalSlots", JSON.stringify(formData.hospitalSlots));
+  data.append("videoSlots", JSON.stringify(formData.videoSlots));
+
+  Object.entries(formData).forEach(([key, value]) => {
+    if (value !== null && key !== "hospitalSlots" && key !== "videoSlots") {
+      if (key === "file") {
+        data.append(key, value);
+      } else {
+        data.append(key, String(value));
+      }
     }
-  };
+  });
+
+  console.log("FormData being submitted:");
+  for (let [key, val] of data.entries()) {
+    console.log(key, val);
+  }
+
+  if (isEditing) {
+    dispatch(updateDoctor(doctor._id, data)).then(onClose);
+  } else {
+    dispatch(createDoctor(data)).then(onClose);
+  }
+};
+
 
   if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-50 backdrop-blur-sm bg-opacity-30 flex justify-center items-center p-4">
-  <div className="bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-lg shadow-lg relative">
-    <div className="sticky top-0 z-10 bg-white p-4 border-b">
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 text-gray-600 hover:text-red-600"
-      >
-        <FaTimes />
-      </button>
-      <h2 className="text-xl font-bold">{isEditing ? "Edit Doctor" : "Add Doctor"}</h2>
-    </div>
+      <div className="bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-lg shadow-lg relative">
+        <div className="sticky top-0 z-10 bg-white p-4 border-b">
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 text-gray-600 hover:text-red-600"
+          >
+            <FaTimes />
+          </button>
+          <h2 className="text-xl font-bold">
+            {isEditing ? "Edit Doctor" : "Add Doctor"}
+          </h2>
+        </div>
 
-    <form
-      onSubmit={handleSubmit}
-      className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4"
-    >
+        <form
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4"
+        >
           <input
             type="text"
             name="name"
@@ -138,25 +167,25 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
             className="border p-2 rounded"
           />
           <input
-            type="number"
+            type="text"
             name="experience"
-            placeholder="Experience (Years)"
+            placeholder="Experience"
             value={formData.experience}
             onChange={handleChange}
             required
-            min={0}
             className="border p-2 rounded"
           />
+
           <input
-            type="number"
+            type="text"
             name="fees"
             placeholder="Fees"
             value={formData.fees}
             onChange={handleChange}
             required
-            min={0}
             className="border p-2 rounded"
           />
+
           <input
             type="text"
             name="phone"
@@ -179,26 +208,17 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
           />
 
           <div className="md:col-span-1">
-            <label className="block mb-1 font-medium">Availability</label>
-            <Select
-              options={[
-                { value: "available", label: "Available" },
-                { value: "unavailable", label: "Unavailable" },
-              ]}
-              value={{ value: formData.availability, label: formData.availability }}
-              onChange={(selected) =>
-                setFormData({ ...formData, availability: selected.value })
-              }
-            />
-          </div>
-
-          <div className="md:col-span-1">
             <label className="block mb-1 font-medium">Hospital Slots</label>
             <Select
               isMulti
-              options={timeSlots.map(time => ({ value: time, label: time }))}
-              value={formData.hospitalSlots.map(s => ({ value: s, label: s }))}
-              onChange={(selected) => handleSelectChange("hospitalSlots", selected)}
+              options={timeSlots.map((time) => ({ value: time, label: time }))}
+              value={formData.hospitalSlots.map((s) => ({
+                value: s,
+                label: s,
+              }))}
+              onChange={(selected) =>
+                handleSelectChange("hospitalSlots", selected)
+              }
             />
           </div>
 
@@ -206,9 +226,11 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
             <label className="block mb-1 font-medium">Video Slots</label>
             <Select
               isMulti
-              options={timeSlots.map(time => ({ value: time, label: time }))}
-              value={formData.videoSlots.map(s => ({ value: s, label: s }))}
-              onChange={(selected) => handleSelectChange("videoSlots", selected)}
+              options={timeSlots.map((time) => ({ value: time, label: time }))}
+              value={formData.videoSlots.map((s) => ({ value: s, label: s }))}
+              onChange={(selected) =>
+                handleSelectChange("videoSlots", selected)
+              }
             />
           </div>
 
@@ -259,16 +281,16 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
           </div>
 
           <div className="md:col-span-2 flex justify-end mt-4">
-        <button
-          type="submit"
-          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
-        >
-          {isEditing ? "Update" : "Create"}
-        </button>
+            <button
+              type="submit"
+              className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+            >
+              {isEditing ? "Update" : "Create"}
+            </button>
+          </div>
+        </form>
       </div>
-    </form>
-  </div>
-</div>
+    </div>
   );
 }
 
