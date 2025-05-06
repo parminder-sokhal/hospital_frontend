@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
-import { getDoctors } from "../../redux/actions/doctorAction";
+import { getAvailableDoctors } from "../../redux/actions/doctorAction";
 import { useNavigate } from "react-router-dom";
 
 const MeetOutDoctors = () => {
@@ -9,13 +9,13 @@ const MeetOutDoctors = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
-  const { doctors, loading, error } = useSelector((state) => state.doctor);
+  const { availableDoctors, loading, error } = useSelector((state) => state.doctor);
 
   useEffect(() => {
-    dispatch(getDoctors());
+    dispatch(getAvailableDoctors());
   }, [dispatch]);
 
-  const filteredDoctors = doctors
+  const filteredDoctors = availableDoctors
     ?.filter((doc) => !doc.isdeleted && doc.isActive)
     ?.filter((doctor) => {
       const term = searchTerm.toLowerCase();

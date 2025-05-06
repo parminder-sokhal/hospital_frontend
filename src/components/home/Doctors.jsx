@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getDoctors } from "../../redux/actions/doctorAction";
+import { getAvailableDoctors } from "../../redux/actions/doctorAction";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -9,13 +9,13 @@ const Doctors = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { doctors, loading, error } = useSelector((state) => state.doctor);
+  const { availableDoctors, loading, error } = useSelector((state) => state.doctor);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerScreen, setSlidesPerScreen] = useState(4);
 
   useEffect(() => {
-    dispatch(getDoctors());
+    dispatch(getAvailableDoctors());
   }, [dispatch]);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Doctors = () => {
   }, []);
 
   const filteredDoctors =
-    doctors?.filter((doc) => !doc.isdeleted && doc.isActive) || [];
+  availableDoctors?.filter((doc) => !doc.isdeleted && doc.isActive) || [];
 
   const totalSlides = filteredDoctors.length;
 

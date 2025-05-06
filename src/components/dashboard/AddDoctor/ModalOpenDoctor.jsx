@@ -217,7 +217,16 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
             required
             className="border p-2 rounded"
           />
-
+<div className="md:col-span-1">
+            <label className="block mb-1 font-medium">Upload Image</label>
+            <input
+              type="file"
+              name="file"
+              accept="image/*"
+              onChange={handleChange}
+              className="w-full text-blue-600 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            />
+          </div>
           <div className="md:col-span-1">
             <label className="block mb-1 font-medium">Hospital Slots</label>
             <Select
@@ -245,16 +254,7 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
             />
           </div>
 
-          <div className="md:col-span-2">
-            <label className="block mb-1 font-medium">Upload Image</label>
-            <input
-              type="file"
-              name="file"
-              accept="image/*"
-              onChange={handleChange}
-              className="w-full text-blue-600 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-            />
-          </div>
+          
 
           {/* Textareas at the bottom */}
           <div className="md:col-span-2">

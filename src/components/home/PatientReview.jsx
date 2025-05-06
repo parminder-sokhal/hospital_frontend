@@ -78,7 +78,7 @@ const PatientReview = () => {
 
   return (
     <div className="bg-fixed bg-[url(/images/Treatmentbg.png)]">
-      <div className="flex flex-col lg:flex-row container mx-auto py-20 px-10 lg:px-30">
+      <div className="flex flex-col lg:flex-row container mx-auto py-20 px-4 lg:px-30">
         {/* Left static section */}
         <div className="w-full lg:w-1/3 mb-10 lg:mb-0 flex flex-col justify-center items-start">
           <h2 className="text-4xl font-bold mb-4">Our Patient Stories</h2>

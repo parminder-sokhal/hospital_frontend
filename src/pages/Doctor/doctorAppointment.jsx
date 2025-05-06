@@ -207,7 +207,7 @@ const DoctorAppointment = () => {
   }, [notification]);
 
   return (
-    <div className="container flex flex-col mt-34 lg:flex-row px-4 sm:px-10 mx-auto py-10  ">
+    <div className="container flex flex-col mt-34 lg:flex-row px-4 sm:px-30 mx-auto py-10  ">
       {/* Left Section - Doctor Details */}
       <div className="bg-white rounded-lg p-4 w-full lg:w-1/2 space-y-6 h-1/2 shadow-lg">
         <h2 className="text-3xl font-bold text-gray-900">
