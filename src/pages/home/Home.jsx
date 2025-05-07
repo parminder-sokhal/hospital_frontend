@@ -8,6 +8,7 @@ import PhotoGallery from '../../components/home/PhotoGallery.jsx'
 import TrendingYoutube from '../../components/home/TrendingYoutube.jsx'
 import InstagramSlider from '../../components/home/InstagramSlider.jsx'
 import PatientReview from '../../components/home/PatientReview.jsx'
+import OurServices from '../../components/home/OurServices.jsx'
 
 function Home() {
   return (
@@ -16,9 +17,10 @@ function Home() {
     <VideoPlayHeader/>
     <Treatment/>
     <OurApproach/>
+    {/* <SpecialitiesSlider/>    */}
+    <OurServices/>
     <Doctors/>
     <PatientReview/>
-    {/* <SpecialitiesSlider/> */}
     <TrendingYoutube/>
     <PhotoGallery/> 
     <InstagramSlider/>

@@ -51,7 +51,7 @@ const Doctors = () => {
   const handlePrev = () => updateSlidePosition(currentIndex - slidesPerScreen);
 
   return (
-    <div className="container mx-auto my-20 lg:px-30 sm:px-14 md:px-18">
+    <div className="container mx-auto my-10 lg:px-30 sm:px-14 md:px-18">
       <div className="flex justify-between items-center mb-4 px-5">
         <h2 className="sm:text-3xl text-2xl">Our Team of Experts</h2>
         <Link to="/doctors">

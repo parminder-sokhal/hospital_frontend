@@ -99,7 +99,7 @@ const SpecialitiesSlider = () => {
   return (
     <div className="container mx-auto my-10 lg:px-40 sm:px-14 md:px-18 mt-35">
       <div className="flex justify-between items-center mb-4 px-5">
-        <h2 className="text-4xl  text-black">Our Treatments</h2>
+        <h2 className="text-4xl text-black">Our Treatments</h2>
       </div>
 
       {/* Carousel Component */}
