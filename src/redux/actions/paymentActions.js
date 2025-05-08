@@ -59,3 +59,20 @@ export const getAllPayments = () => async (dispatch) => {
     );
   }
 };
+
+// Get payments by specific date
+export const getPaymentsByDate = (date) => async (dispatch) => {
+  try {
+    dispatch(paymentRequest());
+
+    const { data } = await axios.post(`${server}/payment/date`, { date }, {
+      headers: { "Content-Type": "application/json" },
+    });
+
+    dispatch(allPaymentsSuccess(data));
+  } catch (error) {
+    dispatch(
+      paymentFail(error.response?.data?.message || "Failed to fetch payments by date")
+    );
+  }
+};

@@ -97,7 +97,14 @@ function HeaderMain() {
                   </svg>
                 </button>
               </li>
-
+              <li>
+                <Link
+                  to="/deaddiction"
+                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+                >
+                 Services
+                </Link>
+              </li>
               <li onMouseEnter={handleNavbarDropdownHover}>
                 <button
                   onClick={toggleNavbarDropdown}
@@ -153,14 +160,7 @@ function HeaderMain() {
                   </ul>
                 </div>
               </li>
-              <li>
-                <Link
-                  to="#"
-                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
-                >
-                  Contact Us
-                </Link>
-              </li>
+              
             </ul>
           </div>
 
@@ -618,11 +618,11 @@ function HeaderMain() {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/deaddiction"
                   onClick={toggleMobileMenu}
                   className="block py-2 px-3 text-black hover:bg-gray-100"
                 >
-                  Contact
+                  Services
                 </Link>
               </li>
             </ul>
