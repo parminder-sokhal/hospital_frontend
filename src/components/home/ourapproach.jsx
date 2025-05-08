@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa"; // Importing phone icon
 import { Link } from "react-router-dom";
+import { useSwipeCarousel } from "../hook/useSwipeCarousel.js"; 
 
 const OurApproach = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,6 +44,17 @@ const OurApproach = () => {
   const handlePagination = (index) => {
     setCurrentIndex(index);
   };
+  const handleNext = () => {
+    if (currentIndex < pagesCount - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+  const swipeHandlers = useSwipeCarousel({ onNext: handleNext, onPrev: handlePrev });
 
   return (
     <div  className="bg-cover py-15 px-4 bg-[url(/images/bgourapp.jpeg)]">
@@ -80,7 +92,7 @@ const OurApproach = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-3/5 flex flex-col space-y-8">
+        <div className="w-full md:w-3/5 flex flex-col space-y-8" {...swipeHandlers}>
           <div className="flex flex-col md:flex-row ">
             {getItemsToShow().map((item, index) => (
               <div

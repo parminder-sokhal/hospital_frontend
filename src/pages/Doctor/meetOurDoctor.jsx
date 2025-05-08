@@ -9,7 +9,9 @@ const MeetOutDoctors = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
-  const { availableDoctors, loading, error } = useSelector((state) => state.doctor);
+  const { availableDoctors, loading, error } = useSelector(
+    (state) => state.doctor
+  );
 
   useEffect(() => {
     dispatch(getAvailableDoctors());
@@ -72,12 +74,15 @@ const MeetOutDoctors = () => {
 
                   <div className="flex justify-start gap-4 text-sm mt-2">
                     <span className="text-black font-bold flex flex-col">
-                      {doctor.experience}
+                      <span className="flex gap-1">
+                        {doctor.experience}
+                        <span>Years</span>
+                      </span>
                       <span className="text-gray-600">Experience</span>
                     </span>
                     <span className="text-black font-bold flex flex-col">
-                      ${doctor.fees}
-                      <span className="text-gray-600">Fees</span>
+                      ₹ {doctor?.fees}
+                      <span className="text-gray-700">Fees</span>
                     </span>
                   </div>
                 </div>

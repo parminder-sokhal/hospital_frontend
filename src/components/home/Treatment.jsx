@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSwipeCarousel } from "../hook/useSwipeCarousel.js";
 
 
 const SpecialitiesSlider = () => {
@@ -95,6 +96,10 @@ const SpecialitiesSlider = () => {
   const handlePrev = () => {
     updateSlidePosition(currentIndex - slidesPerScreen);
   };
+  const swipeHandlers = useSwipeCarousel({
+    onNext: handleNext,
+    onPrev: handlePrev,
+  });
 
   return (
     <div className="container mx-auto my-10 lg:px-40 sm:px-14 md:px-18 mt-35">
@@ -105,6 +110,7 @@ const SpecialitiesSlider = () => {
       {/* Carousel Component */}
       <div
         id="centered"
+        {...swipeHandlers}
         className="relative w-full transition-transform duration-500 ease-in-out"
       >
         {/* Carousel container */}
