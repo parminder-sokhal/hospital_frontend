@@ -20,7 +20,7 @@ import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
 import Dashboard from "./pages/dashboard/dashboard.jsx";
 import SignIn from "./pages/SignIn.jsx";
 import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
-import AllPayments from "./components/dashboard/payment/allpayment.jsx";
+import GetAllPaymentDetails from "./components/dashboard/payment/GetAllPaymentDetails.jsx";
 import TodaysAllPayments from "./components/dashboard/payment/TodaysAllPayments.jsx";
 
 function LayoutWrapper() {
@@ -44,7 +44,7 @@ function LayoutWrapper() {
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="AddDoctor" element={<AddDoctor />} />
-            <Route path="AllPayments" element={<AllPayments />} />
+            <Route path="GetAllPaymentDetails" element={<GetAllPaymentDetails />} />
             <Route path="TodaysAllPayments" element={<TodaysAllPayments />} />
           </Route>
         </Route>

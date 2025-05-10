@@ -361,7 +361,7 @@ function ModalOpenDoctor({ open, onClose, doctor, isEditing }) {
           <div className="md:col-span-2">
             <textarea
               name="awards"
-              placeholder="Awards"
+              placeholder="Member of (Awards)"
               value={formData.awards}
               onChange={handleChange}
               rows="2"

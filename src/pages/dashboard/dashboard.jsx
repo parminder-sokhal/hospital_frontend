@@ -38,9 +38,9 @@ export default function Dashboard() {
            
             <SidebarItem
               icon={<FaUserGraduate />}
-              text="All Payments"
-              to="/dashboard/AllPayments"
-              active={location.pathname === "/dashboard/AllPayments"}
+              text="Get All Payment Details"
+              to="/dashboard/GetAllPaymentDetails"
+              active={location.pathname === "/dashboard/GetAllPaymentDetails"}
             />
             <SidebarItem
               icon={<FaUserGraduate />}

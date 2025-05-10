@@ -197,7 +197,7 @@ function AddDoctor() {
                           <strong>Qualification:</strong> {doctor.qualification}
                         </p>
                         <p>
-                          <strong>Awards:</strong> {doctor.awards}
+                          <strong>Member of:</strong> {doctor.awards}
                         </p>
                         <p>
                           <strong>Hospital Slots:</strong>{" "}

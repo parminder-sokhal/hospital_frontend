@@ -130,7 +130,7 @@ const DoctorProfile = () => {
 
           <div>
             <div className="flex items-center gap-2 mb-2 text-blue-700">
-              <FaAward /> <h3 className="text-2xl font-semibold">Awards</h3>
+              <FaAward /> <h3 className="text-2xl font-semibold">Member Of</h3>
             </div>
             <p className="text-gray-700 text-md">
               {showAwards
