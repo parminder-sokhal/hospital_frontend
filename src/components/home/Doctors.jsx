@@ -4,12 +4,15 @@ import { getAvailableDoctors } from "../../redux/actions/doctorAction";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useSwipeCarousel } from "../hook/useSwipeCarousel"; // Adjust path if needed
 
 const Doctors = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { availableDoctors, loading, error } = useSelector((state) => state.doctor);
+  const { availableDoctors, loading, error } = useSelector(
+    (state) => state.doctor
+  );
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerScreen, setSlidesPerScreen] = useState(4);
@@ -33,7 +36,7 @@ const Doctors = () => {
   }, []);
 
   const filteredDoctors =
-  availableDoctors?.filter((doc) => !doc.isdeleted && doc.isActive) || [];
+    availableDoctors?.filter((doc) => !doc.isdeleted && doc.isActive) || [];
 
   const totalSlides = filteredDoctors.length;
 
@@ -49,6 +52,10 @@ const Doctors = () => {
 
   const handleNext = () => updateSlidePosition(currentIndex + slidesPerScreen);
   const handlePrev = () => updateSlidePosition(currentIndex - slidesPerScreen);
+  const handlers = useSwipeCarousel({
+    onNext: handleNext,
+    onPrev: handlePrev,
+  });
 
   return (
     <div className="container mx-auto my-10 lg:px-30 sm:px-14 md:px-18">
@@ -74,6 +81,7 @@ const Doctors = () => {
                 style={{
                   transform: `translateX(-${(currentIndex * 100) / slidesPerScreen}%)`,
                 }}
+                {...handlers}
               >
                 {filteredDoctors.map((doctor, index) => (
                   <div
@@ -95,13 +103,13 @@ const Doctors = () => {
                       {/* Doctor Info */}
                       <div className="flex flex-col items-start justify-start px-4 py-3 w-full">
                         <p className="font-semibold text-lg truncate w-full">
-                          {doctor.name}
-                        </p>
-                        <p className="text-sm text-gray-600 truncate w-full">
-                          {doctor.hospital}
+                          {doctor?.name}
                         </p>
                         <p className="text-sm text-black truncate w-full">
                           {doctor.specialization}
+                        </p>
+                        <p className="text-sm text-gray-600 truncate w-full">
+                          {doctor.hospital}
                         </p>
                       </div>
 
@@ -113,7 +121,7 @@ const Doctors = () => {
                         >
                           View Full Profile
                         </button>
-                        
+
                         <button
                           onClick={() => navigate(`/doctor/${doctor._id}`)}
                           className="w-1/2 text-sm text-center py-2 bg-green-600 text-white  hover:bg-green-700 transition-all"

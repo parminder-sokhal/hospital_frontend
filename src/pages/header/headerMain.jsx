@@ -102,7 +102,7 @@ function HeaderMain() {
                   to="/deaddiction"
                   className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
                 >
-                 Services
+                  Services
                 </Link>
               </li>
               <li onMouseEnter={handleNavbarDropdownHover}>
@@ -160,7 +160,6 @@ function HeaderMain() {
                   </ul>
                 </div>
               </li>
-              
             </ul>
           </div>
 
@@ -520,7 +519,7 @@ function HeaderMain() {
         </div>
 
         {/* ✅ Mobile Menu */}
-        <div 
+        <div
           className={`md:hidden fixed inset-0 top-30 z-50 bg-white overflow-y-auto transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "block" : "hidden"}`}
         >
           <div className="overflow-y-auto  py-10 px-10">
@@ -536,7 +535,7 @@ function HeaderMain() {
               </li>
               <li>
                 <Link
-                onClick={toggleMobileMenu}
+                  onClick={toggleMobileMenu}
                   to="/about"
                   className="block py-2 px-3 text-black hover:bg-gray-100"
                 >
@@ -565,6 +564,15 @@ function HeaderMain() {
                 </button>
               </li>
               <li>
+                <Link
+                  to="/deaddiction"
+                  onClick={toggleMobileMenu}
+                  className="block py-2 px-3 text-black hover:bg-gray-100"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
                 <button
                   onClick={toggleNavbarDropdown}
                   className="flex justify-between w-full py-2 px-3 text-black hover:bg-gray-100"
@@ -585,7 +593,7 @@ function HeaderMain() {
                   </svg>
                 </button>
                 <div
-                onClick={toggleMobileMenu}
+                  onClick={toggleMobileMenu}
                   className={`z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 mt-2 ${isDropdownNavbarOpen ? "block" : "hidden"}`}
                 >
                   <ul className="py-2 text-sm text-gray-700">
@@ -602,7 +610,7 @@ function HeaderMain() {
                         to="/youtube"
                         className="block px-4 py-2 hover:bg-gray-100"
                       >
-                        video Gallery
+                        Video Gallery
                       </Link>
                     </li>
                     <li>
@@ -615,15 +623,6 @@ function HeaderMain() {
                     </li>
                   </ul>
                 </div>
-              </li>
-              <li>
-                <Link
-                  to="/deaddiction"
-                  onClick={toggleMobileMenu}
-                  className="block py-2 px-3 text-black hover:bg-gray-100"
-                >
-                  Services
-                </Link>
               </li>
             </ul>
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useSwipeCarousel } from "../hook/useSwipeCarousel";
 
 const patientStories = [
   {
@@ -69,6 +70,10 @@ const PatientReview = () => {
 
   const handleNext = () => updateSlide(currentIndex + 1);
   const handlePrev = () => updateSlide(currentIndex - 1);
+  const handlers = useSwipeCarousel({
+    onNext: handleNext,
+    onPrev: handlePrev,
+  });
 
   const updateSlide = (newIndex) => {
     const maxIndex = patientStories.length - cardsPerScreen;
@@ -82,9 +87,7 @@ const PatientReview = () => {
         {/* Left static section */}
         <div className="w-full lg:w-1/3 mb-10 lg:mb-0 flex flex-col justify-center items-start">
           <h2 className="text-4xl font-bold mb-4">Our Patient Stories</h2>
-          <h3 className="text-2xl text-black mb-2">
-            What People Say About Us
-          </h3>
+          <h3 className="text-2xl text-black mb-2">What People Say About Us</h3>
         </div>
 
         {/* Right sliding section */}
@@ -95,6 +98,7 @@ const PatientReview = () => {
               transform: `translateX(-${currentIndex * (100 / patientStories.length)}%)`,
               width: `${(patientStories.length * 100) / cardsPerScreen}%`,
             }}
+            {...handlers}
           >
             {patientStories.map((story) => (
               <div

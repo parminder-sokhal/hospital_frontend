@@ -69,15 +69,15 @@ const DoctorProfile = () => {
           {/* Right - Details */}
           <div className="flex flex-col w-full">
             {/* Name, Hospital, Specialization */}
-            <div className="space-y-1">
+            <div className="space-y-2">
               <h2 className="text-3xl sm:text-4xl font-bold text-blue-800">
                 {doctor?.name}
               </h2>
-              <p className="text-lg sm:text-xl text-gray-700 font-medium">
-                {doctor?.hospital}
-              </p>
-              <p className="text-base sm:text-lg text-gray-600 italic">
+              <p className="text-lg sm:text-xl text-gray-700 font-semibold">
                 {doctor?.specialization}
+              </p>
+              <p className="text-base sm:text-lg text-gray-600">
+                {doctor?.hospital}
               </p>
             </div>
 
@@ -85,8 +85,10 @@ const DoctorProfile = () => {
             <div className="flex gap-4 mt-4 flex-wrap">
               <div className="bg-blue-50 border border-blue-200 px-5 py-3 rounded-md shadow-sm flex flex-col items-center w-40 text-center">
                 <span className="text-xl flex font-semibold text-blue-700">
-                  {doctor?.experience} 
-                  <span className="text-md items-center justify-center flex text-blue-700 ml-1">Years</span>
+                  {doctor?.experience}
+                  <span className="text-md items-center justify-center flex text-blue-700 ml-1">
+                    Years
+                  </span>
                 </span>
                 <span className="text-sm text-gray-600">Experience</span>
               </div>

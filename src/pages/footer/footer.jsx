@@ -103,21 +103,21 @@ const Footer = () => {
                 <h3 className="text-2xl font-semibold">Social Media</h3>
                 <div className="flex justify-center space-x-4">
                   <Link
-                    to="https://www.youtube.com"
+                    to="https://www.youtube.com/@loonahospital"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaYoutube className="text-white text-xl hover:text-red-600" />
                   </Link>
                   <Link
-                    to="https://www.facebook.com"
+                    to="https://www.facebook.com/drneerajloona"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaFacebook className="text-white text-xl hover:text-blue-600 hover:bg-white rounded-3xl" />
                   </Link>
                   <Link
-                    to="https://www.instagram.com"
+                    to="https://www.instagram.com/loonahospital/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -139,8 +139,8 @@ const Footer = () => {
                 >
                   <FaMapMarkerAlt className="text-lg" />
                   <span>
-                    Site No. 4, behind community centre, Sector 15,
-                    <br /> Panchkula, Haryana, India
+                    At the back of community centre, <br />behind raghunath mandir Parking area, <br />Sector 15,
+                     Panchkula, Haryana, India
                   </span>
                 </Link>
 
@@ -179,10 +179,7 @@ const Footer = () => {
         <div className="flex w-full text-center justify-center bg-white text-black">
           <p className="sm:text-sm px-4 py-2">
             Loona Hospital© 2025 All Rights Reserved. | Designed & Developed
-            by:
-            <Link to="/dashboard" className="hover:text-gray-700">
-              Loona Hospital
-            </Link>
+            by: Loona Hospital
           </p>
         </div>
       </footer>

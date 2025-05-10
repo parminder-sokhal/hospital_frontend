@@ -17,19 +17,19 @@ const Headertop = () => {
         {/* Left Section: Mobile View */}
         <div className="flex items-center space-x-6 text-sm sm:block md:flex lg:hidden">
           <Link
-            to="tel:+1234567890"
+              to="tel:+919815015212"
             className="flex items-center space-x-2 hover:text-[#DB8E00]"
           >
             <FaPhoneAlt className="text-xl" />
           </Link>
           <Link
-            to="mailto:example@example.com"
+            to="mailto:Loonahospital@gmail.com"
             className="flex items-center space-x-2 hover:text-[#DB8E00]"
           >
             <FaEnvelope className="text-xl" />
           </Link>
           <Link
-            to="https://www.instagram.com"
+            to="https://www.instagram.com/loonahospital/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,32 +58,32 @@ const Headertop = () => {
               to="https://maps.app.goo.gl/qiHc2LCpLXkAJtdy6"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-2 hover:text-[#DB8E00]"
             >
               <FaMapMarkerAlt className="text-xl" />
               <span>
-                Site No. 4, behind community centre, Sector 15, Panchkula (HR)
+                Sector 15, Panchkula (HR)
               </span>
             </Link>
           </div>
 
           <div className="flex items-center space-x-4">
             <Link
-              to="https://www.youtube.com"
+              to="https://www.youtube.com/@loonahospital"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaYoutube className="text-white text-xl hover:text-red-600" />
             </Link>
             <Link
-              to="https://www.facebook.com"
+              to="https://www.facebook.com/drneerajloona"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebook className="text-white text-xl hover:text-blue-600" />
             </Link>
             <Link
-              to="https://www.instagram.com"
+              to="https://www.instagram.com/loonahospital/"
               target="_blank"
               rel="noopener noreferrer"
             >

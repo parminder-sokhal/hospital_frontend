@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useSwipeCarousel } from "../hook/useSwipeCarousel";
 
 const OurServices = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,20 +54,23 @@ const OurServices = () => {
       setCurrentIndex(newIndex);
     }
   };
-
+  
   const handleNext = () => {
     updateSlidePosition(currentIndex + slidesPerScreen);
   };
-
+  
   const handlePrev = () => {
     updateSlidePosition(currentIndex - slidesPerScreen);
   };
-
+  
+  const handlers = useSwipeCarousel({
+    onNext: handleNext,
+    onPrev: handlePrev,
+  });
   return (
     <section className="container mx-auto mt-10 mb-20 px-4 sm:px-8 lg:px-16">
       <div className="text-center mb-10">
         <h2 className="text-4xl  text-gray-800">Our Services</h2>
-       
       </div>
 
       <div className="relative w-full">
@@ -76,6 +80,7 @@ const OurServices = () => {
             style={{
               transform: `translateX(-${(currentIndex * 100) / slidesPerScreen}%)`,
             }}
+            {...handlers}
           >
             {slides.map((slide) => (
               <Link
