@@ -139,8 +139,9 @@ const Footer = () => {
                 >
                   <FaMapMarkerAlt className="text-lg" />
                   <span>
-                    At the back of community centre, <br />behind raghunath mandir Parking area, <br />Sector 15,
-                     Panchkula, Haryana, India
+                    At the back of community centre, <br />
+                    behind raghunath mandir Parking area, <br />
+                    Sector 15, Panchkula, Haryana, India
                   </span>
                 </Link>
 
@@ -171,7 +172,6 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            {/* 3rd div - Specialities and Treatments */}
           </div>
 
           {/* Footer Bottom */}
@@ -179,7 +179,10 @@ const Footer = () => {
         <div className="flex w-full text-center justify-center bg-white text-black">
           <p className="sm:text-sm px-4 py-2">
             Loona Hospital© 2025 All Rights Reserved. | Designed & Developed
-            by: Loona Hospital
+            by:&nbsp;
+            <Link to="/dashboard" className="hover:text-gray-700">
+              Loona Hospital
+            </Link>
           </p>
         </div>
       </footer>
