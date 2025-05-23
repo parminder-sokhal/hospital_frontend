@@ -10,10 +10,11 @@ const OurServices = () => {
   const slides = [
     {
       id: 1,
-      description: "Expert De-addiction Programs",
+      description: "Psychiatric Care",
       image: "/images/stress.png",
-      href: "/deaddiction",
+      href: "/psychiatric-care",
     },
+    
     {
       id: 2,
       description: "Sexual Wellness Services",
@@ -22,9 +23,9 @@ const OurServices = () => {
     },
     {
       id: 3,
-      description: "Psychiatric Care",
+      description: "Expert De-addiction Programs",
       image: "/images/stress.png",
-      href: "/psychiatric-care",
+      href: "/deaddiction",
     },
   ];
 

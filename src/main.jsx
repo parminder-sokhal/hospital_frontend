@@ -8,7 +8,7 @@ import "./index.css"; // or whatever your styling file is
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}> {/* ✅ This is required */}
+    <Provider store={store}> 
       <App />
     </Provider>
   </React.StrictMode>

@@ -160,6 +160,14 @@ function HeaderMain() {
                   </ul>
                 </div>
               </li>
+              <li>
+                <Link
+                  to="/deaddiction"
+                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+                >
+                  Management
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -215,25 +223,25 @@ function HeaderMain() {
                       to="/depression"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      depression
+                      Depression
                     </Link>
                     <Link
                       to="/anxiety"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      anxiety
+                      Anxiety
                     </Link>
                     <Link
                       to="/bipolar-disorder"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      bipolar disorder
+                      Bipolar Disorder
                     </Link>
                     <Link
                       to="/schizophrenia"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      schizophrenia
+                      Schizophrenia
                     </Link>
                     <Link
                       to="/ocd"
@@ -269,31 +277,31 @@ function HeaderMain() {
                       to="/individual-counselling"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      individual counselling
+                      Individual Counselling
                     </Link>
                     <Link
                       to="/stress-management"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      stress management
+                      Stress Management
                     </Link>
                     <Link
                       to="/behaviour-therapy"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      behaviour therapy
+                      Behaviour Therapy
                     </Link>
                     <Link
                       to="/relaxation-therapy"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      relaxation therapy
+                      Relaxation Therapy
                     </Link>
                     <Link
                       to="/social-skills-training"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      social skills training
+                      Social Skills Training
                     </Link>
                   </li>
                 </ul>
@@ -305,7 +313,7 @@ function HeaderMain() {
                       to="/mental-health-children"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
-                      Mental Health Issues and Children{" "}
+                      Mental Health Issues and Children
                     </Link>
                     <Link
                       to="/adhd"
@@ -317,31 +325,31 @@ function HeaderMain() {
                       to="/autism"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      autism
+                      Autism
                     </Link>
                     <Link
                       to="/incontinence"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      incontinence
+                      Incontinence
                     </Link>
                     <Link
                       to="/behaviour-issues"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      behaviour issues
+                      Behaviour Issues
                     </Link>
                     <Link
                       to="/conduct-disorder"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      conduct disorder
+                      Conduct Disorder
                     </Link>
                     <Link
                       to="/learning-disability"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      learning disability
+                      Learning Disability
                     </Link>
                   </li>
                 </ul>
@@ -353,31 +361,31 @@ function HeaderMain() {
                       to="/De-addictionProgramme"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
-                      De-addiction Programme{" "}
+                      De-addiction Programme
                     </Link>
                     <Link
                       to="/motivation-enhancement"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      motivation enhancement therapy
+                      Motivation Enhancement Therapy
                     </Link>
                     <Link
                       to="/relapse-prevention"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      relapse prevention therapy
+                      Relapse Prevention Therapy
                     </Link>
                     <Link
                       to="/individual-counselling"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      individual counselling
+                      Individual Counselling
                     </Link>
                     <Link
                       to="/motivation-by-hypnosis"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      motivation enhancement by hypnosis
+                      Motivation Enhancement By Hypnosis
                     </Link>
                   </li>
                 </ul>
@@ -389,37 +397,37 @@ function HeaderMain() {
                       to="/sexual-wellness-program"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
-                      Sexual Wellness Program{" "}
+                      Sexual Wellness Program
                     </Link>
                     <Link
                       to="/premature-ejaculation"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      premature ejaculation
+                      Premature Ejaculation
                     </Link>
                     <Link
                       to="/erectile-dysfunction"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      erectile dysfunction
+                      Erectile Dysfunction
                     </Link>
                     <Link
                       to="/reduced-high-libido"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      reduced or high libido
+                      Reduced Or High Libido
                     </Link>
                     <Link
                       to="/anorgasmia"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      anorgasmia
+                      Anorgasmia
                     </Link>
                     <Link
                       to="/dhat-syndrome"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      DHAT syndrome
+                      DHAT Syndrome
                     </Link>
                   </li>
                 </ul>
@@ -431,43 +439,43 @@ function HeaderMain() {
                       to="/sleep-clinic"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
-                      Sleep Clinic{" "}
+                      Sleep Clinic
                     </Link>
                     <Link
                       to="/insomnia"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      insomnia
+                      Insomnia
                     </Link>
                     <Link
                       to="/disturbed-sleep"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      disturbed sleep
+                      Disturbed Sleep
                     </Link>
                     <Link
                       to="/non-refreshing-sleep"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      non-refreshing sleep
+                      Non-Refreshing Sleep
                     </Link>
                     <Link
                       to="/sleep-talking"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      sleep talking
+                      Sleep Talking
                     </Link>
                     <Link
                       to="/sleep-walking"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      sleep walking
+                      Sleep Walking
                     </Link>
                     <Link
                       to="/nightmares"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      nightmares
+                      Nightmares
                     </Link>
                   </li>
                 </ul>
@@ -479,19 +487,19 @@ function HeaderMain() {
                       to="/headache-clinic"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
-                      Headache Clinic{" "}
+                      Headache Clinic
                     </Link>
                     <Link
                       to="/migraine"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      migraine
+                      Migraine
                     </Link>
                     <Link
                       to="/tension-headache"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      tension headache
+                      Tension Headache
                     </Link>
                   </li>
                 </ul>
@@ -503,13 +511,13 @@ function HeaderMain() {
                       to="/epilepsy-clinic"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
-                      Epilepsy Clinic{" "}
+                      Epilepsy Clinic
                     </Link>
                     <Link
                       to="/seizure"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
-                      seizure
+                      Seizure
                     </Link>
                   </li>
                 </ul>
@@ -624,6 +632,14 @@ function HeaderMain() {
                   </ul>
                 </div>
               </li>
+              <li>
+                <Link
+                  to="/deaddiction"
+                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+                >
+                  Management
+                </Link>
+              </li>
             </ul>
 
             <div onClick={toggleMobileMenu}>
@@ -642,25 +658,25 @@ function HeaderMain() {
                           to="/depression"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          depression
+                          Depression
                         </Link>
                         <Link
                           to="/anxiety"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          anxiety
+                          Anxiety
                         </Link>
                         <Link
                           to="/bipolar-disorder"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          bipolar disorder
+                          Bipolar disorder
                         </Link>
                         <Link
                           to="/schizophrenia"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          schizophrenia
+                          Schizophrenia
                         </Link>
                         <Link
                           to="/ocd"
@@ -696,31 +712,31 @@ function HeaderMain() {
                           to="/individual-counselling"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          individual counselling
+                          Individual Counselling
                         </Link>
                         <Link
                           to="/stress-management"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          stress management
+                          Stress Management
                         </Link>
                         <Link
                           to="/behaviour-therapy"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          behaviour therapy
+                          Behaviour Therapy
                         </Link>
                         <Link
                           to="/relaxation-therapy"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          relaxation therapy
+                          Relaxation Therapy
                         </Link>
                         <Link
                           to="/social-skills-training"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          social skills training
+                          Social Skills Training
                         </Link>
                       </li>
                     </ul>
@@ -732,7 +748,7 @@ function HeaderMain() {
                           to="/mental-health-children"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
-                          Mental Health Issues and Children{" "}
+                          Mental Health Issues and Children
                         </Link>
                         <Link
                           to="/adhd"
@@ -744,31 +760,31 @@ function HeaderMain() {
                           to="/autism"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          autism
+                          Autism
                         </Link>
                         <Link
                           to="/incontinence"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          incontinence
+                          Incontinence
                         </Link>
                         <Link
                           to="/behaviour-issues"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          behaviour issues
+                          Behaviour Issues
                         </Link>
                         <Link
                           to="/conduct-disorder"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          conduct disorder
+                          Conduct Disorder
                         </Link>
                         <Link
                           to="/learning-disability"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          learning disability
+                          Learning Disability
                         </Link>
                       </li>
                     </ul>
@@ -780,31 +796,31 @@ function HeaderMain() {
                           to="/De-addictionProgramme"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
-                          De-addiction Programme{" "}
+                          De-addiction Programme
                         </Link>
                         <Link
                           to="/motivation-enhancement"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          motivation enhancement therapy
+                          Motivation Enhancement Therapy
                         </Link>
                         <Link
                           to="/relapse-prevention"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          relapse prevention therapy
+                          Relapse Prevention Therapy
                         </Link>
                         <Link
                           to="/individual-counselling"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          individual counselling
+                          Individual Counselling
                         </Link>
                         <Link
                           to="/motivation-by-hypnosis"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          motivation enhancement by hypnosis
+                          Motivation Enhancement By Hypnosis
                         </Link>
                       </li>
                     </ul>
@@ -816,37 +832,37 @@ function HeaderMain() {
                           to="/sexual-wellness-program"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
-                          Sexual Wellness Program{" "}
+                          Sexual Wellness Program
                         </Link>
                         <Link
                           to="/premature-ejaculation"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          premature ejaculation
+                          Premature Ejaculation
                         </Link>
                         <Link
                           to="/erectile-dysfunction"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          erectile dysfunction
+                          Erectile Dysfunction
                         </Link>
                         <Link
                           to="/reduced-high-libido"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          reduced or high libido
+                          Reduced Or High Libido
                         </Link>
                         <Link
                           to="/anorgasmia"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          anorgasmia
+                          Anorgasmia
                         </Link>
                         <Link
                           to="/dhat-syndrome"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          DHAT syndrome
+                          DHAT Syndrome
                         </Link>
                       </li>
                     </ul>
@@ -858,43 +874,43 @@ function HeaderMain() {
                           to="/sleep-clinic"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
-                          Sleep Clinic{" "}
+                          Sleep Clinic
                         </Link>
                         <Link
                           to="/insomnia"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          insomnia
+                          Insomnia
                         </Link>
                         <Link
                           to="/disturbed-sleep"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          disturbed sleep
+                          Disturbed Sleep
                         </Link>
                         <Link
                           to="/non-refreshing-sleep"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          non-refreshing sleep
+                          Non-refreshing Sleep
                         </Link>
                         <Link
                           to="/sleep-talking"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          sleep talking
+                          Sleep Talking
                         </Link>
                         <Link
                           to="/sleep-walking"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          sleep walking
+                          Sleep Walking
                         </Link>
                         <Link
                           to="/nightmares"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          nightmares
+                          Nightmares
                         </Link>
                       </li>
                     </ul>
@@ -906,19 +922,19 @@ function HeaderMain() {
                           to="/headache-clinic"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
-                          Headache Clinic{" "}
+                          Headache Clinic
                         </Link>
                         <Link
                           to="/migraine"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          migraine
+                          Migraine
                         </Link>
                         <Link
                           to="/tension-headache"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          tension headache
+                          Tension Headache
                         </Link>
                       </li>
                     </ul>
@@ -930,13 +946,13 @@ function HeaderMain() {
                           to="/epilepsy-clinic"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
-                          Epilepsy Clinic{" "}
+                          Epilepsy Clinic
                         </Link>
                         <Link
                           to="/seizure"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
-                          seizure
+                          Seizure
                         </Link>
                       </li>
                     </ul>

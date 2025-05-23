@@ -21,10 +21,16 @@ const Footer = () => {
               <div className="flex flex-col space-y-2 w-full">
                 <h3 className="text-2xl font-semibold">Services</h3>
                 <Link
+                  to="/psychiatric-care"
+                  className="text-md hover:text-[#DB8E00]"
+                >
+                  Psychiatric Care
+                </Link>
+                <Link
                   to="/deaddiction"
                   className="text-sm hover:text-[#DB8E00]"
                 >
-                  Expert De-addiction Programs
+                  De-addiction Programs
                 </Link>
                 <Link
                   to="/sexual-wellness"
@@ -32,12 +38,7 @@ const Footer = () => {
                 >
                   Sexual Wellness Services
                 </Link>
-                <Link
-                  to="/psychiatric-care"
-                  className="text-md hover:text-[#DB8E00]"
-                >
-                  Psychiatric Care
-                </Link>
+                
               </div>
               {/* Treatments Links */}
               <div className="flex flex-col space-y-2 w-full">

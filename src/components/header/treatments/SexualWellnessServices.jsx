@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const data = {
   bgImage: "/images/sexual-wellness.jpg", // Replace with your actual image path
   sidebarLinks: [
-    { title: "Expert De-addiction Programs", link: "/deaddiction" },
-    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
     { title: " Psychiatric Care", link: "/psychiatric-care" },
+    { title: "De-addiction Programs", link: "/deaddiction" },
+    { title: "Sexual Wellness Services", link: "/sexual-wellness" },
   ],
 };
 
