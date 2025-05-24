@@ -1,7 +1,6 @@
 import { FaPhoneAlt } from "react-icons/fa"; // Import the phone icon
 import { Link } from "react-router-dom";
 
-
 const VideoPlayHeader = () => {
   return (
     <header className="relative w-full h-[400px] sm:h-[480px]  md:h-[600px] lg:h-[720px] top-20">
@@ -12,8 +11,10 @@ const VideoPlayHeader = () => {
         muted
         className="w-full h-full object-cover"
       >
-        {/* Replace FILE_ID with the actual ID from your Google Drive link */}
-        <source src="/videos/bgvideo.mp4" type="video/mp4" />
+        <source
+          src="https://drive.google.com/uc?export=download&id=1cH1AphH1PrZvFNdIgudZ2LUrihM-UjDO"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
