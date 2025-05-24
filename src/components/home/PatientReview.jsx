@@ -19,7 +19,7 @@ const patientStories = [
     id: 2,
     name: "John Doe",
     date: "April 20, 2024",
-    video: "/images/patient1.jpg", // an image fallback
+    video: "", // an image fallback
     heading: "Knee Replacement Surgery",
     description:
       "John's journey to recovery was made smoother thanks to our attentive care team. His resilience and positive attitude helped him heal faster.",
