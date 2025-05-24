@@ -9,6 +9,7 @@ import TrendingYoutube from '../../components/home/TrendingYoutube.jsx'
 import InstagramSlider from '../../components/home/InstagramSlider.jsx'
 import PatientReview from '../../components/home/PatientReview.jsx'
 import OurServices from '../../components/home/OurServices.jsx'
+import OurFacility from '../../components/home/OurFacility.jsx'
 
 function Home() {
   return (
@@ -21,8 +22,9 @@ function Home() {
     <OurServices/>
     <Doctors/>
     <PatientReview/>
-    <TrendingYoutube/>
+    <OurFacility/>
     <PhotoGallery/> 
+    <TrendingYoutube/>
     <InstagramSlider/>
     </>
   )
