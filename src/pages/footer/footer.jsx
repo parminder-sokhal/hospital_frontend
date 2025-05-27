@@ -38,7 +38,6 @@ const Footer = () => {
                 >
                   Sexual Wellness Services
                 </Link>
-                
               </div>
               {/* Treatments Links */}
               <div className="flex flex-col space-y-2 w-full">
@@ -125,6 +124,16 @@ const Footer = () => {
                     <FaInstagram className="text-white text-xl hover:text-red-500" />
                   </Link>
                 </div>
+              </div>
+              <div className="flex flex-col items-center mt-4 space-y-1 text-white">
+                <span className="text-md font-semibold">Having issues? Contact us</span>
+                <Link
+                  to="tel:+919815490081"
+                  className="flex items-center space-x-2 hover:text-[#DB8E00]"
+                >
+                  <FaPhoneAlt className="text-lg" />
+                  <span>+91 9815490081</span>
+                </Link>
               </div>
             </div>
 
