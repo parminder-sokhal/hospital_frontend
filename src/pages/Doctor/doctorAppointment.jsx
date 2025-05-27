@@ -18,6 +18,7 @@ const DoctorAppointment = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [patient, setPatient] = useState(null);
+  const [longNotification, setLongNotification] = useState(null);
 
   const [notification, setNotification] = useState({
     message: "",
@@ -94,6 +95,8 @@ const DoctorAppointment = () => {
       return formatted.includes("video") ? "Video Call" : "Hospital Visit";
     };
 
+    const consultationMode = normalizeVisitType(doctor?.visitType);
+
     const appointmentData = {
       name: patient.name,
       age: patient.age,
@@ -101,27 +104,39 @@ const DoctorAppointment = () => {
       phone: patient.phone,
       email: patient.email,
       address: patient.address,
-      consultationMode: normalizeVisitType(doctor?.visitType),
+      consultationMode,
       date: doctor?.availableDate,
       timeSlot: doctor?.availableTimeSlot,
     };
+
     try {
       // Step 1: Create Appointment
       const appointmentRes = await dispatch(
         createAppointment(doctor?._id, appointmentData)
       );
+
       const appointmentId = appointmentRes?.appointment?._id;
 
       if (!appointmentId) throw new Error("Appointment ID not returned");
 
-      // Step 2: Create Razorpay Order via Redux
-      const paymentRes = await dispatch(createPaymentOrder(appointmentId));
-      if (!paymentRes?.order) {
-        throw new Error("Payment order not created");
+      // If it's a Hospital Visit, skip payment and show the notification
+      if (consultationMode === "Hospital Visit") {
+        setLongNotification({
+          _id: appointmentId,
+          name: patient.name,
+          email: patient.email,
+          contact: patient.phone,
+        });
+        resetForm();
+        return;
       }
+
+      // Else proceed to Razorpay flow
+      const paymentRes = await dispatch(createPaymentOrder(appointmentId));
+      if (!paymentRes?.order) throw new Error("Payment order not created");
+
       const { order, key_id } = paymentRes;
 
-      // Step 3: Configure Razorpay
       const options = {
         key: key_id,
         amount: order.amount,
@@ -131,7 +146,6 @@ const DoctorAppointment = () => {
         order_id: order.id,
         handler: async function (response) {
           try {
-            // Step 4: Verify Payment via Redux
             const verifyData = await dispatch(
               verifyPayment({
                 razorpay_order_id: response.razorpay_order_id,
@@ -141,9 +155,11 @@ const DoctorAppointment = () => {
             );
 
             if (verifyData?.success) {
-              setNotification({
-                message: "Payment successful!",
-                type: "success",
+              setLongNotification({
+                _id: verifyData.payment._id,
+                name: patient.name,
+                email: patient.email,
+                contact: patient.phone,
               });
               resetForm();
             } else {
@@ -173,7 +189,7 @@ const DoctorAppointment = () => {
     } catch (error) {
       console.error("Payment Error:", error);
       setNotification({
-        message: "Something went wrong during payment.",
+        message: "Something went wrong during the process.",
         type: "error",
       });
     }
@@ -275,6 +291,25 @@ const DoctorAppointment = () => {
             {notification.message}
           </div>
         )}
+        {longNotification && (
+          <div className="mt-4 p-4 border border-blue-400 bg-blue-50 text-blue-800 rounded shadow">
+            <h3 className="text-lg font-semibold mb-2">
+              Appointment Confirmed
+            </h3>
+            <p>
+              <strong>Reference ID:</strong> {longNotification._id}
+            </p>
+            <p>
+              <strong>Name:</strong> {longNotification.name}
+            </p>
+            <p>
+              <strong>Email:</strong> {longNotification.email}
+            </p>
+            <p>
+              <strong>Phone:</strong> {longNotification.contact}
+            </p>
+          </div>
+        )}
 
         {/* Patient Info Display */}
         {patient && (
@@ -294,9 +329,15 @@ const DoctorAppointment = () => {
             </div>
             <button
               onClick={handlePayNow}
-              className="mt-6 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+              className={`mt-6 w-full py-2 rounded text-white ${
+                doctor?.visitType?.toLowerCase().includes("video")
+                  ? "bg-green-600 hover:bg-green-700"
+                  : "bg-blue-600 hover:bg-blue-700"
+              }`}
             >
-              Pay Now
+              {doctor?.visitType?.toLowerCase().includes("video")
+                ? "Pay Now"
+                : "Pay at Hospital"}
             </button>
           </div>
         )}
