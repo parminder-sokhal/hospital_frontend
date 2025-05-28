@@ -162,7 +162,7 @@ function HeaderMain() {
               </li>
               <li>
                 <Link
-                  to="/deaddiction"
+                  to="/management"
                   className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
                 >
                   Management
@@ -634,7 +634,7 @@ function HeaderMain() {
               </li>
               <li>
                 <Link
-                  to="/deaddiction"
+                  to="/management"
                   className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
                 >
                   Management
