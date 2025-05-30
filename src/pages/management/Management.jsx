@@ -8,7 +8,7 @@ const managementData = [
   {
     name: "Dr. Rina Kapoor - Chief Psychiatrist",
     description: `With over 20 years of experience in psychiatry, Dr. Rina is dedicated to improving lives through personalized mental health care. She specializes in adolescent and adult mental wellness.`,
-    image: "/images/doctor2.jpeg",
+    image: "/images/doctor3.jpeg",
   },
 ];
 
@@ -16,11 +16,14 @@ const Management = () => {
   return (
     <>
       <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/images/Treatmentbg.png')]">
-        <span className="flex justify-center items-center sm:text-8xl text-3xl font-semibold text-white">
-          Our Management Team
+        <span className="flex justify-center items-center sm:text-8xl text-4xl font-semibold text-white">
+          Meet Our Team
         </span>
       </div>
       <div className="bg-white px-6 sm:px-8 md:px-12 py-5 flex flex-col items-center justify-center">
+        <h2 className="sm:text-5xl text-3xl font-bold text-gray-800 sm:my-10 ">
+          Our Team of Experts
+        </h2>
         <div className="max-w-6xl mx-auto py-10">
           {managementData.map((member, index) => (
             <div
@@ -32,7 +35,7 @@ const Management = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="object-cover w-full h-60 md:h-full"
+                  className="object-cover w-full h-auto rounded-lg shadow-md mb-4 md:mb-0 md:mr-6"
                 />
               </div>
 
