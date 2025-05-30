@@ -3,8 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   loading: false,
   appointments: [],
-  appointmentsByDate: [], // 🔹 Add this line
+  appointmentsByDate: [],
   appointment: {},
+  hospitalVisitAppointments: [],
   error: null,
 };
 
@@ -32,6 +33,10 @@ const appointmentSlice = createSlice({
       state.loading = false;
       state.appointments.push(action.payload.appointment);
     },
+    setHospitalVisitAppointments(state, action) {
+      state.loading = false;
+      state.hospitalVisitAppointments = action.payload.appointments;
+    },
   },
 });
 
@@ -41,6 +46,7 @@ export const {
   getAppointmentByDateSuccess,
   appointmentFail,
   addAppointment,
+  setHospitalVisitAppointments, // <- Add this
 } = appointmentSlice.actions;
 
 export default appointmentSlice.reducer;

@@ -7,6 +7,7 @@ import {
   getAppointmentByDateSuccess,
   appointmentFail,
   addAppointment,
+  setHospitalVisitAppointments,
 } from "../reducers/appointmentSlice";
 
 // Get all appointments
@@ -19,7 +20,9 @@ export const getAppointments = () => async (dispatch) => {
     dispatch(fetchAppointmentsSuccess(data));
   } catch (error) {
     dispatch(
-      appointmentFail(error.response?.data?.message || "Failed to fetch appointments")
+      appointmentFail(
+        error.response?.data?.message || "Failed to fetch appointments"
+      )
     );
   }
 };
@@ -34,7 +37,9 @@ export const getAppointmentByDate = (date) => async (dispatch) => {
     dispatch(getAppointmentByDateSuccess(data));
   } catch (error) {
     dispatch(
-      appointmentFail(error.response?.data?.message || "Failed to fetch appointment by date")
+      appointmentFail(
+        error.response?.data?.message || "Failed to fetch appointment by date"
+      )
     );
   }
 };
@@ -45,12 +50,16 @@ export const createAppointment = (id, appointmentData) => async (dispatch) => {
   try {
     dispatch(appointmentRequest());
 
-    const { data } = await axios.post(`${server}/appoint/${id}`, appointmentData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      withCredentials: true,
-    });
+    const { data } = await axios.post(
+      `${server}/appoint/${id}`,
+      appointmentData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      }
+    );
 
     dispatch(addAppointment(data));
     dispatch(getAppointments());
@@ -59,9 +68,33 @@ export const createAppointment = (id, appointmentData) => async (dispatch) => {
     return data;
   } catch (error) {
     dispatch(
-      appointmentFail(error.response?.data?.message || "Failed to create appointment")
+      appointmentFail(
+        error.response?.data?.message || "Failed to create appointment"
+      )
     );
     throw error; // Optional: propagate error
   }
 };
 
+export const getHospitalVisitAppointments = () => async (dispatch) => {
+  try {
+    dispatch(appointmentRequest());
+
+    const token = localStorage.getItem("Bearer");
+
+    const { data } = await axios.get(`${server}/offline/hospital-visit`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+
+    dispatch(setHospitalVisitAppointments(data));
+  } catch (error) {
+    dispatch(
+      appointmentFail(
+        error.response?.data?.message ||
+          "Failed to fetch hospital visit appointments"
+      )
+    );
+  }
+};

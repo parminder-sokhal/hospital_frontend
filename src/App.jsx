@@ -21,7 +21,7 @@ import Dashboard from "./pages/dashboard/dashboard.jsx";
 import SignIn from "./pages/SignIn.jsx";
 import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
 import GetAllPaymentDetails from "./components/dashboard/payment/GetAllPaymentDetails.jsx";
-import TodaysAllPayments from "./components/dashboard/payment/TodaysAllPayments.jsx";
+import GetAllOfflinePayments from "./components/dashboard/payment/GetAllOfflinePayments.jsx";
 import Management from "./pages/management/Management.jsx";
 
 function LayoutWrapper() {
@@ -47,7 +47,7 @@ function LayoutWrapper() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route path="AddDoctor" element={<AddDoctor />} />
             <Route path="GetAllPaymentDetails" element={<GetAllPaymentDetails />} />
-            <Route path="TodaysAllPayments" element={<TodaysAllPayments />} />
+            <Route path="GetAllOfflinePayments" element={<GetAllOfflinePayments />} />
           </Route>
         </Route>
 

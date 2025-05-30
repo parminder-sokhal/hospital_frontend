@@ -14,6 +14,7 @@ function GetAllPaymentDetails() {
     consultationMode: "",
     gender: "",
   });
+  const [selectedDate, setSelectedDate] = useState("");
   const [expandedPatientId, setExpandedPatientId] = useState(null);
   const [expandedDoctorId, setExpandedDoctorId] = useState(null);
 
@@ -50,84 +51,120 @@ function GetAllPaymentDetails() {
     const matchesGender =
       !filters.gender || p.patient?.gender === filters.gender;
 
+    // Date filter: if selectedDate is empty, pass all, else compare appointment date
+    const matchesDate =
+      !selectedDate || moment(p.appointment?.date).isSame(selectedDate, "day");
+
     return (
       matchesSearch &&
       matchesStatus &&
       matchesDoctor &&
       matchesMode &&
-      matchesGender
+      matchesGender &&
+      matchesDate
     );
   });
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">All Payments</h1>
+      <div className="flex items-center justify-between mb-4">
+        <h1 className="text-2xl font-bold">All Payments</h1>
+      </div>
 
       {/* Search and Filters */}
-      <div className="flex flex-wrap gap-2 mb-4">
-        <input
-          type="text"
-          placeholder="Search payments..."
-          className="border px-3 py-2 rounded-md shadow-sm w-full sm:w-64"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <div className="flex flex-wrap justify-between items-center gap-2 mb-4">
+        {/* Left side - search and other filters */}
+        <div className="flex flex-wrap gap-2 flex-grow max-w-full sm:max-w-[80%]">
+          <input
+            type="text"
+            placeholder="Search payments..."
+            className="border px-3 py-2 rounded-md shadow-sm w-full sm:w-64"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
 
-        <select
-          value={filters.status}
-          onChange={(e) => setFilters({ ...filters, status: e.target.value })}
-          className="border rounded-md px-3 py-2 text-sm"
-        >
-          <option value="">All Statuses</option>
-          <option value="created">Created</option>
-          <option value="completed">Completed</option>
-        </select>
+          {/* Status Filter */}
+          <select
+            value={filters.status}
+            onChange={(e) => setFilters({ ...filters, status: e.target.value })}
+            className="border rounded-md px-3 py-2 text-sm"
+          >
+            <option value="">All Statuses</option>
+            {[...new Set(payments.map((p) => p.status).filter(Boolean))].map(
+              (status) => (
+                <option key={status} value={status}>
+                  {status}
+                </option>
+              )
+            )}
+          </select>
 
-        <select
-          value={filters.doctor}
-          onChange={(e) => setFilters({ ...filters, doctor: e.target.value })}
-          className="border rounded-md px-3 py-2 text-sm"
-        >
-          <option value="">All Doctors</option>
-          {[...new Set(payments.map((p) => p.doctor?.name).filter(Boolean))].map(
-            (doc) => (
+          {/* Doctor Filter */}
+          <select
+            value={filters.doctor}
+            onChange={(e) => setFilters({ ...filters, doctor: e.target.value })}
+            className="border rounded-md px-3 py-2 text-sm"
+          >
+            <option value="">All Doctors</option>
+            {[
+              ...new Set(payments.map((p) => p.doctor?.name).filter(Boolean)),
+            ].map((doc) => (
               <option key={doc} value={doc}>
                 {doc}
               </option>
-            )
-          )}
-        </select>
+            ))}
+          </select>
 
-        <select
-          value={filters.consultationMode}
-          onChange={(e) =>
-            setFilters({ ...filters, consultationMode: e.target.value })
-          }
-          className="border rounded-md px-3 py-2 text-sm"
-        >
-          <option value="">All Modes</option>
-          {[...new Set(
-            payments
-              .map((p) => p.appointment?.consultationMode)
-              .filter(Boolean)
-          )].map((mode) => (
-            <option key={mode} value={mode}>
-              {mode}
-            </option>
-          ))}
-        </select>
+          {/* Consultation Mode Filter */}
+          <select
+            value={filters.consultationMode}
+            onChange={(e) =>
+              setFilters({ ...filters, consultationMode: e.target.value })
+            }
+            className="border rounded-md px-3 py-2 text-sm"
+          >
+            <option value="">All Modes</option>
+            {[
+              ...new Set(
+                payments
+                  .map((p) => p.appointment?.consultationMode)
+                  .filter(Boolean)
+              ),
+            ].map((mode) => (
+              <option key={mode} value={mode}>
+                {mode}
+              </option>
+            ))}
+          </select>
 
-        <select
-          value={filters.gender}
-          onChange={(e) =>
-            setFilters({ ...filters, gender: e.target.value })
-          }
-          className="border rounded-md px-3 py-2 text-sm"
-        >
-          <option value="">All Genders</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
+          {/* Gender Filter */}
+          <select
+            value={filters.gender}
+            onChange={(e) => setFilters({ ...filters, gender: e.target.value })}
+            className="border rounded-md px-3 py-2 text-sm"
+          >
+            <option value="">All Genders</option>
+            {[
+              ...new Set(
+                payments.map((p) => p.patient?.gender).filter(Boolean)
+              ),
+            ].map((gender) => (
+              <option key={gender} value={gender}>
+                {gender}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Right side - date picker */}
+        <div className="flex-shrink-0">
+          <input
+            type="date"
+            value={selectedDate}
+            onChange={(e) => setSelectedDate(e.target.value)}
+            className="border rounded-md px-3 py-2 text-sm"
+          />
+        </div>
       </div>
 
       {/* Table */}
@@ -150,7 +187,6 @@ function GetAllPaymentDetails() {
                 <th className="p-2">Status</th>
                 <th className="p-2">Created At</th>
                 <th className="p-2">Patient</th>
-                <th className="p-2">Doctor</th>
               </tr>
             </thead>
 
@@ -159,7 +195,7 @@ function GetAllPaymentDetails() {
                 <React.Fragment key={payment._id}>
                   <tr className="border-t hover:bg-gray-50">
                     <td className="p-2">
-                      {moment(payment.appointment?.date).format("YYYY-MM-DD")}
+                      {moment(payment.appointment?.date).format("DD-MM-YYYY")}
                     </td>
                     <td className="p-3">
                       <div className="flex flex-col">
@@ -197,8 +233,8 @@ function GetAllPaymentDetails() {
                 payment.status === "completed"
                   ? "bg-green-500 text-white"
                   : payment.status === "created"
-                  ? "bg-red-500 text-white"
-                  : "bg-gray-300 text-black"
+                    ? "bg-red-500 text-white"
+                    : "bg-gray-300 text-black"
               }`}
                       >
                         {payment.status}
@@ -225,22 +261,7 @@ function GetAllPaymentDetails() {
                       )}
                     </td>
 
-                    <td className="p-2">
-                      {payment.doctor ? (
-                        <button
-                          onClick={() =>
-                            toggleDoctorDetails(payment.doctor._id)
-                          }
-                          className="text-blue-600 hover:underline"
-                        >
-                          {expandedDoctorId === payment.doctor._id
-                            ? "Hide"
-                            : "View"}
-                        </button>
-                      ) : (
-                        "N/A"
-                      )}
-                    </td>
+                    
                   </tr>
 
                   {/* Patient Details Row */}
@@ -262,32 +283,6 @@ function GetAllPaymentDetails() {
                           </p>
                           <p>
                             <strong>Email:</strong> {payment.patient.email}
-                          </p>
-                        </td>
-                      </tr>
-                    )}
-
-                  {/* Doctor Details Row */}
-                  {payment.doctor &&
-                    expandedDoctorId === payment.doctor._id && (
-                      <tr className="bg-gray-100">
-                        <td colSpan="11" className="p-4 space-y-1 text-sm">
-                          <p>
-                            <strong>Name:</strong> {payment.doctor.name}
-                          </p>
-                          <p>
-                            <strong>Specialization:</strong>{" "}
-                            {payment.doctor.specialization}
-                          </p>
-                          <p>
-                            <strong>Hospital:</strong> {payment.doctor.hospital}
-                          </p>
-                          <p>
-                            <strong>Availability:</strong>{" "}
-                            {payment.doctor.availability}
-                          </p>
-                          <p>
-                            <strong>Fees:</strong> ₹{payment.doctor.fees}
                           </p>
                         </td>
                       </tr>
