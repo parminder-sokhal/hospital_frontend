@@ -13,38 +13,28 @@ const OurFacility = () => {
       id: 1,
       heading: "Therapy",
       description: "Modern Therapy Rooms",
-      image: "/images/facility.jpg",
+      image: "/images/DSC01694.jpg",
     },
     {
       id: 2,
       heading: "Equipment",
       description: "State-of-the-Art Equipment",
-      image: "/images/facility.jpg",
+      image: "/images/DSC01697.jpg",
     },
     {
       id: 3,
       heading: "Lounge",
       description: "Relaxation Lounges",
-      image: "/images/facility.jpg",
+      image: "/images/DSC01698.jpg",
     },
+    
     {
       id: 4,
-      heading: "Therapy",
-      description: "Modern Therapy Rooms",
-      image: "/images/facility.jpg",
-    },
-    {
-      id: 5,
-      heading: "Equipment",
-      description: "State-of-the-Art Equipment",
-      image: "/images/facility.jpg",
-    },
-    {
-      id: 6,
       heading: "Lounge",
       description: "Relaxation Lounges",
-      image: "/images/facility.jpg",
+      image: "/images/DSC01710.jpg",
     },
+    
   ];
 
   const totalSlides = facilities.length;
@@ -113,7 +103,7 @@ const OurFacility = () => {
                         loading="lazy"
                       />
                       {/* Rectangle box in bottom right */}
-                      <div className="absolute bottom-3 right-3 bg-blue-600 text-white text-lg px-3 py-1 rounded shadow">
+                      <div className="absolute bottom-4 right-4 bg-blue-600 text-white text-lg px-4 py-2 rounded ">
                         {facility.heading}
                       </div>
                     </div>
