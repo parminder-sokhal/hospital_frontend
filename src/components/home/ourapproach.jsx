@@ -8,28 +8,28 @@ const OurApproach = () => {
 
   const data = [
     {
-      title: "Game Therapy",
+      title: "Motivational Enhance Therapy",
       description:
-        "Game therapy utilizes interactive video games and play-based activities to enhance mental health, improve emotional regulation, and foster social skills in a fun and engaging way.",
-      image: "/images/gametherapy.jpg",
+        "Motivational Enhancement Therapy (MET) is a client-centered counseling approach that helps individuals strengthen their motivation and commitment to change.",
+      image: "/pictures/motivationaltherapy.jpeg",
     },
     {
       title: "Yoga & Meditation",
       description:
         "Yoga and meditation therapy combines physical postures, breath control, and mindfulness practices to promote relaxation, reduce stress, and enhance overall mental well-being.",
-      image: "/images/yoga.jpg",
+      image: "/pictures/Yoga.jpeg",
     },
     {
       title: "Gym ",
       description:
         "Gym therapy involves structured physical exercise in a gym setting to improve mental health, boost mood, and enhance overall well-being through physical activity and social interaction.",
-      image: "/images/hypnotherapy.jpg",
+      image: "/pictures/gym.jpeg",
     },
     {
       title: "Recreational activities",
       description:
         "Recreational activities engage individuals in enjoyable pastimes to promote relaxation, social interaction, and mental well-being while reducing stress and enhancing overall life satisfaction.",
-      image: "/images/autogenic.jpg",
+      image: "/pictures/recreational.jpeg",
     },
   ];
 
