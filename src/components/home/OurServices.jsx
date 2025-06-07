@@ -14,7 +14,6 @@ const OurServices = () => {
       image: "/pictures/psychiatrycare.jpeg",
       href: "/psychiatric-care",
     },
-    
     {
       id: 2,
       description: "Sexual Wellness Services",
@@ -42,7 +41,6 @@ const OurServices = () => {
 
     updateSlidesPerScreen();
     window.addEventListener("resize", updateSlidesPerScreen);
-
     return () => window.removeEventListener("resize", updateSlidesPerScreen);
   }, []);
 
@@ -55,23 +53,24 @@ const OurServices = () => {
       setCurrentIndex(newIndex);
     }
   };
-  
+
   const handleNext = () => {
     updateSlidePosition(currentIndex + slidesPerScreen);
   };
-  
+
   const handlePrev = () => {
     updateSlidePosition(currentIndex - slidesPerScreen);
   };
-  
+
   const handlers = useSwipeCarousel({
     onNext: handleNext,
     onPrev: handlePrev,
   });
+
   return (
-    <section className="container mx-auto mt-10 mb-20 px-4 sm:px-8 lg:px-16">
+    <section className="container mx-auto mt-10 mb-20 md:px-18 sm:px-14 lg:px-40">
       <div className="text-center mb-10">
-        <h2 className="text-4xl  text-gray-800">Our Services</h2>
+        <h2 className="text-4xl text-gray-800">Our Services</h2>
       </div>
 
       <div className="relative w-full">
@@ -87,20 +86,22 @@ const OurServices = () => {
               <Link
                 key={slide.id}
                 to={slide.href}
-                className={`carousel-slide flex-shrink-0 px-3 ${
+                className={`carousel-slide flex-shrink-0 px-4 ${
                   slidesPerScreen === 3 ? "w-full md:w-1/2 lg:w-1/3" : "w-full"
                 }`}
               >
-                <div className="bg-white rounded-xl  hover:scale-[1.02] transition-transform duration-300 ease-in-out flex flex-col items-center p-6 text-center h-full">
+                <div className="bg-white rounded-lg  transition-all duration-300 flex flex-col items-center text-center h-full">
                   <img
                     src={slide.image}
                     alt={`Service ${slide.id}`}
-                    className="w-28 h-28 object-cover mb-5"
+                    className="w-full h-56 object-cover rounded-t-lg transition-transform duration-200 hover:scale-105"
                     loading="lazy"
                   />
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {slide.description}
-                  </h3>
+                  <div className="py-4 px-3">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {slide.description}
+                    </h3>
+                  </div>
                 </div>
               </Link>
             ))}

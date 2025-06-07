@@ -89,7 +89,7 @@ const handlers = useSwipeCarousel({
           >
             <div
               className="relative "
-              style={{ width: "80vw", height: "80vh" }}
+              style={{ width: "90vw", height: "90vh" }}
               onClick={(e) => e.stopPropagation()}
             >
               <img

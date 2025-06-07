@@ -27,14 +27,13 @@ const OurFacility = () => {
       description: "Relaxation Lounges",
       image: "/images/DSC01698.jpg",
     },
-    
+
     {
       id: 4,
       heading: "Lounge",
       description: "Relaxation Lounges",
       image: "/images/DSC01710.jpg",
     },
-    
   ];
 
   const totalSlides = facilities.length;
@@ -95,15 +94,14 @@ const OurFacility = () => {
                 >
                   <div className="flip-card-inner">
                     {/* FRONT */}
-                    <div className="flip-card-front flex flex-col items-center justify-center p-6 bg-white rounded-xl text-center h-full relative">
+                    <div className="flip-card-front relative">
                       <img
                         src={facility.image}
                         alt={`Facility ${facility.id}`}
-                        className="w-full h-56 object-cover rounded-xl"
+                        className="w-full h-full object-cover rounded-xl"
                         loading="lazy"
                       />
-                      {/* Rectangle box in bottom right */}
-                      <div className="absolute bottom-4 right-4 bg-blue-600 text-white text-lg px-4 py-2 rounded ">
+                      <div className="absolute bottom-4 right-4 bg-blue-600 text-white text-xl px-3 py-1 rounded">
                         {facility.heading}
                       </div>
                     </div>

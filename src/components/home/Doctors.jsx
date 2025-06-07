@@ -89,7 +89,7 @@ const Doctors = () => {
                     className="carousel-slide flex-shrink-0 px-2"
                     style={{ width: `${100 / slidesPerScreen}%` }}
                   >
-                    <div className="flex flex-col justify-between items-center bg-white rounded-lg shadow-lg overflow-hidden h-auto w-full">
+                    <div className="flex flex-col justify-between items-center bg-white rounded-lg  overflow-hidden h-auto w-full">
                       {/* Image Section */}
                       <div className="w-full h-[400px] overflow-hidden">
                         <img

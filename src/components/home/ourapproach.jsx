@@ -104,7 +104,7 @@ const OurApproach = () => {
               >
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col">
                   <div
-                    className="h-40 bg-cover bg-center"
+                    className="h-62 bg-cover bg-center"
                     style={{
                       backgroundImage: `url(${item.image})`,
                       loading: `lazy`,

@@ -127,15 +127,15 @@ const SpecialitiesSlider = () => {
                 to={slide.href}
                 className="carousel-slide h-72 flex-shrink-0 w-full sm:w-full md:w-full lg:w-1/3 xl:w-1/3 p-4" // Responsive layout: 3 items per screen on large screens
               >
-                <div className="flex flex-col justify-between items-center bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <div className="flex flex-col justify-between items-center  rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
                   <img
                     src={slide.image}
                     alt={`Slide ${slide.id}`}
-                    className="w-full h-50 object-cover rounded-t-lg mb-4 transition-transform duration-300 ease-in-out hover:scale-105"
+                    className="w-full h-50 object-cover rounded-t-lg mb-4 transition-transform duration-100 ease-in-out hover:scale-105"
                     loading="lazy"
                   />
                   <button
-                    className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-800 text-white text-lg font-semibold rounded-2xl transition-all duration-300 ease-in-out"
+                    className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-800 text-white text-lg font-semibold rounded-xl transition-all duration-300 ease-in-out"
                     onClick={(e) => {
                       e.preventDefault(); // Prevent default anchor behavior
                       window.location.href = slide.href; // Redirect on button click
