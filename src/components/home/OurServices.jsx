@@ -11,20 +11,20 @@ const OurServices = () => {
     {
       id: 1,
       description: "Psychiatric Care",
-      image: "/images/stress.png",
+      image: "/pictures/psychiatrycare.jpeg",
       href: "/psychiatric-care",
     },
     
     {
       id: 2,
       description: "Sexual Wellness Services",
-      image: "/images/stress.png",
+      image: "/pictures/sexualWellness.jpeg",
       href: "/sexual-wellness",
     },
     {
       id: 3,
       description: "Expert De-addiction Programs",
-      image: "/images/stress.png",
+      image: "/pictures/Deaddiction.jpeg",
       href: "/deaddiction",
     },
   ];
