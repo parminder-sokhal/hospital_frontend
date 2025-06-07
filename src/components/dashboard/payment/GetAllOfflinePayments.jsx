@@ -19,7 +19,7 @@ function GetAllOfflinePayments() {
   });
   const [selectedDate, setSelectedDate] = useState("");
   const [expandedPatientId, setExpandedPatientId] = useState(null);
-  const [expandedDoctorId, setExpandedDoctorId] = useState(null);
+  // const [expandedDoctorId, setExpandedDoctorId] = useState(null);
 
   useEffect(() => {
     dispatch(getHospitalVisitAppointments());
@@ -29,9 +29,9 @@ function GetAllOfflinePayments() {
     setExpandedPatientId((prevId) => (prevId === id ? null : id));
   };
 
-  const toggleDoctorDetails = (id) => {
-    setExpandedDoctorId((prevId) => (prevId === id ? null : id));
-  };
+  // const toggleDoctorDetails = (id) => {
+  //   setExpandedDoctorId((prevId) => (prevId === id ? null : id));
+  // };
 
   // Filtering logic including search and filters
   const filteredAppointments = hospitalVisitAppointments.filter((a) => {
@@ -74,14 +74,14 @@ function GetAllOfflinePayments() {
   const uniqueStatuses = [
     ...new Set(hospitalVisitAppointments.map((a) => a.status).filter(Boolean)),
   ];
-  const uniqueConsultationModes = [
-    ...new Set(
-      hospitalVisitAppointments.map((a) => a.consultationMode).filter(Boolean)
-    ),
-  ];
+  // const uniqueConsultationModes = [
+  //   ...new Set(
+  //     hospitalVisitAppointments.map((a) => a.consultationMode).filter(Boolean)
+  //   ),
+  // ];
 
   return (
-    <div className="p-4">
+    <div className="p-4 mt-10">
       <h1 className="text-2xl font-bold mb-4">
         Offline Hospital Visit Appointments
       </h1>

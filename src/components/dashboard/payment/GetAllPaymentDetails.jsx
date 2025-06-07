@@ -16,7 +16,7 @@ function GetAllPaymentDetails() {
   });
   const [selectedDate, setSelectedDate] = useState("");
   const [expandedPatientId, setExpandedPatientId] = useState(null);
-  const [expandedDoctorId, setExpandedDoctorId] = useState(null);
+  // const [expandedDoctorId, setExpandedDoctorId] = useState(null);
 
   useEffect(() => {
     dispatch(getAllPaymentDetails());
@@ -26,9 +26,9 @@ function GetAllPaymentDetails() {
     setExpandedPatientId((prevId) => (prevId === id ? null : id));
   };
 
-  const toggleDoctorDetails = (id) => {
-    setExpandedDoctorId((prevId) => (prevId === id ? null : id));
-  };
+  // const toggleDoctorDetails = (id) => {
+  //   setExpandedDoctorId((prevId) => (prevId === id ? null : id));
+  // };
 
   // Sort payments by createdAt descending
   const sortedPayments = [...payments].sort(
@@ -66,7 +66,7 @@ function GetAllPaymentDetails() {
   });
 
   return (
-    <div className="p-4">
+    <div className="p-4 mt-10">
       <div className="flex items-center justify-between mb-4">
         <h1 className="text-2xl font-bold">All Payments</h1>
       </div>
