@@ -3,7 +3,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: "/images/ocd.jpg", // Replace with the correct image path
+  bgImage: "/pictures/OCD.jpeg", // Replace with the correct image path
   sidebarLinks: [
     { title: "Depression", link: "/depression" },
     { title: "Anxiety", link: "/anxiety" },
@@ -18,7 +18,7 @@ const OCD = () => {
     <div className="w-full min-h-screen bg-white font-sans">
       {/* ✅ Top Banner */}
       <div
-        className="w-full mt-34 h-92 bg-cover bg-no-repeat bg-center"
+        className="w-full mt-34 h-120 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${data.bgImage})` }}
       ></div>
 
