@@ -5,50 +5,50 @@ import { useSwipeCarousel } from "../hook/useSwipeCarousel";
 const patientStories = [
   {
     id: 1,
-    name: "XYZ CBA",
+    name: "Deliberately Hidden",
     date: "May 30, 2024",
-    video: "https://www.youtube.com/embed/ScMzIvxBSi4", // or replace with image URL
+    video: "https://www.youtube.com/embed/HnRRds75Vxs", // or replace with image URL
     heading:
-      "Lumbar Spine Surgery | Transforaminal Lumbar Interbody Fusion (TLIF)",
+      "Real Patient Stories: Transforming Healthcare Experiences",
     description:
-      "Lakshmi Pai entrusted us with her journey, and for that, we are immensely grateful. Under the meticulous care of Dr. Gayatri Kamath at Fortis Hospitals, her medical experience was profoundly guided.",
+      "In this video, we delve into the powerful stories of patients who have navigated their healthcare journeys. From challenges faced to triumphs celebrated, these narratives highlight the importance of compassion, communication, and understanding in healthcare. Join us as we explore how these experiences can inspire change and improve patient care.",
     treatedBy: "Dr. Gayatri Kamath",
     hospital: "Loona Hospital, Panchkula",
   },
   {
     id: 2,
-    name: "John Doe",
+    name: "Deliberately Hidden",
     date: "April 20, 2024",
-    video: "", // an image fallback
-    heading: "Knee Replacement Surgery",
+    video: "https://www.youtube.com/embed/vl1B3-RDbAU", // an image fallback /pictures/doctor1.jpeg
+    heading: "Real Patient Stories: Transforming Healthcare Experiences",
     description:
-      "John's journey to recovery was made smoother thanks to our attentive care team. His resilience and positive attitude helped him heal faster.",
+      "In this compelling video, we explore the transformative journeys of patients as they navigate the complexities of healthcare. From the obstacles they encounter to the victories they achieve, these heartfelt stories underscore the vital roles of compassion, effective communication, and empathy in the medical field. Join us as we uncover how these personal experiences can drive meaningful change and enhance the quality of patient care.",
     treatedBy: "Dr. Asha Mehta",
     hospital: "Loona Hospital, Panchkula",
   },
-  {
-    id: 3,
-    name: "XYZ 1",
-    date: "May 30, 2024",
-    video: "https://www.youtube.com/embed/ScMzIvxBSi4", // or replace with image URL
-    heading:
-      "Lumbar Spine Surgery | Transforaminal Lumbar Interbody Fusion (TLIF)",
-    description:
-      "Lakshmi Pai entrusted us with her journey, and for that, we are immensely grateful. Under the meticulous care of Dr. Gayatri Kamath at Fortis Hospitals, her medical experience was profoundly guided.",
-    treatedBy: "Dr. Gayatri Kamath",
-    hospital: "Loona Hospital, Panchkula",
-  },
-  {
-    id: 4,
-    name: "John Doe",
-    date: "April 20, 2024",
-    video: "/images/doctor1.jpeg", // an image fallback
-    heading: "Knee Replacement Surgery",
-    description:
-      "John's journey to recovery was made smoother thanks to our attentive care team. His resilience and positive attitude helped him heal faster.",
-    treatedBy: "Dr. Asha Mehta",
-    hospital: "Loona Hospital, Panchkula",
-  },
+  // {
+  //   id: 3,
+  //   name: "XYZ 1",
+  //   date: "May 30, 2024",
+  //   video: "https://www.youtube.com/embed/vl1B3-RDbAU", // or replace with image URL
+  //   heading:
+  //     "Real Patient Stories: Transforming Healthcare Experiences",
+  //   description:
+  //     "In this video, we delve into the powerful stories of patients who have navigated their healthcare journeys. From challenges faced to triumphs celebrated, these narratives highlight the importance of compassion, communication, and understanding in healthcare. Join us as we explore how these experiences can inspire change and improve patient care.",
+  //   treatedBy: "Dr. Gayatri Kamath",
+  //   hospital: "Loona Hospital, Panchkula",
+  // },
+  // {
+  //   id: 4,
+  //   name: "John Doe",
+  //   date: "April 20, 2024",
+  //   video: "/pictures/doctor1.jpeg", // an image fallback
+  //   heading: "Real Patient Stories: Transforming Healthcare Experiences",
+  //   description:
+  //     "In this video, we delve into the powerful stories of patients who have navigated their healthcare journeys. From challenges faced to triumphs celebrated, these narratives highlight the importance of compassion, communication, and understanding in healthcare. Join us as we explore how these experiences can inspire change and improve patient care.",
+  //   treatedBy: "Dr. Asha Mehta",
+  //   hospital: "Loona Hospital, Panchkula",
+  // },
 ];
 
 const PatientReview = () => {
@@ -82,16 +82,16 @@ const PatientReview = () => {
   };
 
   return (
-    <div className="bg-cover bg-blend-soft-light bg-[url(/images/bgour.jpg)]">
-      <div className="flex flex-col lg:flex-row container mx-auto py-20 px-4 lg:px-30 ">
+    <div className="bg-cover bg-blend-soft-light bg-[url(/pictures/bgour.jpg)]">
+      <div className="flex flex-col lg:flex-row container mx-auto py-20 px-4 lg:px-20 ">
         {/* Left static section */}
-        <div className="w-full lg:w-1/3 mb-10 lg:mb-0 flex flex-col justify-center items-start">
+        <div className="w-full lg:w-2/5 mb-10 lg:mb-0 flex flex-col justify-center items-start">
           <h2 className="text-4xl font-bold mb-4">Our Patient Stories</h2>
           <h3 className="text-2xl text-black mb-2">What People Say About Us</h3>
         </div>
 
         {/* Right sliding section */}
-        <div className="w-full lg:w-2/3 relative overflow-hidden">
+        <div className="w-full lg:w-5/5 relative overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
@@ -103,7 +103,7 @@ const PatientReview = () => {
             {patientStories.map((story) => (
               <div
                 key={story.id}
-                className="p-4 flex-shrink-0"
+                className="p-3 flex-shrink-0"
                 style={{ width: `${100 / patientStories.length}%` }}
               >
                 <div className="flex flex-row bg-white shadow-lg rounded-lg overflow-hidden h-full">

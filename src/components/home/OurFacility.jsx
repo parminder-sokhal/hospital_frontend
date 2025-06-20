@@ -12,27 +12,26 @@ const OurFacility = () => {
     {
       id: 1,
       heading: "Therapy",
-      description: "Modern Therapy Rooms",
-      image: "/images/DSC01694.jpg",
+      description: "Elegance and comfort redefined.",
+      image: "/pictures/DSC01694.jpg",
     },
     {
       id: 2,
       heading: "Equipment",
-      description: "State-of-the-Art Equipment",
-      image: "/images/DSC01710.jpg",
+      description: "Recovery through exercise",
+      image: "/pictures/DSC01710.jpg",
     },
     {
       id: 3,
       heading: "Lounge",
-      description: "Relaxation Lounges",
-      image: "/images/DSC01698.jpg",
+      description: "Comfortable care for healing",
+      image: "/pictures/DSC01698.jpg",
     },
-
     {
       id: 4,
       heading: "Lounge",
-      description: "Relaxation Lounges",
-      image: "/images/DSC01697.jpg",
+      description: "Elegance and comfort redefined.",
+      image: "/pictures/DSC01697.jpg",
     },
   ];
 

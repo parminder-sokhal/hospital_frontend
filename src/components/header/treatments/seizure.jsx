@@ -14,7 +14,7 @@ const Seizure = () => {
   return (
     <div className="w-full bg-white font-sans min-h-screen">
       <div
-        className="w-full mt-34 h-120 bg-cover bg-center bg-no-repeat"
+        className="w-full mt-34 h-80 sm:h-150 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${data.bgImage})` }}
       ></div>
 

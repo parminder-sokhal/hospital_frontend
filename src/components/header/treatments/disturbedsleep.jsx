@@ -18,7 +18,7 @@ const DisturbedSleep = () => {
   return (
     <div className="w-full min-h-screen bg-white font-sans">
       <div
-        className="w-full mt-34 h-120 bg-cover bg-center bg-no-repeat"
+        className="w-full mt-34 h-80 sm:h-150 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${data.bgImage})` }}
       ></div>
 

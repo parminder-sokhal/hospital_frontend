@@ -8,21 +8,15 @@ function Pictures() {
 
   // Corrected URLs for Google Drive
   const photos = [
-    "/images/gallery.jpeg",
-    // "/images/gallery1.jpeg",
-    "/images/gallery2.jpeg",
-    // "/images/gallery3.jpeg",
-    // "/images/gallery4.jpeg",
-    // "/images/gallery9.jpeg",
-    "/images/gallery6.jpeg",
-    "/images/gallery8.jpeg",
-    // "/images/gallery9.jpeg",
-    "/images/gallery10.jpeg",
-    // "/images/gallery11.jpeg",
-    "/images/gallery12.jpeg",
-    "/images/gallery13.jpeg",
-    "/images/gallery14.jpeg",
-    "/images/gallery15.jpeg",
+    "/pictures/gallery.jpeg",
+    "/pictures/gallery2.jpeg",
+    "/pictures/gallery6.jpeg",
+    "/pictures/gallery8.jpeg",
+    "/pictures/gallery10.jpeg",
+    "/pictures/gallery12.jpeg",
+    "/pictures/gallery13.jpeg",
+    "/pictures/gallery14.jpeg",
+    "/pictures/gallery15.jpeg",
     
   ];
 
@@ -52,7 +46,7 @@ const handlers = useSwipeCarousel({
   });
   return (
     <>
-      <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/images/Treatmentbg.png')]">
+      <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/Background.jpeg')]">
         <span className="flex justify-center items-center sm:text-8xl text-5xl font-semibold text-white">Image Gallery </span>
       </div>
       <div className="container mx-auto lg:px-30 px-15 py-20 " {...handlers}>

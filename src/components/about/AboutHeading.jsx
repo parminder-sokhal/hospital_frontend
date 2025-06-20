@@ -52,9 +52,6 @@ const AboutHeading = () => {
         <p className="text-gray-600 text-lg leading-relaxed mb-8">
           Whether you are dealing with anxiety, depression, addiction, or any other mental health issue, we are dedicated to helping you achieve a healthier, happier life.
         </p>
-        <p className="text-lg text-black font-semibold">
-          📞 Contact us today to learn more about our services and how we can assist you on your path to mental wellness.
-        </p>
       </div>
     </div>
   );
