@@ -22,7 +22,7 @@ import SignIn from "./pages/SignIn.jsx";
 import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
 import GetAllPaymentDetails from "./components/dashboard/payment/GetAllPaymentDetails.jsx";
 import GetAllOfflinePayments from "./components/dashboard/payment/GetAllOfflinePayments.jsx";
-import Management from "./pages/management/Management.jsx";
+// import Management from "./pages/management/Management.jsx";
 
 function LayoutWrapper() {
   const location = useLocation();
@@ -36,7 +36,7 @@ function LayoutWrapper() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/management" element={<Management />} />
+        {/* <Route path="/management" element={<Management />} /> */}
         <Route path="/doctors" element={<Doctors />} />
         <Route path="/doctor/:id" element={<DoctorProfile />} />
         <Route path="/appointment" element={<DoctorAppointment />} />

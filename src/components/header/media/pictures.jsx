@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
 import { useSwipeCarousel } from "../../hook/useSwipeCarousel"; 
 
-function pictures() {
+function Pictures() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -133,4 +133,4 @@ const handlers = useSwipeCarousel({
   );
 }
 
-export default pictures;
+export default Pictures;

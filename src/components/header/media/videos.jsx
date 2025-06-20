@@ -52,7 +52,7 @@ const getYoutubeThumbnail = (embedUrl) => {
   return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 };
 
-function videos() {
+function Videos() {
   const [activeVideos, setActiveVideos] = useState({});
   
     const handlePlay = (id) => {
@@ -145,4 +145,4 @@ function videos() {
     );
 }
 
-export default videos
+export default Videos

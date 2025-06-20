@@ -9,13 +9,15 @@ const PhotoGallery = () => {
   // Corrected URLs for Google Drive
   const photos = [
     "/images/gallery.jpeg",
-    "/images/gallery1.jpeg",
+    // "/images/gallery1.jpeg",
     "/images/gallery2.jpeg",
-    "/images/gallery3.jpeg",
-    "/images/gallery4.jpeg",
-    "/images/gallery9.jpeg",
+    // "/images/gallery3.jpeg",
+    // "/images/gallery4.jpeg",
+    // "/images/gallery9.jpeg",
     "/images/gallery6.jpeg",
     "/images/gallery8.jpeg",
+    "/images/gallery10.jpeg",
+    "/images/gallery14.jpeg",
   ];
 
   const handleOpen = (index) => {
