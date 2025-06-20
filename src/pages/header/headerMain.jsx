@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function HeaderMain() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownNavbarOpen, setIsDropdownNavbarOpen] = useState(false);
+  const [isDropdownNavbarOpenservices, setIsDropdownNavbarOpenservices] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -12,6 +13,9 @@ function HeaderMain() {
 
   const toggleNavbarDropdown = () => {
     setIsDropdownNavbarOpen(!isDropdownNavbarOpen);
+  };
+  const toggleNavbarDropdownservices = () => {
+    setIsDropdownNavbarOpenservices(!isDropdownNavbarOpenservices);
   };
 
   const toggleMobileMenu = () => {
@@ -41,6 +45,9 @@ function HeaderMain() {
   const handleNavbarDropdownHover = () => {
     setIsDropdownNavbarOpen(true);
   };
+  const handleNavbarDropdownHoverservices = () => {
+    setIsDropdownNavbarOpenservices(true);
+  };
 
   const handleDropdownLeave = () => {
     setIsDropdownOpen(false);
@@ -48,6 +55,9 @@ function HeaderMain() {
 
   const handleNavbarDropdownLeave = () => {
     setIsDropdownNavbarOpen(false);
+  };
+  const handleNavbarDropdownLeaveservices = () => {
+    setIsDropdownNavbarOpenservices(false);
   };
 
   return (
@@ -97,13 +107,61 @@ function HeaderMain() {
                   </svg>
                 </button>
               </li>
-              <li>
-                <Link
-                  to="/deaddiction"
-                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+              
+              <li onMouseEnter={handleNavbarDropdownHoverservices}>
+                <button
+                  onClick={toggleNavbarDropdownservices}
+                  className="flex items-center justify-between w-full py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:p-0"
                 >
                   Services
-                </Link>
+                  <svg
+                    className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${isDropdownNavbarOpenservices ? "rotate-180" : ""}`}
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  onMouseLeave={handleNavbarDropdownLeaveservices}
+                  onClick={handleNavbarDropdownLeaveservices}
+                  className={`z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-auto px-2 absolute mt-2 ${isDropdownNavbarOpenservices ? "block" : "hidden"}`}
+                >
+                  <ul className="py-2 text-sm text-black">
+                    <li>
+                      <Link
+                        to="/psychiatric-care"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                       Psychiatric Care
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/deaddiction"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        De-addiction Programs
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        to="/sexual-wellness"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Sexual Wellness Services
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li onMouseEnter={handleNavbarDropdownHover}>
                 <button
@@ -129,7 +187,7 @@ function HeaderMain() {
                 <div
                   onMouseLeave={handleNavbarDropdownLeave}
                   onClick={handleNavbarDropdownLeave}
-                  className={`z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 absolute mt-2 ${isDropdownNavbarOpen ? "block" : "hidden"}`}
+                  className={`z-50 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-auto px-4 absolute mt-2 ${isDropdownNavbarOpen ? "block" : "hidden"}`}
                 >
                   <ul className="py-2 text-sm text-black">
                     <li>
@@ -571,14 +629,58 @@ function HeaderMain() {
                   </svg>
                 </button>
               </li>
+              
               <li>
-                <Link
-                  to="/deaddiction"
-                  onClick={toggleMobileMenu}
-                  className="block py-2 px-3 text-black hover:bg-gray-100"
+                <button
+                  onClick={toggleNavbarDropdownservices}
+                  className="flex justify-between w-full py-2 px-3 text-black hover:bg-gray-100"
                 >
                   Services
-                </Link>
+                  <svg
+                    className={`w-2.5 h-2.5 ms-2.5 transition-transform duration-200 ${isDropdownNavbarOpenservices ? "rotate-180" : ""}`}
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <div
+                  onClick={toggleMobileMenu}
+                  className={`z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 mt-2 ${isDropdownNavbarOpenservices ? "block" : "hidden"}`}
+                >
+                  <ul className="py-2 text-sm text-gray-700">
+                    <li>
+                      <Link
+                        to="/psychiatric-care"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Psychiatric Care
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/deaddiction"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        De-addiction Programs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/sexual-wellness"
+                        className="block px-4 py-2 hover:bg-gray-100"
+                      >
+                        Sexual Wellness Services
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li>
                 <button
