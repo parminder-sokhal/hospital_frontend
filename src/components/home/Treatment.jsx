@@ -30,7 +30,7 @@ const SpecialitiesSlider = () => {
     {
       id: 4,
       description: "De-addiction programme",
-      image: "/pictures/Deaddiction.jpeg",
+      image: "/pictures/De-addictionS.jpeg",
       href: "/De-addictionProgramme",
     },
     {

@@ -19,7 +19,7 @@ const OurFacility = () => {
       id: 2,
       heading: "Equipment",
       description: "State-of-the-Art Equipment",
-      image: "/images/DSC01697.jpg",
+      image: "/images/DSC01710.jpg",
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const OurFacility = () => {
       id: 4,
       heading: "Lounge",
       description: "Relaxation Lounges",
-      image: "/images/DSC01710.jpg",
+      image: "/images/DSC01697.jpg",
     },
   ];
 
