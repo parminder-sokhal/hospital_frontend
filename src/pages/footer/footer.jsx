@@ -190,8 +190,8 @@ const Footer = () => {
         </div>
         <div className="flex w-full text-center justify-center bg-white text-black">
           <p className="sm:text-sm px-4 py-2">
-            Loona Hospital© 2025 All Rights Reserved. | Designed & Developed
-            by:&nbsp;
+            <Link to="/dashboard">Loona Hospital</Link>© 2025 All Rights
+            Reserved. | Designed & Developed by:&nbsp;
             <a
               href="https://quantivisiontech.com"
               target="_blank"
