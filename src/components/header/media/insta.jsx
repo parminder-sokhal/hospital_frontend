@@ -6,28 +6,28 @@ function insta() {
     {
       id: 1,
       image: "/images/insta1.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/CfEYPJaIA_f/?hl=en", // Reel URL
+      href: "https://www.instagram.com/reel/DKxDVNKzx7M/?utm_source=ig_web_copy_link&igsh=M2NsYTRseGd1bmlo", // Reel URL
     },
     {
       id: 2,
       image: "/images/insta2.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/CQySPD3HGmQ/?hl=en", // Reel URL
+      href: "https://www.instagram.com/reel/DK2Vx8wT236/?utm_source=ig_web_copy_link&igsh=MWhpa2lpbHdxY250YQ==", // Reel URL
     },
     {
       id: 3,
       image: "/images/insta3.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/C4oiRnhADfI/?hl=en", // Reel URL
+      href: "https://www.instagram.com/reel/DLF0uNdz9BF/?utm_source=ig_web_copy_link&igsh=ZHd5aTJ0cmNkeXph", // Reel URL
     },
   ];
 
   return (
     <>
-      <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/images/Treatmentbg.png')]">
+      <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/Background.jpeg')]">
         <span className="flex justify-center items-center sm:text-8xl text-3xl font-semibold text-white">
           Instagram Highlights
         </span>
       </div>
-      <div className="flex flex-col mx-auto lg:px-60 gap-10 px-6 py-10">
+      <div className="flex flex-col mx-auto lg:px-100 gap-10 px-6 py-10">
         <div>
           <h2 className="sm:text-3xl py-4 text-center">Trending Highlights</h2>
 

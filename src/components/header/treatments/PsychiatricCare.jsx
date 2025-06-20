@@ -15,7 +15,7 @@ const PsychiatricCare = () => {
   return (
     <div className="w-full min-h-screen bg-white font-sans">
       <div
-        className="w-full mt-34 h-120 bg-cover bg-no-repeat bg-center"
+        className="w-full mt-34 h-80 sm:h-150 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${data.bgImage})` }}
       ></div>
 
@@ -30,7 +30,7 @@ const PsychiatricCare = () => {
               Welcome to Our Psychiatric Care Services
             </h2>
             <p>
-              At [Your Clinic Name], we understand that mental health is a
+              We understand that mental health is a
               crucial component of overall well-being. Our team of experienced
               psychiatrists is committed to providing compassionate,
               personalized, and evidence-based care.

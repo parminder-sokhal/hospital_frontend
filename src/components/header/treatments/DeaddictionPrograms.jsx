@@ -16,14 +16,14 @@ const DeaddictionPrograms = () => {
     <div className="w-full min-h-screen bg-white font-sans">
       {/* ✅ Top Div */}
       <div
-        className="w-full mt-34 h-120 bg-cover bg-no-repeat bg-center"
+        className="w-full mt-34 h-80 sm:h-150 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${data.bgImage})` }}
       ></div>
 
       {/* ✅ Bottom Div */}
       <div className="px-10 lg:px-40 py-10">
         <h1 className="text-3xl font-bold mb-8 text-gray-800">
-          Expert De-addiction Programs
+          De-addiction Programs
         </h1>
 
         <div className="flex flex-col lg:flex-row gap-8">

@@ -8,14 +8,14 @@ const PhotoGallery = () => {
 
   // Corrected URLs for Google Drive
   const photos = [
-    "/images/gallery.jpeg",
-    "/images/gallery1.jpeg",
-    "/images/gallery2.jpeg",
-    "/images/gallery3.jpeg",
-    "/images/gallery4.jpeg",
-    "/images/gallery9.jpeg",
-    "/images/gallery6.jpeg",
-    "/images/gallery8.jpeg",
+    "/pictures/gallery.jpeg",
+    "/pictures/gallery2.jpeg",
+    "/pictures/gallery6.jpeg",
+    "/pictures/gallery8.jpeg",
+    "/pictures/gallery10.jpeg",
+    "/pictures/gallery14.jpeg",
+    "/pictures/Playground.jpeg",
+    "/pictures/Garden.jpeg",
   ];
 
   const handleOpen = (index) => {
@@ -43,7 +43,7 @@ const PhotoGallery = () => {
     onPrev: handlePrev,
   });
   return (
-    <div className="bg-fixed bg-[url(/images/Treatmentbg.png)]">
+    <div className="bg-fixed bg-cover bg-[url(/pictures/Background.jpeg)]">
       <div className="container mx-auto lg:px-20 px-15 py-20 " {...handlers}>
         <div className="text-center flex flex-col justify-between mb-8">
           <h1 className="text-4xl justify-start flex text-black">
@@ -65,7 +65,7 @@ const PhotoGallery = () => {
               <img
                 src={photo}
                 alt={`Photo ${index}`}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-72 object-cover rounded-lg"
                 loading="lazy"
               />
             </div>

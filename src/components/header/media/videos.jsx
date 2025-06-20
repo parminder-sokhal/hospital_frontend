@@ -5,45 +5,41 @@ import { FaYoutube } from 'react-icons/fa';
 const latestvideo=[
     {
         id: 1,
-        url: 'https://www.youtube.com/embed/pHv1EFS4UkU',
+        url: 'https://www.youtube.com/embed/ylpC55nfSno',
     }
 ]
 const videosdata = [
   {
     id: 1,
-    url: 'https://www.youtube.com/embed/pHv1EFS4UkU',
+    url: 'https://www.youtube.com/embed/d55dcfhga0A',
   },
   {
     id: 2,
-    url: 'https://www.youtube.com/embed/gqb6HmB9OsU',
+    url: 'https://www.youtube.com/embed/57yThdJQLBs',
   },
   {
     id: 3,
-    url: 'https://www.youtube.com/embed/8YsnzW83K4s',
+    url: 'https://www.youtube.com/embed/0emNvavRxVQ',
   },
   {
     id: 4,
-    url: 'https://www.youtube.com/embed/pHv1EFS4UkU',
+    url: 'https://www.youtube.com/embed/3pvgpE1x1cw',
   },
   {
     id: 5,
-    url: 'https://www.youtube.com/embed/gqb6HmB9OsU',
+    url: 'https://www.youtube.com/embed/ukJtTF1yBtQ',
   },
   {
     id: 6,
-    url: 'https://www.youtube.com/embed/8YsnzW83K4s',
+    url: 'https://www.youtube.com/embed/VqRgPghUGhs',
   },
   {
     id: 7,
-    url: 'https://www.youtube.com/embed/pHv1EFS4UkU',
+    url: 'https://www.youtube.com/embed/c6F_rW-u6cY',
   },
   {
     id: 8,
-    url: 'https://www.youtube.com/embed/gqb6HmB9OsU',
-  },
-  {
-    id: 9,
-    url: 'https://www.youtube.com/embed/8YsnzW83K4s',
+    url: 'https://www.youtube.com/embed/txZPqzMqGn4',
   },
 ];
 
@@ -52,7 +48,7 @@ const getYoutubeThumbnail = (embedUrl) => {
   return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 };
 
-function videos() {
+function Videos() {
   const [activeVideos, setActiveVideos] = useState({});
   
     const handlePlay = (id) => {
@@ -61,7 +57,7 @@ function videos() {
   
     return (
         <>
-        <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/images/Treatmentbg.png')]">
+        <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/Background.jpeg')]">
         <span className="flex justify-center items-center sm:text-8xl text-5xl font-semibold text-white">Video Gallery </span>
       </div>
       <div className="flex flex-col mx-auto lg:px-60 gap-10 px-6 py-10">
@@ -145,4 +141,4 @@ function videos() {
     );
 }
 
-export default videos
+export default Videos

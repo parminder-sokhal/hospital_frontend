@@ -57,7 +57,7 @@ const OurApproach = () => {
   const swipeHandlers = useSwipeCarousel({ onNext: handleNext, onPrev: handlePrev });
 
   return (
-    <div  className="bg-cover py-15 px-4 bg-[url(/images/bgourapp.jpeg)]">
+    <div  className="bg-cover py-15 px-4 bg-[url(/pictures/bgourapp.jpeg)]">
       <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between">
         {/* Left Section - Centered vertically */}
         <div className="w-full md:w-2/5 flex flex-col justify-center items-start space-y-4 mb-8 md:mb-0 sm:px-10 px-4">

@@ -5,15 +5,15 @@ import { FaYoutube } from 'react-icons/fa';
 const videos = [
   {
     id: 1,
-    url: 'https://www.youtube.com/embed/pHv1EFS4UkU',
+    url: 'https://www.youtube.com/embed/c6F_rW-u6cY',
   },
   {
     id: 2,
-    url: 'https://www.youtube.com/embed/gqb6HmB9OsU',
+    url: 'https://www.youtube.com/embed/ylpC55nfSno',
   },
   {
     id: 3,
-    url: 'https://www.youtube.com/embed/8YsnzW83K4s',
+    url: 'https://www.youtube.com/embed/ukJtTF1yBtQ',
   },
 ];
 

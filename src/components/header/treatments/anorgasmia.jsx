@@ -3,7 +3,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: "/pictures/anorgasmai.jpeg", // Update if you have a specific image for Anorgasmia
+  bgImage: "/pictures/Anorgasmia.jpeg", // Update if you have a specific image for Anorgasmia
   sidebarLinks: [
     { title: "Premature Ejaculation", link: "/Premature-Ejaculation" },
     { title: "Erectile Dysfunction", link: "/Erectile-Dysfunction" },
@@ -17,7 +17,7 @@ const Anorgasmia = () => {
   return (
     <div className="w-full min-h-screen bg-white font-sans">
       <div
-        className="w-full mt-34 h-120 bg-cover bg-no-repeat bg-center"
+        className="w-full mt-34 h-80 sm:h-150 bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${data.bgImage})` }}
       ></div>
 

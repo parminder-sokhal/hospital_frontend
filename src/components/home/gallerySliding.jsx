@@ -3,12 +3,11 @@ import { useSwipeCarousel } from "../hook/useSwipeCarousel";
 
 const GallerySliding = () => {
   const images = [
-    "https://cdn.eka.care/clinics/62972d13d21e52001e294710/162200699512413/exterior/7e159a9421f0e50185219d390fbf971fc414fbf5d8454e051e00eb0811d17a22.jpeg",
-    "https://cdn.eka.care/clinics/62972d13d21e52001e294710/162200699512413/exterior/d9211f7a455259908d1d93501fdd528d88c94c536148675e89357dbf2305a76f.jpeg",
-    "https://cdn.eka.care/clinics/62972d13d21e52001e294710/162200699512413/interior/64f2700c0fa58953cf6d376bfe049cbfd74dde0c45c2dc7089482ef0a78af6e7.jpeg",
-    "https://cdn.eka.care/clinics/62972d13d21e52001e294710/162200699512413/interior/8fe461eed45e8ff1052306c3ad3014d262884c6fa980b682e32196772f17203c.jpeg",
-    "https://cdn.eka.care/clinics/62972d13d21e52001e294710/162200699512413/with_patients/82e89efc8ef343587ec4923d9caf55722ff304e4ff42214de1d55471882408cc.jpeg",
-    "https://images.jdmagicbox.com/comp/chandigarh/e3/0172px172.x172.120211201601.i4e3/catalogue/loona-neuropsychiatry-and-de-addiction-centre-panchkula-sector-12a-panchkula-de-addiction-centres-ghbjej4hrp-250.jpg",
+    "/pictures/LoonaGate.jpeg",
+    "/pictures/LoonaFront.jpeg",
+    "/pictures/LoonaFront1.jpeg",
+    "/pictures/Playground.jpeg",
+    "/pictures/Garden.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,7 +42,7 @@ const GallerySliding = () => {
       data-carousel="slide"
     >
       {/* Carousel wrapper */}
-      <div className="relative h-72 sm:h-[450px] md:h-[500px] overflow-hidden "  {...handlers}
+      <div className="relative h-72 sm:h-[600px] md:h-[700px] overflow-hidden "  {...handlers}
 >
         {images.map((image, index) => (
           <div
