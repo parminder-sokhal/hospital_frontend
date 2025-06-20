@@ -22,8 +22,8 @@ const OurServices = () => {
     },
     {
       id: 3,
-      description: "Expert De-addiction Programs",
-      image: "/pictures/Deaddiction.jpeg",
+      description: "De-addiction Programs",
+      image: "/pictures/De-addictionS.jpeg",
       href: "/deaddiction",
     },
   ];
