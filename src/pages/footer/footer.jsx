@@ -126,7 +126,9 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center mt-4 space-y-1 text-white">
-                <span className="text-md font-semibold">Having issues? Contact us</span>
+                <span className="text-md font-semibold">
+                  Having issues? Contact us
+                </span>
                 <Link
                   to="tel:+919815490081"
                   className="flex items-center space-x-2 hover:text-[#DB8E00]"
@@ -190,9 +192,14 @@ const Footer = () => {
           <p className="sm:text-sm px-4 py-2">
             Loona Hospital© 2025 All Rights Reserved. | Designed & Developed
             by:&nbsp;
-            <Link to="/dashboard" className="hover:text-gray-700">
-              Loona Hospital
-            </Link>
+            <a
+              href="https://quantivisiontech.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-700"
+            >
+              Quantivision Tech
+            </a>
           </p>
         </div>
       </footer>
