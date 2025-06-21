@@ -52,7 +52,7 @@ const GallerySliding = () => {
           >
             <img
               src={image}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
               alt={`carousel-item-${index}`}
               loading="lazy"
             />

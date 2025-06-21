@@ -27,7 +27,7 @@ function insta() {
           Instagram Highlights
         </span>
       </div>
-      <div className="flex flex-col mx-auto lg:px-100 gap-10 px-6 py-10">
+      <div className="flex flex-col mx-auto lg:px-40 gap-10 px-6 py-10">
         <div>
           <h2 className="sm:text-3xl py-4 text-center">Trending Highlights</h2>
 
