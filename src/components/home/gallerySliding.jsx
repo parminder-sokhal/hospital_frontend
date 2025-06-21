@@ -38,11 +38,11 @@ const GallerySliding = () => {
   return (
     <div
       id="default-carousel"
-      className="relative w-full mt-30"
+      className="relative w-full mt-34"
       data-carousel="slide"
     >
       {/* Carousel wrapper */}
-      <div className="relative h-72 sm:h-[600px] md:h-[700px] overflow-hidden "  {...handlers}
+      <div className="relative h-72 sm:h-[450px] md:h-[500px] overflow-hidden "  {...handlers}
 >
         {images.map((image, index) => (
           <div
