@@ -83,19 +83,6 @@ const SexualWellnessServices = () => {
               compassionate care, always prioritizing your well-being.
             </p>
 
-            <h2 className="font-semibold text-xl">How to Get Started</h2>
-            <ul className="list-disc pl-6">
-              <li>
-                <strong>Phone:</strong> [Your Phone Number]
-              </li>
-              <li>
-                <strong>Email:</strong> [Your Email Address]
-              </li>
-              <li>
-                <strong>Online Booking:</strong> [Link to Booking Page]
-              </li>
-            </ul>
-
             <h2 className="font-semibold text-xl">Conclusion</h2>
             <p>
               Don’t let sexual health concerns hold you back. Contact us today
