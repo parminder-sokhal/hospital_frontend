@@ -8,15 +8,40 @@ function HeaderMain() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+  setIsDropdownOpen(!isDropdownOpen);
+  setIsDropdownNavbarOpen(false);
+  setIsDropdownNavbarOpenservices(false);
+};
 
-  const toggleNavbarDropdown = () => {
-    setIsDropdownNavbarOpen(!isDropdownNavbarOpen);
-  };
-  const toggleNavbarDropdownservices = () => {
-    setIsDropdownNavbarOpenservices(!isDropdownNavbarOpenservices);
-  };
+const toggleNavbarDropdownservices = () => {
+  setIsDropdownNavbarOpenservices(!isDropdownNavbarOpenservices);
+  setIsDropdownOpen(false);
+  setIsDropdownNavbarOpen(false);
+};
+
+const toggleNavbarDropdown = () => {
+  setIsDropdownNavbarOpen(!isDropdownNavbarOpen);
+  setIsDropdownOpen(false);
+  setIsDropdownNavbarOpenservices(false);
+};
+
+const handleDropdownHover = () => {
+  setIsDropdownOpen(true);
+  setIsDropdownNavbarOpen(false);
+  setIsDropdownNavbarOpenservices(false);
+};
+
+const handleNavbarDropdownHover = () => {
+  setIsDropdownNavbarOpen(true);
+  setIsDropdownOpen(false);
+  setIsDropdownNavbarOpenservices(false);
+};
+
+const handleNavbarDropdownHoverservices = () => {
+  setIsDropdownNavbarOpenservices(true);
+  setIsDropdownOpen(false);
+  setIsDropdownNavbarOpen(false);
+};
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -38,20 +63,7 @@ function HeaderMain() {
     };
   }, []);
 
-  const handleDropdownHover = () => {
-    setIsDropdownOpen(true);
-  };
-
-  const handleNavbarDropdownHover = () => {
-    setIsDropdownNavbarOpen(true);
-  };
-  const handleNavbarDropdownHoverservices = () => {
-    setIsDropdownNavbarOpenservices(true);
-  };
-
-  // const handleDropdownLeave = () => {
-  //   setIsDropdownOpen(false);
-  // };
+  
 
   const handleNavbarDropdownLeave = () => {
     setIsDropdownNavbarOpen(false);
