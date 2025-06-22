@@ -29,7 +29,7 @@ const SexualWellnessServices = () => {
             <h2 className="font-semibold text-xl">Introduction</h2>
             <p>
               Understanding and addressing sexual health is crucial for overall
-              well-being. At [Your Clinic Name], we believe that sexual wellness
+              well-being.We believe that sexual wellness
               is an integral part of a healthy lifestyle. Our dedicated
               specialists provide support and care in a safe, confidential
               environment.
