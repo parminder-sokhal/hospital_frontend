@@ -3,11 +3,9 @@ import { useSwipeCarousel } from "../hook/useSwipeCarousel";
 
 const GallerySliding = () => {
   const images = [
-    "/pictures/LoonaGate.jpeg",
-    "/pictures/LoonaFront.jpeg",
     "/pictures/LoonaFront1.jpeg",
-    "/pictures/Playground.jpeg",
-    "/pictures/Garden.jpeg",
+    "/pictures/LoonaFront.jpeg",
+    "/pictures/LoonaGate.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
