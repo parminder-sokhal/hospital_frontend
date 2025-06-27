@@ -1,21 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaYoutube } from 'react-icons/fa';
-
-// Video data with just URLs (no local thumbnails)
-const videos = [
-  {
-    id: 1,
-    url: 'https://www.youtube.com/embed/c6F_rW-u6cY',
-  },
-  {
-    id: 2,
-    url: 'https://www.youtube.com/embed/ylpC55nfSno',
-  },
-  {
-    id: 3,
-    url: 'https://www.youtube.com/embed/ukJtTF1yBtQ',
-  },
-];
+import { useDispatch, useSelector } from 'react-redux';
+import { getLinks } from '../../redux/actions/linksAction'; // Adjust path if needed
 
 const getYoutubeThumbnail = (embedUrl) => {
   const videoId = embedUrl.split('/embed/')[1];
@@ -23,27 +9,40 @@ const getYoutubeThumbnail = (embedUrl) => {
 };
 
 const TrendingYoutube = () => {
+  const dispatch = useDispatch();
+  const { links } = useSelector((state) => state.links);
   const [activeVideos, setActiveVideos] = useState({});
+
+  useEffect(() => {
+    dispatch(getLinks());
+  }, [dispatch]);
+
+  const homeYoutubeVideos = links?.filter((link) => link.category === 'homeyoutube') || [];
 
   const handlePlay = (id) => {
     setActiveVideos((prev) => ({ ...prev, [id]: true }));
   };
+
+  if (homeYoutubeVideos.length === 0) return null;
 
   return (
     <div className="container mx-auto lg:px-40 px-6 py-20">
       <h2 className="sm:text-3xl text-2xl text-start mb-8">Trending on Social Media</h2>
 
       <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
-        {videos.map((video) => {
+        {homeYoutubeVideos.map((video, index) => {
           const thumbnailUrl = getYoutubeThumbnail(video.url);
 
           return (
             <div
-              key={video.id}
+              key={video._id}
               className="w-full lg:w-1/3 aspect-video bg-white rounded-md shadow-md overflow-hidden relative cursor-pointer"
             >
-              {!activeVideos[video.id] ? (
-                <div onClick={() => handlePlay(video.id)} className="w-full h-full relative group">
+              {!activeVideos[video._id] ? (
+                <div
+                  onClick={() => handlePlay(video._id)}
+                  className="w-full h-full relative group"
+                >
                   <img
                     src={thumbnailUrl}
                     alt="YouTube video thumbnail"
@@ -59,7 +58,7 @@ const TrendingYoutube = () => {
                   className="w-full h-full"
                   loading="lazy"
                   src={`${video.url}?autoplay=1`}
-                  title={`YouTube video ${video.id}`}
+                  title={`YouTube video ${index + 1}`}
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen

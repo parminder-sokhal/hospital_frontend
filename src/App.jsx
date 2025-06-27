@@ -22,6 +22,7 @@ import SignIn from "./pages/SignIn.jsx";
 import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
 import GetAllPaymentDetails from "./components/dashboard/payment/GetAllPaymentDetails.jsx";
 import GetAllOfflinePayments from "./components/dashboard/payment/GetAllOfflinePayments.jsx";
+import AddLinks from "./components/dashboard/Links/AddLinks.jsx";
 // import Management from "./pages/management/Management.jsx";
 
 function LayoutWrapper() {
@@ -48,6 +49,7 @@ function LayoutWrapper() {
             <Route path="AddDoctor" element={<AddDoctor />} />
             <Route path="GetAllPaymentDetails" element={<GetAllPaymentDetails />} />
             <Route path="GetAllOfflinePayments" element={<GetAllOfflinePayments />} />
+            <Route path="Links" element={<AddLinks />} />
           </Route>
         </Route>
 

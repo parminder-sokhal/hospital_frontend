@@ -54,6 +54,12 @@ export default function Dashboard() {
               to="/dashboard/AddDoctor"
               active={location.pathname === "/dashboard/AddDoctor"}
             />
+            <SidebarItem
+              icon={<FaUserGraduate />}
+              text="Add Links"
+              to="/dashboard/Links"
+              active={location.pathname === "/dashboard/Links"}
+            />
             <li className="py-4 border-t">
               <button
                 onClick={() => {

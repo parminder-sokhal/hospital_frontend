@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useSwipeCarousel } from "../hook/useSwipeCarousel";
-
-// Clean data: just id and video URL
-const patientStories = [
-  {
-    id: 1,
-    video: "https://www.youtube.com/embed/HnRRds75Vxs",
-  },
-  {
-    id: 2,
-    video: "https://www.youtube.com/embed/vl1B3-RDbAU",
-  },
-  {
-    id: 3,
-    video: "https://www.youtube.com/embed/c6F_rW-u6cY",
-  },
-];
+import { useDispatch, useSelector } from "react-redux";
+import { getLinks } from "../../redux/actions/linksAction"; // adjust path if needed
 
 const PatientReview = () => {
+  const dispatch = useDispatch();
+  const { links } = useSelector((state) => state.links);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerScreen, setCardsPerScreen] = useState(2);
+  const [patientStories, setPatientStories] = useState([]);
+
+  useEffect(() => {
+    dispatch(getLinks());
+  }, [dispatch]);
+
+  useEffect(() => {
+    // Filter only homestories category
+    const filtered = links?.filter((link) => link.category === "homestories");
+    setPatientStories(filtered || []);
+  }, [links]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,15 +41,17 @@ const PatientReview = () => {
     setCurrentIndex(clampedIndex);
   };
 
+  if (!patientStories.length) return null; // Or show a fallback UI if no stories
+
   return (
     <div className="bg-cover bg-blend-soft-light bg-[url(/pictures/bgour.jpg)]">
       <div className="flex flex-col lg:flex-row container mx-auto py-20 px-4 lg:px-20">
-        
         <div className="w-full lg:w-2/5 mb-10 lg:mb-0 flex flex-col justify-center items-start">
           <h2 className="text-4xl font-bold mb-4">Our Patient Stories</h2>
           <h3 className="text-2xl text-black mb-2">What People Say About Us</h3>
         </div>
-        <div className="relative overflow-hidden">
+
+        <div className="relative overflow-hidden w-full lg:w-3/5">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
@@ -58,17 +60,17 @@ const PatientReview = () => {
             }}
             {...handlers}
           >
-            {patientStories.map((story) => (
+            {patientStories.map((story, index) => (
               <div
-                key={story.id}
+                key={story._id}
                 className="p-3 flex-shrink-0"
                 style={{ width: `${100 / patientStories.length}%` }}
               >
                 <div className="bg-white shadow-lg rounded-lg overflow-hidden h-full">
                   <iframe
                     className="w-full aspect-video"
-                    src={story.video}
-                    title={`Patient Video ${story.id}`}
+                    src={story.url}
+                    title={`Patient Video ${index + 1}`}
                     frameBorder="0"
                     allow="autoplay; encrypted-media"
                     allowFullScreen

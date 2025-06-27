@@ -1,66 +1,63 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getLinks } from "../../../redux/actions/linksAction"; // Adjust the path as needed
 
-function insta() {
-  const instagramPosts = [
-    {
-      id: 1,
-      image: "/images/insta1.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/DKxDVNKzx7M/?utm_source=ig_web_copy_link&igsh=M2NsYTRseGd1bmlo", // Reel URL
-    },
-    {
-      id: 2,
-      image: "/images/insta2.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/DK2Vx8wT236/?utm_source=ig_web_copy_link&igsh=MWhpa2lpbHdxY250YQ==", // Reel URL
-    },
-    {
-      id: 3,
-      image: "/images/insta3.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/DLF0uNdz9BF/?utm_source=ig_web_copy_link&igsh=ZHd5aTJ0cmNkeXph", // Reel URL
-    },
-  ];
+const Insta = () => {
+  const dispatch = useDispatch();
+  const { links } = useSelector((state) => state.links);
+
+  useEffect(() => {
+    dispatch(getLinks());
+  }, [dispatch]);
+
+  // Filter only Instagram Reels with category "mediainsta"
+  const instagramPosts =
+    links?.filter((link) => link.category === "mediainsta") || [];
 
   return (
     <>
-      <div className="flex justify-center  w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/Background.jpeg')]">
+      <div className="flex justify-center w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/Background.jpeg')]">
         <span className="flex justify-center items-center sm:text-8xl text-3xl font-semibold text-white">
           Instagram Highlights
         </span>
       </div>
+
       <div className="flex flex-col mx-auto lg:px-40 gap-10 px-6 py-10">
         <div>
           <h2 className="sm:text-3xl py-4 text-center">Trending Highlights</h2>
 
-          {/* Flex layout for Instagram posts */}
-          <div className="flex flex-col lg:flex-row gap-6 justify-between">
-            {instagramPosts.map((post) => (
-              <div
-                key={post.id}
-                className="relative w-full lg:w-1/3 md:w-1/2 sm:w-1/3 bg-white  shadow-lg "
-              >
-                {/* Instagram post (iframe for Reels) */}
-                <Link to={post.href} target="_blank" rel="noopener noreferrer">
-                  <div className="w-full  h-170 overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {instagramPosts.map((post) => {
+              const reelCode = post.url.split("/reel/")[1]?.split("/")[0];
+
+              return (
+                <div
+                  key={post._id}
+                  className="bg-white shadow-lg w-full h-170 rounded-lg overflow-hidden"
+                >
+                  <Link to={post.url} target="_blank" rel="noopener noreferrer">
                     <iframe
-                      src={`https://www.instagram.com/p/${post.href.split("/")[4]}/embed`}
+                      src={`https://www.instagram.com/reel/${reelCode}/embed`}
                       frameBorder="0"
                       height="100%"
                       width="100%"
-                      title="Instagram Reel"
+                      title={`Instagram Reel ${post._id}`}
                       style={{
                         border: "none",
-                        borderRadius: "8px", // Optional: Makes the iframe corners rounded
+                        borderRadius: "8px",
                       }}
+                      loading="lazy"
                     />
-                  </div>
-                </Link>
-              </div>
-            ))}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
     </>
   );
-}
+};
 
-export default insta;
+export default Insta;

@@ -1,25 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getLinks } from "../../redux/actions/linksAction";
 
 const InstagramPosts = () => {
-  // Instagram post data with Reels URLs
-  const instagramPosts = [
-    {
-      id: 1,
-      image: "/images/insta1.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/DKxDVNKzx7M/?utm_source=ig_web_copy_link&igsh=M2NsYTRseGd1bmlo", // Reel URL
-    },
-    {
-      id: 2,
-      image: "/images/insta2.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/DK2Vx8wT236/?utm_source=ig_web_copy_link&igsh=MWhpa2lpbHdxY250YQ==", // Reel URL
-    },
-    {
-      id: 3,
-      image: "/images/insta3.jpg", // This is a fallback image (for visual consistency)
-      href: "https://www.instagram.com/reel/DLF0uNdz9BF/?utm_source=ig_web_copy_link&igsh=ZHd5aTJ0cmNkeXph", // Reel URL
-    },
-  ];
+  const dispatch = useDispatch();
+  const { links } = useSelector((state) => state.links);
+
+  useEffect(() => {
+    dispatch(getLinks());
+  }, [dispatch]);
+
+  // Filter only homeinsta category
+  const instagramPosts = links?.filter((link) => link.category === "homeinsta") || [];
+
+  // Helper to extract post ID from the URL
+  const extractPostId = (href) => {
+    try {
+      const parts = href.split("/");
+      return parts[4] || ""; // e.g., "DKxDVNKzx7M"
+    } catch {
+      return "";
+    }
+  };
+
+  if (instagramPosts.length === 0) return null;
 
   return (
     <div className="container mx-auto lg:px-40 px-10 py-10">
@@ -29,32 +33,33 @@ const InstagramPosts = () => {
         </h2>
       </div>
 
-      {/* Flex layout for Instagram posts */}
       <div className="flex flex-col lg:flex-row gap-6 justify-between">
-        {instagramPosts.map((post) => (
-          <div
-            key={post.id}
-            className="relative w-full  lg:w-1/3 md:w-1/2 sm:w-1/3 bg-white  shadow-lg "
-          >
-            {/* Instagram post (iframe for Reels) */}
-            <Link to={post.href} target="_blank" rel="noopener noreferrer">
-              <div className="w-full h-170  overflow-y-hidden">
-                <iframe
-                  src={`https://www.instagram.com/p/${post.href.split("/")[4]}/embed`}
-                  frameBorder="0"
-                  height="100%"
-                  width="100%"
-                  title="Instagram Reel"
-                  loading="lazy"
-                  style={{
-                    border: "none",
-                    borderRadius: "8px", // Optional: Makes the iframe corners rounded
-                  }}
-                />
-              </div>
-            </Link>
-          </div>
-        ))}
+        {instagramPosts.map((post) => {
+          const postId = extractPostId(post.url);
+          return (
+            <div
+              key={post._id}
+              className="relative w-full lg:w-1/3 md:w-1/2 sm:w-1/3 bg-white shadow-lg"
+            >
+              <a href={post.url} target="_blank" rel="noopener noreferrer">
+                <div className="w-full h-170 overflow-y-hidden">
+                  <iframe
+                    src={`https://www.instagram.com/p/${postId}/embed`}
+                    frameBorder="0"
+                    height="100%"
+                    width="100%"
+                    title={`Instagram Reel ${postId}`}
+                    loading="lazy"
+                    style={{
+                      border: "none",
+                      borderRadius: "8px",
+                    }}
+                  />
+                </div>
+              </a>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
