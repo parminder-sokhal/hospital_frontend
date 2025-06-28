@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { FaYoutube } from 'react-icons/fa';
-import { useDispatch, useSelector } from 'react-redux';
-import { getLinks } from '../../redux/actions/linksAction'; // Adjust path if needed
+import React, { useState, useEffect } from "react";
+import { FaYoutube } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { getLinks } from "../../redux/actions/linksAction"; // Adjust path if needed
 
 const getYoutubeThumbnail = (embedUrl) => {
-  const videoId = embedUrl.split('/embed/')[1];
+  const videoId = embedUrl.split("/embed/")[1];
   return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 };
 
@@ -17,7 +17,8 @@ const TrendingYoutube = () => {
     dispatch(getLinks());
   }, [dispatch]);
 
-  const homeYoutubeVideos = links?.filter((link) => link.category === 'homeyoutube') || [];
+  const homeYoutubeVideos =
+    links?.filter((link) => link.category === "homeyoutube") || [];
 
   const handlePlay = (id) => {
     setActiveVideos((prev) => ({ ...prev, [id]: true }));
@@ -27,16 +28,18 @@ const TrendingYoutube = () => {
 
   return (
     <div className="container mx-auto lg:px-40 px-6 py-20">
-      <h2 className="sm:text-3xl text-2xl text-start mb-8">Trending on Social Media</h2>
+      <h2 className="sm:text-3xl text-2xl text-start mb-8">
+        Trending on Social Media
+      </h2>
 
-      <div className="flex flex-col lg:flex-row gap-6 items-center justify-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {homeYoutubeVideos.map((video, index) => {
           const thumbnailUrl = getYoutubeThumbnail(video.url);
 
           return (
             <div
               key={video._id}
-              className="w-full lg:w-1/3 aspect-video bg-white rounded-md shadow-md overflow-hidden relative cursor-pointer"
+              className="w-full aspect-video bg-white rounded-md shadow-md overflow-hidden relative cursor-pointer"
             >
               {!activeVideos[video._id] ? (
                 <div

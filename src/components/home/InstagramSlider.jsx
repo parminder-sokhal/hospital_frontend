@@ -11,7 +11,8 @@ const InstagramPosts = () => {
   }, [dispatch]);
 
   // Filter only homeinsta category
-  const instagramPosts = links?.filter((link) => link.category === "homeinsta") || [];
+  const instagramPosts =
+    links?.filter((link) => link.category === "homeinsta") || [];
 
   // Helper to extract post ID from the URL
   const extractPostId = (href) => {
@@ -33,16 +34,13 @@ const InstagramPosts = () => {
         </h2>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-6 justify-between">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {instagramPosts.map((post) => {
           const postId = extractPostId(post.url);
           return (
-            <div
-              key={post._id}
-              className="relative w-full lg:w-1/3 md:w-1/2 sm:w-1/3 bg-white shadow-lg"
-            >
+            <div key={post._id} className="relative w-full bg-white shadow-lg">
               <a href={post.url} target="_blank" rel="noopener noreferrer">
-                <div className="w-full h-170 overflow-y-hidden">
+                <div className="w-full h-170 overflow-hidden">
                   <iframe
                     src={`https://www.instagram.com/p/${postId}/embed`}
                     frameBorder="0"

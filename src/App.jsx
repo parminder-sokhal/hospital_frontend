@@ -18,6 +18,7 @@ import DoctorProfile from "./components/doctor/doctorprofile.jsx";
 import DoctorAppointment from "./pages/Doctor/doctorAppointment.jsx";
 import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
 import Dashboard from "./pages/dashboard/dashboard.jsx";
+import WelcomeDashboard from "./pages/dashboard/WelcomeDashboard.jsx";
 import SignIn from "./pages/SignIn.jsx";
 import AddDoctor from "./components/dashboard/AddDoctor/AddDoctor.jsx";
 import GetAllPaymentDetails from "./components/dashboard/payment/GetAllPaymentDetails.jsx";
@@ -46,6 +47,7 @@ function LayoutWrapper() {
         {/* Private dashboard route with nested child routes */}
         <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Dashboard />}>
+            <Route index element={<WelcomeDashboard />} />
             <Route path="AddDoctor" element={<AddDoctor />} />
             <Route path="GetAllPaymentDetails" element={<GetAllPaymentDetails />} />
             <Route path="GetAllOfflinePayments" element={<GetAllOfflinePayments />} />
