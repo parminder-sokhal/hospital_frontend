@@ -13,7 +13,7 @@ const AboutHeading = () => {
 
         <h3 className="text-3xl font-bold text-blue-600 mb-4">Welcome to Loona Hospital</h3>
         <p className="text-gray-600 text-lg leading-relaxed mb-12">
-          At Loona Hospital, we prioritize mental health above all else. Our dedicated psychiatry hospital is committed to providing compassionate care and comprehensive treatment for individuals facing a wide range of mental health challenges. With a focus on creating a supportive and healing environment, we aim to empower our patients on their journey patients toward mental wellness.
+          At Loona Hospital, we prioritize mental health above all else. Our dedicated hospital is committed to providing compassionate care and comprehensive treatment for individuals facing a wide range of mental health challenges. With a focus on creating a supportive and healing environment, we aim to empower our patients on their journey toward mental wellness.
         </p>
 
         <h3 className="text-3xl font-bold text-blue-600 mb-4">Comprehensive Services</h3>
