@@ -446,16 +446,16 @@ const handleNavbarDropdownHoverservices = () => {
                       Relapse Prevention Therapy
                     </Link>
                     <Link
-                      to="/individual-counselling"
-                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                    >
-                      Individual Counselling
-                    </Link>
-                    <Link
                       to="/motivation-by-hypnosis"
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       Motivation Enhancement By Hypnosis
+                    </Link>
+                    <Link
+                      to="/detoxprogram"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      Detox Program
                     </Link>
                   </li>
                 </ul>
@@ -926,16 +926,16 @@ const handleNavbarDropdownHoverservices = () => {
                           Relapse Prevention Therapy
                         </Link>
                         <Link
-                          to="/individual-counselling"
-                          className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
-                        >
-                          Individual Counselling
-                        </Link>
-                        <Link
                           to="/motivation-by-hypnosis"
                           className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                         >
                           Motivation Enhancement By Hypnosis
+                        </Link>
+                        <Link
+                          to="/detoxprogram"
+                          className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                        >
+                          Detox Program
                         </Link>
                       </li>
                     </ul>

@@ -127,7 +127,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col items-center mt-4 space-y-1 text-white">
                 <span className="text-md font-semibold">
-                  Having issues? Contact us
+                  For Enquiry
                 </span>
                 <Link
                   to="tel:+919815490081"

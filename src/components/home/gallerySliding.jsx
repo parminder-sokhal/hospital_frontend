@@ -3,9 +3,9 @@ import { useSwipeCarousel } from "../hook/useSwipeCarousel";
 
 const GallerySliding = () => {
   const images = [
-    "/pictures/LoonaFront1.jpeg",
-    "/pictures/LoonaFront.jpeg",
-    "/pictures/LoonaGate.jpeg",
+    // "/pictures/LoonaFront1.jpeg",
+    // "/pictures/LoonaFront.jpeg",
+    "/pictures/LoonaAbout.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,11 +36,11 @@ const GallerySliding = () => {
   return (
     <div
       id="default-carousel"
-      className="relative w-full mt-34"
+      className="relative w-full mt-35"
       data-carousel="slide"
     >
       {/* Carousel wrapper */}
-      <div className="relative h-72 sm:h-[450px] md:h-[500px] overflow-hidden "  {...handlers}
+      <div className="relative h-72 sm:h-[500px] md:h-[700px] overflow-hidden "  {...handlers}
 >
         {images.map((image, index) => (
           <div
@@ -50,7 +50,7 @@ const GallerySliding = () => {
           >
             <img
               src={image}
-              className="w-full h-full object-cover "
+              className="w-full h-full object-center object-fit"
               alt={`carousel-item-${index}`}
               loading="lazy"
             />

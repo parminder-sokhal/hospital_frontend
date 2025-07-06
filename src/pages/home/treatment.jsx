@@ -53,6 +53,8 @@ import TensionHeadache from '../../components/header/treatments/tensionheadache.
 import EpilepsyClinic from '../../components/header/treatments/EpilepsyClinic.jsx';
 import Seizure from '../../components/header/treatments/seizure.jsx';
 import DeaddictionProgramme from '../../components/header/treatments/De-addictionProgramme.jsx';
+import DetoxProgram from '../../components/header/treatments/DetoxProgram.jsx'
+
 
 const TreatmentRoutes = (
   <>
@@ -89,6 +91,7 @@ const TreatmentRoutes = (
     <Route path="/motivation-enhancement" element={<MotivationEnhancementTherapy />} />
     <Route path="/relapse-prevention" element={<RelapsePreventionTherapy />} />
     <Route path="/motivation-by-hypnosis" element={<MotivationEnhancementByHypnosis />} />
+    <Route path="/detoxprogram" element={<DetoxProgram />} />
     <Route path="/sexual-wellness-program" element={<SexualWellnessProgram />} />
 
     <Route path="/premature-ejaculation" element={<PrematureEjaculation />} />

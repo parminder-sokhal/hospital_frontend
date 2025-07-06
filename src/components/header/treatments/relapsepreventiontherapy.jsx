@@ -10,10 +10,13 @@ const data = {
       link: "/motivation-enhancement",
     },
     { title: "Relapse Prevention Therapy", link: "/Relapse-Prevention" },
-    { title: "Individual Counselling", link: "/Individual-Counselling" },
     {
       title: "Motivation Enhancement By Hypnosis",
       link: "/motivation-by-hypnosis",
+    },
+    {
+      title: "Detox Program",
+      link: "/detoxprogram",
     },
   ],
 };

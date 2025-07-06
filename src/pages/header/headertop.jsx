@@ -39,11 +39,12 @@ const Headertop = () => {
 
         {/* Right Section: Desktop View - Full Contact Info and Social Icons */}
         <div className="container mx-auto items-center justify-around space-x-4 hidden lg:flex">
-          <div className="flex items-center space-x-6 text-sm">
+          <div className="flex items-center space-x-6 text-xl">
             <Link
               to="tel:+919815015212"
               className="flex items-center space-x-2 hover:text-[#DB8E00]"
             >
+              <span>For Booking Enquiry</span>
               <FaPhoneAlt className="text-xl" />
               <span>+91 9815015212</span>
             </Link>
@@ -73,21 +74,21 @@ const Headertop = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaYoutube className="text-white text-xl hover:text-red-600" />
+              <FaYoutube className="text-white text-2xl hover:text-red-600" />
             </Link>
             <Link
               to="https://www.facebook.com/drneerajloona"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebook className="text-white text-xl hover:text-blue-600" />
+              <FaFacebook className="text-white text-2xl hover:text-blue-600" />
             </Link>
             <Link
               to="https://www.instagram.com/loonahospital/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaInstagram className="text-white text-xl hover:text-pink-500" />
+              <FaInstagram className="text-white text-2xl hover:text-pink-500" />
             </Link>
           </div>
         </div>
