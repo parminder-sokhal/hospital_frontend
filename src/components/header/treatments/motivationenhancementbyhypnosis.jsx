@@ -10,10 +10,13 @@ const data = {
       link: "/motivation-enhancement",
     },
     { title: "Relapse Prevention Therapy", link: "/Relapse-Prevention" },
-    { title: "Individual Counselling", link: "/Individual-Counselling" },
     {
       title: "Motivation Enhancement By Hypnosis",
       link: "/motivation-by-hypnosis",
+    },
+    {
+      title: "Detox Program",
+      link: "/detoxprogram",
     },
   ],
 };
@@ -54,7 +57,7 @@ const MotivationEnhancementByHypnosis = () => {
               goals.
             </p>
             <p>
-              At [Your Clinic/Practice Name], our Motivation Enhancement by
+              Our Motivation Enhancement by
               Hypnosis sessions are designed to empower you, eliminate limiting
               beliefs, and increase your drive to succeed in areas like personal
               development, weight loss, career goals, academic achievements, or

@@ -78,7 +78,7 @@ const AboutHeading = () => {
         </h3>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-12">
           <div className="lg:w-1/2">
-            <ul className="list-disc pl-6 flex flex-col gap-5 text-gray-900 text-lg leading-relaxed">
+            <ul className="list-disc pl-6 flex flex-col gap-5 text-gray-900 text-xl leading-relaxed">
               <li>Indian Association for Sexology</li>
               <li>
                 International Association of Sexual Medicine Practitioners
@@ -101,12 +101,25 @@ const AboutHeading = () => {
         </div>
 
         <h3 className="text-3xl font-bold text-blue-600 mb-4">Recognitions</h3>
-        <p className="text-gray-600 text-lg leading-relaxed mb-12">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mb-12">
+          <div className="lg:w-1/2">
+             {/* <p className="list-disc pl-6 flex flex-col gap-5 text-gray-900 text-lg leading-relaxed"> */}    
+            <p className="text-gray-600 text-3xl leading-relaxed mb-12">
           Loona Hospital has been recognized for its commitment to mental health
           care. We are honored to have received an award from the honorable Dr.
           Balbir Singh, Health Minister of Punjab, acknowledging our efforts in
           promoting mental wellness in the community.
         </p>
+          </div>
+
+          <div className="lg:w-1/2 flex justify-center mx-auto">
+            <img
+              src="/pictures/newspaper.jpg"
+              alt="Memberships and Affiliations"
+              className="w-auto h-92 rounded shadow-md object-fit"
+            />
+          </div>
+        </div>
 
         <h3 className="text-3xl font-bold text-blue-600 mb-4">
           Your Journey to Wellness
