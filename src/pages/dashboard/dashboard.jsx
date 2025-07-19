@@ -35,36 +35,39 @@ export default function Dashboard() {
             </button>
           </div>
           <ul className="flex-1 px-2 overflow-y-auto">
-           
             <SidebarItem
               icon={<FaUserGraduate />}
               text="Get All Online Payment Details"
               to="/dashboard/GetAllPaymentDetails"
+              onClick={closeSidebar}
               active={location.pathname === "/dashboard/GetAllPaymentDetails"}
             />
             <SidebarItem
               icon={<FaUserGraduate />}
               text="Get All Hospital Visit Details"
               to="/dashboard/GetAllOfflinePayments"
+              onClick={closeSidebar}
               active={location.pathname === "/dashboard/GetAllOfflinePayments"}
             />
             <SidebarItem
               icon={<FaUserGraduate />}
               text="Add Doctor"
               to="/dashboard/AddDoctor"
+              onClick={closeSidebar}
               active={location.pathname === "/dashboard/AddDoctor"}
             />
             <SidebarItem
               icon={<FaUserGraduate />}
               text="Add Links"
               to="/dashboard/Links"
+              onClick={closeSidebar}
               active={location.pathname === "/dashboard/Links"}
             />
             <li className="py-4 border-t">
               <button
                 onClick={() => {
                   dispatch(logout());
-                  navigate("/"); 
+                  navigate("/");
                 }}
                 className={`flex w-full items-center p-2 rounded-md text-sm font-medium transition-colors text-black hover:text-white hover:bg-red-600`}
               >
@@ -92,11 +95,12 @@ export default function Dashboard() {
   );
 }
 
-function SidebarItem({ icon, text, to, active }) {
+function SidebarItem({ icon, text, to, active, onClick }) {
   return (
     <li className="my-1">
       <Link
         to={to}
+        onClick={onClick}
         className={`flex items-center p-2 rounded-md text-sm font-medium transition-colors ${
           active ? "bg-blue-500 text-white" : "text-gray-700 hover:bg-blue-100"
         }`}
