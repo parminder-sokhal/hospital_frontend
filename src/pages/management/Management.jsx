@@ -2,7 +2,7 @@ import React from "react";
 
 const managementData = [
   {
-    name: "Mr. xyz xyzxyz - Founder of Loona Hospital",
+    name: "Dr. Neeraj Loona - Founder of Loona Hospital",
     description: `Founder of ROAR, Mr. Madhav Singh is fully dedicated to the therapeutic and facility management at Loona Hospital. With over 14 years of experience helping individuals recover from addiction, he has changed countless lives through the Roar Addiction and Rehabilitation Centre, Asola, New Delhi.`,
     image: "/images/doctor2.jpeg",
   },
@@ -27,7 +27,7 @@ const Management = () => {
   return (
     <>
       {/* Header Section */}
-      <div className="flex justify-center items-center mt-34 w-full h-60 sm:h-80 bg-cover bg-no-repeat bg-center bg-[url('/images/Treatmentbg.png')]">
+      <div className="flex justify-center items-center mt-34 w-full h-60 sm:h-80 bg-cover bg-no-repeat bg-center bg-[url('/pictures/Background.jpeg')]">
         <h1 className="text-white text-4xl sm:text-6xl font-bold tracking-wide drop-shadow-md">
           Meet Our Team
         </h1>

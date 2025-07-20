@@ -196,7 +196,11 @@ function GetAllOfflinePayments() {
                     </td>
                     <td className="p-2">{item.doctor?.name}</td>
                     <td className="p-2">{item.timeSlot}</td>
-                    <td className="p-2">₹{item.doctor.fees}</td>
+                    <td className="p-2">
+                      {item.doctor?.fees != null
+                        ? `₹${item.doctor.fees}`
+                        : "N/A"}
+                    </td>
                     <td className="p-2">{item.consultationMode}</td>
                     <td className="p-2">
                       <span

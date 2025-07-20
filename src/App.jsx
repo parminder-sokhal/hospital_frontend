@@ -26,7 +26,7 @@ import GetAllOfflinePayments from "./components/dashboard/payment/GetAllOfflineP
 import AddLinks from "./components/dashboard/Links/AddLinks.jsx";
 import TherapyCounselling from "./pages/therapyCounselling/therapyCounselling.jsx"
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy.jsx";
-// import Management from "./pages/management/Management.jsx";
+import Management from "./pages/management/Management.jsx";
 
 function LayoutWrapper() {
   const location = useLocation();
@@ -40,7 +40,7 @@ function LayoutWrapper() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/management" element={<Management />} /> */}
+        <Route path="/management" element={<Management />} />
         <Route path="/therapyCounselling" element={<TherapyCounselling />} />
         <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/doctors" element={<Doctors />} />

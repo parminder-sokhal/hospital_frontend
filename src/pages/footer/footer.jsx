@@ -124,11 +124,17 @@ const Footer = () => {
                     <FaInstagram className="text-white text-xl hover:text-red-500" />
                   </Link>
                 </div>
+              </div><div className="flex flex-col items-center mt-4 space-y-1 text-white">
+                <Link
+                  to="/PrivacyPolicy"
+                  className="flex items-center space-x-2 hover:text-[#DB8E00]"
+                >
+                  <span className="text-xl">Privacy & Policy</span>
+                </Link>
               </div>
+
               <div className="flex flex-col items-center mt-4 space-y-1 text-white">
-                <span className="text-md font-semibold">
-                  For Enquiry
-                </span>
+                <span className="text-xl font-semibold">For Admission</span>
                 <Link
                   to="tel:+919815490081"
                   className="flex items-center space-x-2 hover:text-[#DB8E00]"
@@ -137,6 +143,7 @@ const Footer = () => {
                   <span>+91 9815490081</span>
                 </Link>
               </div>
+              
             </div>
 
             {/* 3rd div - Contact Info */}

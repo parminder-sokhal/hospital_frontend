@@ -39,7 +39,7 @@ const Headertop = () => {
 
         {/* Right Section: Desktop View - Full Contact Info and Social Icons */}
         <div className="container mx-auto items-center justify-around space-x-4 hidden lg:flex">
-          <div className="flex items-center space-x-6 text-xl">
+          <div className="flex items-center space-x-6 text-lg">
             <Link
               to="tel:+919815015212"
               className="flex items-center space-x-2 hover:text-[#DB8E00]"
