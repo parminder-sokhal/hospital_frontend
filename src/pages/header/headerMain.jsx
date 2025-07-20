@@ -230,6 +230,23 @@ const handleNavbarDropdownHoverservices = () => {
                   </ul>
                 </div>
               </li>
+              
+              <li>
+                <Link
+                  to="/therapyCounselling"
+                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+                >
+                  Packages
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/PrivacyPolicy"
+                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+                >
+                  Privacy & Policy
+                </Link>
+              </li>
               {/* <li>
                 <Link
                   to="/management"
@@ -238,6 +255,7 @@ const handleNavbarDropdownHoverservices = () => {
                   Management
                 </Link>
               </li> */}
+              
             </ul>
           </div>
 
@@ -745,6 +763,25 @@ const handleNavbarDropdownHoverservices = () => {
                     </li>
                   </ul>
                 </div>
+              </li>
+              
+              <li>
+                <Link
+                  to="/PrivacyPolicy"
+                   onClick={toggleMobileMenu}
+                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+                >
+                  Privacy & Policy
+                </Link>
+              </li>
+             <li>
+                <Link
+                  to="/therapyCounselling"
+                   onClick={toggleMobileMenu}
+                  className="block py-2 px-3 text-black hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
+                >
+                  Packages
+                </Link>
               </li>
               {/* <li>
                 <Link
