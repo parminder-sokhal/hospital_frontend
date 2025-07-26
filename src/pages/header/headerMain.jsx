@@ -758,7 +758,7 @@ const handleNavbarDropdownHoverservices = () => {
                 </div>
               </li>
               
-              <li>
+              {/* <li>
                 <Link
                   to="/PrivacyPolicy"
                    onClick={toggleMobileMenu}
@@ -766,7 +766,7 @@ const handleNavbarDropdownHoverservices = () => {
                 >
                   Privacy & Policy
                 </Link>
-              </li>
+              </li> */}
              <li>
                 <Link
                   to="/therapyCounselling"
@@ -776,7 +776,7 @@ const handleNavbarDropdownHoverservices = () => {
                   Packages
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link
                   to="/management"
                    onClick={toggleMobileMenu}
@@ -784,7 +784,7 @@ const handleNavbarDropdownHoverservices = () => {
                 >
                   Management
                 </Link>
-              </li> */}
+              </li>
             </ul>
 
             <div onClick={toggleMobileMenu}>
