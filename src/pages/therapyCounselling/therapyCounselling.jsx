@@ -53,16 +53,17 @@ const TherapyCounselling = () => {
   return (
     <div className="text-gray-800">
       {/* Banner */}
-      <div className="flex justify-center w-full mt-34 sm:h-112 h-62 bg-cover bg-no-repeat bg-center bg-[url('/pictures/LoonaAbout.jpeg')]">
-        <span className="flex justify-center items-center sm:text-6xl text-2xl font-semibold text-white  w-full">
-          Therapy & Counselling Packages
-        </span>
-      </div>
+      <div className="flex justify-center w-full mt-34 sm:h-140 h-62 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]"></div>
 
       <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Counselling Packages */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Counselling Packages</h2>
+          <span className="flex justify-center items-center sm:text-6xl text-2xl font-semibold text-black pb-10  w-full">
+            Therapy & Counselling Packages
+          </span>
+          <h2 className="text-2xl font-semibold mb-4 text-blue-700">
+            Counselling Packages
+          </h2>
           <ul className="list-disc ml-6 space-y-2">
             {counsellingPackages.map((item, idx) => (
               <li key={idx}>{item}</li>
@@ -72,7 +73,9 @@ const TherapyCounselling = () => {
 
         {/* Relaxation Exercises */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Relaxation Exercises</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-blue-700">
+            Relaxation Exercises
+          </h2>
           <ul className="list-disc ml-6 space-y-2">
             {relaxationExercises.map((item, idx) => (
               <li key={idx}>{item}</li>
@@ -82,21 +85,27 @@ const TherapyCounselling = () => {
 
         {/* Psychological Testing */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Psychological Testing</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-blue-700">
+            Psychological Testing
+          </h2>
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-blue-600">Rating Scales – ₹500</h3>
+            <h3 className="text-lg font-semibold text-blue-600">
+              Rating Scales – ₹500
+            </h3>
             <p className="ml-4 mt-1 text-sm">
               BDI, BAI, HAM-A, HAM-D, BPRS, Beck Suicide Intent Scale, Y-BOCS,
               Panic Disorder Severity Scale, Liebowitz Social Anxiety Scale,
-              Short PTSD Rating Scale, SANS, SAPS, GHQ, MOCE, MMSE,
-              Socrates A D, Catatonia Rating Scale, Perceived Stress Scale
+              Short PTSD Rating Scale, SANS, SAPS, GHQ, MOCE, MMSE, Socrates A
+              D, Catatonia Rating Scale, Perceived Stress Scale
             </p>
           </div>
           <ul className="list-disc ml-6 space-y-2">
             <li>Personality Test (IPDE, EPQ, NEO, ZAN, BPD, BPQ) – ₹1500</li>
             <li>16 PF – ₹2500</li>
             <li>Rorschach & TAT – ₹4000</li>
-            <li>IQ Testing (Bhatia’s Battery, MISIC, VSMS, DST, BKT, SFBT) – ₹3000</li>
+            <li>
+              IQ Testing (Bhatia’s Battery, MISIC, VSMS, DST, BKT, SFBT) – ₹3000
+            </li>
             <li>PGI Memory Scale – ₹2000</li>
             <li>PGI BBD – ₹3500</li>
           </ul>
@@ -133,7 +142,9 @@ const TherapyCounselling = () => {
 
         {/* Admission Room Charges */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-4 text-blue-700">Admission Room Charges</h2>
+          <h2 className="text-2xl font-semibold mb-4 text-blue-700">
+            Admission Room Charges
+          </h2>
           <ul className="list-disc ml-6 space-y-2">
             {admissionRoomCharges.map((item, idx) => (
               <li key={idx}>{item}</li>

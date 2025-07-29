@@ -19,25 +19,27 @@ function Videos() {
   }, [dispatch]);
 
   // Filter links by category
-  const latestVideos = links?.filter((link) => link.category === "mediayoutubelatest") || [];
-  const videosData = links?.filter((link) => link.category === "mediayoutube") || [];
+  const latestVideos =
+    links?.filter((link) => link.category === "mediayoutubelatest") || [];
+  const videosData =
+    links?.filter((link) => link.category === "mediayoutube") || [];
 
-  const handlePlay = (id) => setActiveVideos((prev) => ({ ...prev, [id]: true }));
+  const handlePlay = (id) =>
+    setActiveVideos((prev) => ({ ...prev, [id]: true }));
 
   if (links.length === 0) return null; // or loading indicator
 
   return (
     <>
-      <div className="flex justify-center w-full mt-34 sm:h-92 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/Background.jpeg')]">
-        <span className="flex justify-center items-center sm:text-8xl text-5xl font-semibold text-white">
-          Video Gallery
-        </span>
-      </div>
+      <div className="flex justify-center w-full mt-34 sm:h-140 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]"></div>
 
       <div className="flex flex-col mx-auto lg:px-60 gap-10 px-6 py-10">
         {/* Latest Trending */}
         {latestVideos.length > 0 && (
           <div className="sm:px-30">
+            <span className="flex justify-center items-center sm:text-8xl text-5xl font-semibold text-black pb-10">
+              Video Gallery
+            </span>
             <h2 className="sm:text-3xl py-4 text-center">
               Trending on Social Media
             </h2>
