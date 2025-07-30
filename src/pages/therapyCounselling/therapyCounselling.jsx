@@ -58,7 +58,7 @@ const TherapyCounselling = () => {
       <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Counselling Packages */}
         <section className="mb-10">
-          <span className="flex justify-center items-center sm:text-6xl text-2xl font-semibold text-black pb-10  w-full">
+          <span className="flex justify-center items-center sm:text-6xl text-xl font-semibold text-black pb-10  w-full">
             Therapy & Counselling Packages
           </span>
           <h2 className="text-2xl font-semibold mb-4 text-blue-700">

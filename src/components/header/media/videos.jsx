@@ -37,7 +37,7 @@ function Videos() {
         {/* Latest Trending */}
         {latestVideos.length > 0 && (
           <div className="sm:px-30">
-            <span className="flex justify-center items-center sm:text-8xl text-5xl font-semibold text-black pb-10">
+            <span className="flex justify-center items-center sm:text-8xl text-2xl font-semibold text-black pb-10">
               Video Gallery
             </span>
             <h2 className="sm:text-3xl py-4 text-center">

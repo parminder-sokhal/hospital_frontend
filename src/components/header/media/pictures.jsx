@@ -46,9 +46,9 @@ function Pictures() {
   return (
     <>
       <div className="flex justify-center  w-full mt-34 sm:h-140 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]"></div>
-      <div className="container mx-auto lg:px-30 px-15 py-20 " {...handlers}>
+      <div className="container mx-auto lg:px-30 px-15 py-5 " {...handlers}>
         <div className="text-center flex flex-col justify-between mb-8">
-          <span className="flex justify-center items-center sm:text-8xl text-5xl font-semibold pb-10 text-black">
+          <span className="flex justify-center items-center sm:text-8xl text-3xl font-semibold pb-10 text-black">
             Image Gallery{" "}
           </span>
 
