@@ -40,7 +40,7 @@ const GallerySliding = () => {
       data-carousel="slide"
     >
       {/* Carousel wrapper */}
-      <div className="relative h-72 sm:h-[500px] md:h-[700px] overflow-hidden "  {...handlers}
+      <div className="relative h-72 sm:h-[450px] md:h-[650px] overflow-hidden "  {...handlers}
 >
         {images.map((image, index) => (
           <div

@@ -17,15 +17,15 @@ const Insta = () => {
 
   return (
     <>
-      <div className="flex justify-center w-full mt-34 sm:h-140 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
-        
+      <div className="flex justify-center w-full mt-34 sm:h-110 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
+         <span className="flex justify-center items-center sm:text-8xl text-3xl font-bold text-white pb-10">
+          Instagram Highlights
+        </span>
       </div>
 
       <div className="flex flex-col mx-auto lg:px-40 gap-10 px-6 py-10">
         <div>
-          <span className="flex justify-center items-center sm:text-8xl text-3xl font-semibold text-black pb-10">
-          Instagram Highlights
-        </span>
+         
           <h2 className="sm:text-3xl py-4 text-center">Trending Highlights</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

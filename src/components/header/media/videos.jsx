@@ -31,15 +31,16 @@ function Videos() {
 
   return (
     <>
-      <div className="flex justify-center w-full mt-34 sm:h-140 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]"></div>
+      <div className="flex justify-center w-full mt-34 sm:h-110 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
+        <span className="flex  justify-center items-center sm:text-8xl text-3xl font-bold text-white pb-10">
+          Video Gallery
+        </span>
+      </div>
 
       <div className="flex flex-col mx-auto lg:px-60 gap-10 px-6 py-10">
         {/* Latest Trending */}
         {latestVideos.length > 0 && (
           <div className="sm:px-30">
-            <span className="flex justify-center items-center sm:text-8xl text-2xl font-semibold text-black pb-10">
-              Video Gallery
-            </span>
             <h2 className="sm:text-3xl py-4 text-center">
               Trending on Social Media
             </h2>

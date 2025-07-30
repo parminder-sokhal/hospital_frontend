@@ -53,14 +53,18 @@ const TherapyCounselling = () => {
   return (
     <div className="text-gray-800">
       {/* Banner */}
-      <div className="flex justify-center w-full mt-34 sm:h-140 h-62 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]"></div>
+      <div className="flex justify-center w-full mt-34 sm:h-110 h-62 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
+        <span className="flex  justify-center items-center sm:text-7xl text-2xl font-bold text-white pb-10  w-full">
+          Therapy & Counselling Packages
+        </span>
+      </div>
 
       <div className="max-w-6xl mx-auto px-4 py-10">
+        <h1 className="sm:text-5xl text-3xl  font-bold mb-10 text-center">
+          Therapy & Counselling Services  
+        </h1>
         {/* Counselling Packages */}
         <section className="mb-10">
-          <span className="flex justify-center items-center sm:text-6xl text-xl font-semibold text-black pb-10  w-full">
-            Therapy & Counselling Packages
-          </span>
           <h2 className="text-2xl font-semibold mb-4 text-blue-700">
             Counselling Packages
           </h2>

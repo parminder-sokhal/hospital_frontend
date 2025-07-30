@@ -22,45 +22,47 @@ const Management = () => {
   return (
     <>
       {/* Header Section */}
-      <div className="flex justify-center items-center mt-34 w-full h-60 sm:h-140 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
-        
+      <div className="flex justify-center items-center mt-34 w-full h-60 sm:h-110 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
+        <h2 className="text-3xl sm:text-8xl font-bold text-white text-center mb-16">
+          Management Team
+        </h2>
       </div>
 
       {/* Team Section */}
       <div className="container mx-auto bg-white px-6 sm:px-12 lg:px-40 py-16">
-        <h2 className="text-3xl sm:text-5xl font-bold text-gray-800 text-center mb-16">
-          Our Team of Experts
-        </h2>
+        <h1 className="text-4xl sm:text-6xl font-bold text-center mb-20">
+          Meet Our Management Team
+        </h1>
 
         <div className="space-y-20">
-            {managementData.map((member, index) => (
-              <div
-                key={index}
-                className={`flex flex-col-reverse md:flex-row items-center gap-10 ${
-                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
-                }`}
-              >
-                {/* Image */}
-                <div className="w-full md:w-1/5">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-auto object-cover object-top rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-
-                {/* Text */}
-                <div className="w-full md:w-2/3 text-left">
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
-                    {member.name}
-                  </h3>
-                  <p className="text-gray-700 text-lg leading-relaxed">
-                    {member.description}
-                  </p>
-                </div>
+          {managementData.map((member, index) => (
+            <div
+              key={index}
+              className={`flex flex-col-reverse md:flex-row items-center gap-10 ${
+                index % 2 !== 0 ? "md:flex-row-reverse" : ""
+              }`}
+            >
+              {/* Image */}
+              <div className="w-full md:w-1/5">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-auto object-cover object-top rounded-xl shadow-md transition-transform duration-300 hover:scale-105"
+                />
               </div>
-            ))}
-          </div>
+
+              {/* Text */}
+              <div className="w-full md:w-2/3 text-left">
+                <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
+                  {member.name}
+                </h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  {member.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
