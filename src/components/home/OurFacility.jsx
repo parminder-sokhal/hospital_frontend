@@ -11,28 +11,23 @@ const OurFacility = () => {
   const facilities = [
     {
       id: 1,
-      heading: "Therapy",
+      heading: "Luxury Rooms",
       description: "Elegance and comfort redefined.",
       image: "/pictures/DSC01694.jpg",
     },
     {
       id: 2,
-      heading: "Equipment",
+      heading: "GYM",
       description: "Recovery through exercise",
       image: "/pictures/DSC01710.jpg",
     },
     {
       id: 3,
-      heading: "Lounge",
+      heading: "Gerneral Ward",
       description: "Comfortable care for healing",
       image: "/pictures/DSC01698.jpg",
     },
-    {
-      id: 4,
-      heading: "Lounge",
-      description: "Elegance and comfort redefined.",
-      image: "/pictures/DSC01697.jpg",
-    },
+    
   ];
 
   const totalSlides = facilities.length;

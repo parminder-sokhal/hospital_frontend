@@ -10,6 +10,7 @@ import InstagramSlider from '../../components/home/InstagramSlider.jsx'
 import PatientReview from '../../components/home/PatientReview.jsx'
 import OurServices from '../../components/home/OurServices.jsx'
 import OurFacility from '../../components/home/OurFacility.jsx'
+import HospitalStructure from '../../components/home/HospitalStructure.jsx'
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
     <OurApproach/>
     {/* <SpecialitiesSlider/>    */}
     <OurServices/>
+    <HospitalStructure/>
     <Doctors/>
     <PatientReview/>
     <OurFacility/>

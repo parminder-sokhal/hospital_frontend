@@ -91,7 +91,7 @@ const Doctors = () => {
                   >
                     <div className="flex flex-col justify-between items-center bg-white rounded-lg  overflow-hidden h-auto w-full">
                       {/* Image Section */}
-                      <div className="w-full h-[400px] overflow-hidden">
+                      <div className="w-full h-[350px] overflow-hidden">
                         <img
                           src={doctor.image?.url || "/images/doctor1.jpeg"}
                           alt={doctor.name}
