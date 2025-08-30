@@ -90,13 +90,21 @@ const MeetOutDoctors = () => {
 
               <div className="flex w-full space-x-2 mt-2 px-4 pb-4">
                 <button
-                  onClick={() => navigate(`/doctor/${doctor._id}`)}
+                  onClick={() => {
+                    if (doctor.ekalink && doctor.ekalink !== "null") {
+                      window.open(doctor.ekalink, "_blank");
+                    }
+                  }}
                   className="flex-grow text-sm text-center py-2 bg-blue-500 text-white rounded-sm"
                 >
                   View Full Profile
                 </button>
                 <button
-                  onClick={() => navigate(`/doctor/${doctor._id}`)}
+                  onClick={() => {
+                    if (doctor.ekalink && doctor.ekalink !== "null") {
+                      window.open(doctor.ekalink, "_blank");
+                    }
+                  }}
                   className="flex-grow text-sm text-center py-2 bg-green-500 text-white rounded-sm"
                 >
                   Book an Appointment

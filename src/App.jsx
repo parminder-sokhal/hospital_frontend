@@ -14,8 +14,8 @@ import Footer from "./pages/footer/footer.jsx";
 import Doctors from "./pages/Doctor/meetOurDoctor.jsx";
 import TreatmentRoutes from "./pages/home/treatment.jsx";
 import Media from "./pages/header/media.jsx";
-import DoctorProfile from "./components/doctor/doctorprofile.jsx";
-import DoctorAppointment from "./pages/Doctor/doctorAppointment.jsx";
+// import DoctorProfile from "./components/doctor/doctorprofile.jsx";
+// import DoctorAppointment from "./pages/Doctor/doctorAppointment.jsx";
 import PrivateRoute from "./components/privateRoute/PrivateRoute.jsx";
 import Dashboard from "./pages/dashboard/dashboard.jsx";
 import WelcomeDashboard from "./pages/dashboard/WelcomeDashboard.jsx";
@@ -44,8 +44,8 @@ function LayoutWrapper() {
         <Route path="/therapyCounselling" element={<TherapyCounselling />} />
         <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/doctors" element={<Doctors />} />
-        <Route path="/doctor/:id" element={<DoctorProfile />} />
-        <Route path="/appointment" element={<DoctorAppointment />} />
+        {/* <Route path="/doctor/:id" element={<DoctorProfile />} /> */}
+        {/* <Route path="/appointment" element={<DoctorAppointment />} /> */}
         <Route path="/signin" element={<SignIn />} />
 
         {/* Private dashboard route with nested child routes */}
@@ -53,8 +53,8 @@ function LayoutWrapper() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<WelcomeDashboard />} />
             <Route path="AddDoctor" element={<AddDoctor />} />
-            <Route path="GetAllPaymentDetails" element={<GetAllPaymentDetails />} />
-            <Route path="GetAllOfflinePayments" element={<GetAllOfflinePayments />} />
+            {/* <Route path="GetAllPaymentDetails" element={<GetAllPaymentDetails />} /> */}
+            {/* <Route path="GetAllOfflinePayments" element={<GetAllOfflinePayments />} /> */}
             <Route path="Links" element={<AddLinks />} />
           </Route>
         </Route>
