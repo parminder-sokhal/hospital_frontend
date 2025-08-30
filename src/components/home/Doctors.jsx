@@ -116,14 +116,22 @@ const Doctors = () => {
                       {/* Action Buttons */}
                       <div className="flex w-full gap-1 pb-4 ">
                         <button
-                          onClick={() => navigate(`/doctor/${doctor._id}`)}
+                          onClick={() => {
+                            if (doctor.ekalink && doctor.ekalink !== "null") {
+                              window.open(doctor.ekalink, "_blank");
+                            }
+                          }}
                           className="flex-grow text-sm text-center bg-blue-500 text-white "
                         >
                           View Full Profile
                         </button>
 
                         <button
-                          onClick={() => navigate(`/doctor/${doctor._id}`)}
+                          onClick={() => {
+                            if (doctor.ekalink && doctor.ekalink !== "null") {
+                              window.open(doctor.ekalink, "_blank");
+                            }
+                          }}
                           className="w-1/2 text-sm text-center py-2 bg-green-600 text-white  hover:bg-green-700 transition-all"
                         >
                           Book Appointment
