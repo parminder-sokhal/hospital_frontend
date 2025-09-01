@@ -6,6 +6,13 @@ const GallerySliding = () => {
     // "/pictures/LoonaFront1.jpeg",
     // "/pictures/LoonaFront.jpeg",
     "/pictures/LoonaAbout.jpeg",
+    "/pictures/LoonaAbout1.jpeg",
+    "/pictures/LoonaAbout2.jpeg",
+    "/pictures/LoonaAbout3.jpeg",
+    "/pictures/LoonaAbout4.jpeg",
+    "/pictures/LoonaAbout5.jpeg",
+    "/pictures/LoonaAbout6.jpeg",
+    "/pictures/LoonaAbout7.jpeg",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -40,7 +47,7 @@ const GallerySliding = () => {
       data-carousel="slide"
     >
       {/* Carousel wrapper */}
-      <div className="relative h-72 sm:h-[450px] md:h-[650px] overflow-hidden "  {...handlers}
+      <div className="relative h-72 sm:h-[450px] md:h-[600px] overflow-hidden "  {...handlers}
 >
         {images.map((image, index) => (
           <div
@@ -50,7 +57,7 @@ const GallerySliding = () => {
           >
             <img
               src={image}
-              className="w-full h-full object-center object-fit"
+              className="w-auto h-full object-center object-fit justify-center mx-auto"
               alt={`carousel-item-${index}`}
               loading="lazy"
             />

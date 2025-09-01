@@ -2,7 +2,7 @@ import React from 'react';
 
 const HospitalStructure = () => {
   return (
-    <div className="container gap-4 mx-auto pb-10 py-5 px-10 lg:px-40">
+    <div className="container gap-4 mx-auto pb-10 py-5 px-10 lg:px-30">
       <div className="text-center mb-10">
         <h2 className="flex justify-start text-4xl text-gray-800">Hospital Structure</h2>
       </div>

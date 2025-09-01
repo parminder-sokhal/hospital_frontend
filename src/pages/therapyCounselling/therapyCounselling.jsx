@@ -52,10 +52,10 @@ const TherapyCounselling = () => {
   return (
     <div className="text-gray-800">
       {/* Banner */}
-      <div className="flex justify-center w-full mt-34 sm:h-110 h-62 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
-        <span className="flex  justify-center items-center sm:text-7xl text-2xl font-bold text-white pb-10  w-full">
+      <div className="flex justify-center w-full mt-34 sm:h-110 h-62 bg-cover bg-no-repeat bg-center bg-[url('/pictures/cover.jpeg')]">
+        {/* <span className="flex  justify-center items-center sm:text-7xl text-2xl font-bold text-white pb-10  w-full">
           Therapy & Counselling Packages
-        </span>
+        </span> */}
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-10">

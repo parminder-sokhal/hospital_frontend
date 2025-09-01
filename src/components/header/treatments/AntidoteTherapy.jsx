@@ -3,7 +3,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const data = {
-  bgImage: "/pictures/naltrexone.jpeg", // Replace with your actual image path
+  bgImage: "/pictures/antidote.jpeg", // Replace with your actual image path
   sidebarLinks: [
     {
       title: "Motivation Enhancement Therapy",
