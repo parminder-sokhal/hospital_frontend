@@ -8,7 +8,7 @@ const OurApproach = () => {
 
   const data = [
     {
-      title: "Motivational Enhance Therapy",
+      title: "Motivational Enhancement Therapy",
       description:
         "Motivational Enhancement Therapy (MET) is a client-centered counseling approach that helps individuals strengthen their motivation and commitment to change.",
       image: "/pictures/motivationaltherapy.jpeg",

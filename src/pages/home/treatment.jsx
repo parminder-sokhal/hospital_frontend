@@ -54,7 +54,8 @@ import EpilepsyClinic from '../../components/header/treatments/EpilepsyClinic.js
 import Seizure from '../../components/header/treatments/seizure.jsx';
 import DeaddictionProgramme from '../../components/header/treatments/De-addictionProgramme.jsx';
 import DetoxProgram from '../../components/header/treatments/DetoxProgram.jsx'
-
+import OstAddiction from '../../components/header/treatments/OstAddiction.jsx';
+import AntidoteTherapy from '../../components/header/treatments/AntidoteTherapy.jsx';
 
 const TreatmentRoutes = (
   <>
@@ -93,6 +94,8 @@ const TreatmentRoutes = (
     <Route path="/motivation-by-hypnosis" element={<MotivationEnhancementByHypnosis />} />
     <Route path="/detoxprogram" element={<DetoxProgram />} />
     <Route path="/sexual-wellness-program" element={<SexualWellnessProgram />} />
+    <Route path="/OstAddiction" element={<OstAddiction />} />
+    <Route path="/AntidoteTherapy" element={<AntidoteTherapy />} />
 
     <Route path="/premature-ejaculation" element={<PrematureEjaculation />} />
     <Route path="/erectile-dysfunction" element={<ErectileDysfunction />} />

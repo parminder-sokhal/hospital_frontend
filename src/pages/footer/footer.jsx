@@ -143,6 +143,16 @@ const Footer = () => {
                   <span>+91 9815490081</span>
                 </Link>
               </div>
+              <div className="flex flex-col items-center mt-4 space-y-1 text-white">
+                <span className="text-xl font-semibold">Landline Phone no.</span>
+                <Link
+                  to="tel:+919815490081"
+                  className="flex items-center space-x-2 hover:text-[#DB8E00]"
+                >
+                  <FaPhoneAlt className="text-lg" />
+                  <span>+0172-4113612</span>
+                </Link>
+              </div>
               
             </div>
 

@@ -394,7 +394,7 @@ const handleNavbarDropdownHoverservices = () => {
                       to="/mental-health-children"
                       className="font-semibold text-md  hover:text-blue-700"
                     >
-                      Mental Health Issues and Children
+                      Child guidance clinic
                     </Link>
                     <Link
                       to="/adhd"
@@ -467,6 +467,18 @@ const handleNavbarDropdownHoverservices = () => {
                       className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
                     >
                       Detox Program
+                    </Link>
+                    <Link
+                      to="/OstAddiction"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      Ost Addiction
+                    </Link>
+                    <Link
+                      to="/AntidoteTherapy"
+                      className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                    >
+                      Antidote Therapy
                     </Link>
                   </li>
                 </ul>
@@ -893,7 +905,7 @@ const handleNavbarDropdownHoverservices = () => {
                           to="/mental-health-children"
                           className="font-semibold text-md  hover:text-blue-700"
                         >
-                          Mental Health Issues and Children
+                          Child guidance clinic
                         </Link>
                         <Link
                           to="/adhd"

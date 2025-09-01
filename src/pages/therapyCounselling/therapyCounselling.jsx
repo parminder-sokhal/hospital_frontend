@@ -44,7 +44,6 @@ const relaxationExercises = [
 ];
 
 const admissionRoomCharges = [
-  "General ward - ₹2500",
   "Private Room - ₹3500",
   "Luxury Room - ₹5500",
 ];
