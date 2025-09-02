@@ -979,6 +979,18 @@ const handleNavbarDropdownHoverservices = () => {
                         >
                           Detox Program
                         </Link>
+                        <Link
+                          to="/OstAddiction"
+                          className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                        >
+                          Ost Addiction
+                        </Link>
+                        <Link
+                          to="/AntidoteTherapy"
+                          className="block p-1 text-sm rounded-lg hover:bg-gray-100 hover:text-blue-700"
+                        >
+                          Antidote Therapy
+                        </Link>
                       </li>
                     </ul>
 

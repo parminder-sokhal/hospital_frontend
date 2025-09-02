@@ -5,7 +5,6 @@ const GallerySliding = () => {
   const images = [
     // "/pictures/LoonaFront1.jpeg",
     // "/pictures/LoonaFront.jpeg",
-    "/pictures/LoonaAbout.jpeg",
     "/pictures/LoonaAbout1.jpeg",
     "/pictures/LoonaAbout2.jpeg",
     "/pictures/LoonaAbout3.jpeg",

@@ -22,10 +22,8 @@ const Management = () => {
   return (
     <>
       {/* Header Section */}
-      <div className="flex justify-center items-center mt-34 w-full h-60 sm:h-110 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
-        <h2 className="text-3xl sm:text-8xl font-bold text-white text-center mb-16">
-          Management Team
-        </h2>
+      <div className="flex justify-center items-center mt-34 w-full h-60 sm:h-100 bg-cover bg-no-repeat bg-center bg-[url('/pictures/cover.jpeg')]">
+        
       </div>
 
       {/* Team Section */}
