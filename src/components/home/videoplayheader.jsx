@@ -12,7 +12,10 @@ const VideoPlayHeader = () => {
         preload="auto"
         className="w-full h-full object-cover"
       >
-        <source src="/video/bgvideo.mp4" type="video/mp4" />
+        <source
+          src="https://dl.dropboxusercontent.com/scl/fi/6nrif2ivlzc1shm2a6fst/bgvideo.mp4?rlkey=1majbp4e125q8olv89e0zvzbt&st=f12sztmx"
+          type="video/mp4"
+        />
         Your browser does not support the video tag.
       </video>
 
