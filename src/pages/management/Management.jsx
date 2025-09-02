@@ -22,7 +22,7 @@ const Management = () => {
   return (
     <>
       {/* Header Section */}
-      <div className="flex justify-center items-center mt-34 w-full h-60 sm:h-100 bg-cover bg-no-repeat bg-center bg-[url('/pictures/cover.jpeg')]">
+      <div className="flex justify-center  w-full mt-34 sm:h-110 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/cover2.jpeg')]">
         
       </div>
 
