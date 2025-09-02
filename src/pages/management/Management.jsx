@@ -4,17 +4,17 @@ const managementData = [
   {
     name: "Dr. Neeraj Loona | MBBS, MD Psychiatry - Director & Head, Loona Hospital",
     description: `Dr. Neeraj Loona is a distinguished psychiatrist with extensive experience in the field of mental health. As the Director and Head of Loona Hospital, he leads a dedicated team of professionals committed to providing comprehensive psychiatric care.`,
-    image: "/pictures/Neeraj1.JPG",
+    image: "/pictures/Neeraj.jpeg",
   },
   {
     name: "Ms. Jaya Choudhary | Project Manager ",
     description: `Ms. Jaya Choudhary is a skilled Project Manager with 4 years of experience in the field of Drug De-addiction. Holding a bachelor’s degree in medical sciences, she effectively bridges clinical understanding with project execution. Her expertise lies in program coordination, stakeholder engagement, and outcome-focused rehabilitation, ensuring smooth operations and impactful results.`,
-    image: "/pictures/Jiya.JPG",
+    image: "/pictures/jaya.jpeg",
   },
   {
     name: "Mrs. Neha | Hospital Manager",
     description: `Mrs.Neha  is an experienced Hospital Manager with 3 years of proven leadership in healthcare administration. She specializes in streamlining hospital operations, enhancing patient services, and maintaining compliance with healthcare standards. Her proactive management style ensures efficient workflows and high-quality patient care.`,
-    image: "/pictures/Neha.JPG",
+    image: "/pictures/neha.jpeg",
   },
 ];
 
