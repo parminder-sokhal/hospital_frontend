@@ -61,14 +61,14 @@ const MeetOutDoctors = () => {
                   />
                 </div>
 
-                <div className="flex flex-col flex-grow w-full">
-                  <p className="font-semibold text-xl truncate">
+                <div className="flex flex-col flex-grow w-full space-y-1">
+                  <p className="font-semibold text-xl">
                     {doctor.name}
                   </p>
-                  <p className="text-sm text-gray-600 truncate">
+                  <p className="text-sm text-gray-600 ">
                     {doctor.hospital}
                   </p>
-                  <p className="text-md text-black truncate">
+                  <p className="text-md text-black">
                     {doctor.specialization}
                   </p>
 
@@ -79,10 +79,6 @@ const MeetOutDoctors = () => {
                         <span>Years</span>
                       </span>
                       <span className="text-gray-600">Experience</span>
-                    </span>
-                    <span className="text-black font-bold flex flex-col">
-                      ₹ {doctor?.fees}
-                      <span className="text-gray-700">Fees</span>
                     </span>
                   </div>
                 </div>

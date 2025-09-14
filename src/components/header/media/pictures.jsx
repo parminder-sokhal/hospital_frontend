@@ -13,10 +13,13 @@ function Pictures() {
     "/pictures/gallery6.jpeg",
     "/pictures/gallery8.jpeg",
     "/pictures/gallery10.jpeg",
-    "/pictures/gallery12.jpeg",
     "/pictures/gallery13.jpeg",
-    "/pictures/gallery14.jpeg",
     "/pictures/gallery15.jpeg",
+    "/pictures/gallery11.jpeg",
+    "/pictures/gallery111.jpeg",
+    "/pictures/gallery112.jpeg",
+    "/pictures/gallery113.jpeg",
+    "/pictures/gallery114.jpeg",
   ];
 
   const handleOpen = (index) => {
@@ -45,10 +48,8 @@ function Pictures() {
   });
   return (
     <>
-      <div className="flex justify-center  w-full mt-34 sm:h-110 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/loona.jpg')]">
-        <span className="flex justify-center items-center sm:text-8xl text-3xl font-bold pb-10 text-white">
-          Image Gallery
-        </span>
+      <div className="flex justify-center  w-full mt-34 sm:h-110 h-52 bg-cover bg-no-repeat bg-center bg-[url('/pictures/cover2.jpeg')]">
+        
       </div>
       <div className="container mx-auto lg:px-30 px-15 py-10 " {...handlers}>
         <div className="text-center flex flex-col justify-between mb-10">

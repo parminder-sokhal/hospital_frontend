@@ -13,9 +13,13 @@ const PhotoGallery = () => {
     "/pictures/gallery6.jpeg",
     "/pictures/gallery8.jpeg",
     "/pictures/gallery10.jpeg",
-    "/pictures/gallery14.jpeg",
     "/pictures/Playground.jpeg",
     "/pictures/Garden.jpeg",
+    "/pictures/gallery11.jpeg",
+    "/pictures/gallery111.jpeg",
+    "/pictures/gallery112.jpeg",
+    "/pictures/gallery113.jpeg",
+    "/pictures/gallery114.jpeg",
   ];
 
   const handleOpen = (index) => {
